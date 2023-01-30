@@ -41,7 +41,8 @@
     // display: grid;
     // grid-template-columns: 576px auto;
     display: flex;
-    grid-gap: 64px;
+    // grid-gap: 64px;
+    grid-gap: 56px;
     position: relative;
     .poppa__closer {
         width: 36px;
@@ -54,6 +55,7 @@
         height: inherit;
         flex-direction: column;
         padding-bottom: 48px;
+        align-items: flex-start;
     }
     .poppa__aligner {
         width: auto;
@@ -272,7 +274,8 @@
     }
     @media (max-width:650px) {
         width: 100%;
-        height: 45%;
+        // height: 45%;
+        pointer-events: none;
         .swiper-slide {
             height: 405px;
             &.poppa-slider--slide {
@@ -295,6 +298,7 @@
     opacity: 0;
     transition: all 0.3s ease;
     overflow-y: auto;
+    overflow-x: hidden;
     .input-attach__icon {
         width: 40px;
         height: 40px;
@@ -307,6 +311,11 @@
         color: #7A899D;
         width: max-content;
         margin-left: 24px;
+        @media (max-width: 700px) {
+            margin-left: 0;
+            margin-top: 11px;
+            
+        }
     }
     .input__field {
         padding: 18px 24px;
@@ -453,6 +462,11 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    @media (max-width: 700px) {
+        align-items: flex-start;
+        padding-top: 108px;
+        padding-bottom: 35px;
+    }
 }
 
 .modal__title {
@@ -533,7 +547,7 @@
     }
     @media (max-width:620px) {
         width: 100%;
-        .form-callback__row {
+            .form-callback__row {
             width: 100%
         }
     }
@@ -736,13 +750,15 @@
 .modal__title {
     font-size: 48px;
     line-height: 120%;
-    text-align: center;
     font-family: var(--ff-title);
     margin-bottom: 24px;
     font-weight: 600;
     @media (max-width: 650px) {
         font-size: 36px;
     }
+}
+.modal-thanks .modal__title {
+    text-align: center;
 }
 
 .modal-thanks__text {
@@ -777,4 +793,73 @@
 
 .modal__title--review {
     text-align: left;
+}
+
+.poppa--no-scroll .poppa__aligner {
+    align-items: flex-start;
+}
+.poppa--wide {
+    max-width: 1548px;
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.poppa__overlay--abouts .poppa__closer {
+    @media (min-width: 1280px) {
+        top: 49px;
+        right: 12%;
+        width: 36px;
+        height: 36px;
+    }
+    @media (max-width: 1600px) {
+        right: 10%;
+    }
+    @media (max-width: 700px) {
+        padding-top: 0;
+    }
+}
+.poppa__overlay--container {
+    height: #{'calc(100 * 1vh)'};
+
+    @media (max-width: 700px) {
+        height: initial;
+    }
+}
+
+.poppa-abouts .modal__inner .modal__title {
+    @media (min-width: 1280px) {
+        margin-top: 30px;
+        margin-bottom: 32px;
+    }
+}
+.poppa-abouts .poppa__aligner .modal__inner {
+    @media (min-width: 1280px) {
+        width: 73%;
+    }
+    @media (max-width: 1600px) {
+        width: 90%;
+    }
+    @media (max-width: 700px) {
+        width: 100%;
+        padding: 0;
+    }
+}
+.modal__inner {
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 700px) {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
+.poppa-abouts .poppa__aligner {
+    @media (max-width: 700px) {
+        padding-top: 0;
+    }
+}
+.poppa__overlay--abouts .poppa--wide,
+.poppa__overlay--abouts .poppa__aligner {
+    @media (max-width: 700px) {
+        padding: 0;
+    }
 }

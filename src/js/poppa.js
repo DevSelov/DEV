@@ -125,6 +125,11 @@ class Poppa {
   makePopupWrapper(poppa) {
     let { id } = poppa;
 
+    if (id == "") {
+      console.warn('set the id to ', poppa)
+      return;
+    }
+
     const overlay = document.createElement("div");
     overlay.classList.add("poppa__overlay");
     overlay.classList.add(`poppa__overlay--${id}`);
@@ -196,7 +201,7 @@ class Poppa {
 
     const popupContent = pop.querySelector('.poppa');
 
-    if (window.innerHeight < popupContent.getBoundingClientRect().height) {
+    if (window.innerHeight < popupContent.getBoundingClientRect().height && !popupContent.classList.contains('poppa--no-scroll')) {
       pop.classList.add('poppa--scrollable')
     } else {
       pop.classList.remove('poppa--scrollable')

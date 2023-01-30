@@ -2,6 +2,7 @@ import Swiper, { Navigation, Pagination, Thumbs } from "swiper";
 import SwiperCore, { Mousewheel } from "swiper/core";
 SwiperCore.use([Mousewheel]);
 
+if (document.querySelector(".poppa-slider--swiper")) {
 new Swiper(".poppa-slider--swiper", {
     modules: [Mousewheel],
     direction: "vertical",
@@ -32,6 +33,7 @@ new Swiper(".poppa-slider--swiper", {
         }
     }
 });
+}
 
 if (document.querySelector(".why-carousel-top")) {
     let swiper = new Swiper(".why-carousel-bottom", {

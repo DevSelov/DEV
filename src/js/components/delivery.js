@@ -29,7 +29,7 @@ if (document.querySelector('[data-step-content]')) {
     })
 }
 
-const hash = window.location.hash.replace("#", "");
-if (hash !== '') {
-    document.querySelector(`.poppa__overlay[data-poppa-name="${hash}"]`).classList.add('_show');
-}
+// const hash = window.location.hash.replace("#", "");
+// if (hash !== '') {
+//     document.querySelector(`.poppa__overlay[data-poppa-name="${hash}"]`).classList.add('_show');
+// }
