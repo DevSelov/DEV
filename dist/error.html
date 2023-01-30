@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230130201716" >
+    <link rel="stylesheet" href="./css/style.css?_v=20230130205751" >
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no" >
@@ -316,7 +316,7 @@
         </section>
     </div><button class="poppa__closer" data-poppa-close="pod-callback">Закрыть</button></div> <div class="poppa__overlay" data-poppa-name="form-callback">
     <div class="poppa__aligner">
-        <section class="poppa modal modal-thanks">
+        <section class="poppa modal modal-thanks" id="form-callback">
             <div class="modal__inner">
                 <h2 class="modal__title">Наш менеджер позвонит <br> вам в течение 5 минут</h2>
                 <div class="modal__group">
@@ -442,9 +442,9 @@
     </div>
 </div> <div class="poppa__overlay" data-poppa-name="otzyv-callback">
     <div class="poppa__aligner">
-        <section class="poppa modal modal-thanks">
+        <section class="poppa modal modal-thanks" data-id="otzyv-callback" >
             <div class="modal__inner">
-                <h2 class="modal__title">Оставьте свой отзыв о нашей<br> работе прямо сейчас</h2>
+                <h2 class="modal__title modal__title--review">Оставьте свой отзыв о нашей<br> работе прямо сейчас</h2>
                 <div class="modal__group">
                     <form action="./callback.php" class="form-callback shifter__form">
                         <fieldset class="form-callback__row">
@@ -519,7 +519,9 @@
                 </div>
             </div>
         </section>
-    </div><button class="poppa__closer" data-poppa-close="otzyv-callback">Закрыть</button></div> <div class="poppa__overlay" data-poppa-name="thanks">
+    </div>
+    <button class="poppa__closer" data-poppa-close="otzyv-callback">Закрыть</button>
+</div> <div class="poppa__overlay" data-poppa-name="thanks">
     <div class="poppa__aligner">
         <section class="poppa modal modal-thanks">
             <div class="modal__inner">
@@ -536,6 +538,6 @@
             </div>
         </section>
     </div><button class="poppa__closer" data-poppa-close="thanks-pop-service">Закрыть</button></div>
-    <script src="./js/bundle.min.js?_v=20230130201716"></script>
+    <script src="./js/bundle.min.js?_v=20230130205751"></script>
   </body>
 </html>

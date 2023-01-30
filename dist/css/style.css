@@ -3568,6 +3568,10 @@ input[type=search]::-webkit-search-cancel-button {
   }
 }
 
+.modal__title--review {
+  text-align: left;
+}
+
 .dropdown {
   position: relative;
   display: flex;
