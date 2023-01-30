@@ -1,0 +1,202 @@
+<div class="tabs">
+    <div class="tabs-top-box">
+        <div class="tabs__toggler-container" data-tabs="projects" data-scroll>
+            <div class="tabs__toggler--box">
+                <button class="tabs__toggler tab--active">Все</button>
+                <button class="tabs__toggler">Монокосоур</button>
+                <button class="tabs__toggler">Ломаный косоур</button>
+                <button class="tabs__toggler">Тетива из листа Perfect style</button>
+                <button class="tabs__toggler">Консольные лестницы</button>
+                <button class="tabs__toggler">Лестницы эконом</button>
+                <div class="tabs__toggler--end-dots">
+                    <button class="tabs__toggler">
+                <span class="button-more__dot"></span>
+                <span class="button-more__dot"></span>
+                <span class="button-more__dot"></span>                  
+            </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__page-container" data-tabs="projects">
+        <div class="tabs__page">
+            @@if (textBlock){
+            <div class="projects-top">
+                <p class="projects-top-text">
+                    Здесь отображается какой-то текст про все лестницы. Можно упомянуть о чем-то, что лежит не на поверхности в других разделах, или каких-то новых преимуществах. При переключении вкладок, на них рассказывается вкратце о типах и видах лестниц. А ссылка справа
+                    может меняться на более конкретную.
+                </p>
+                <a href="" class="projects-top-link link link--underlined">
+                    <span class="link__text">
+                        Все проекты
+                    </span>
+                </a>
+            </div>
+            } @@if (slides) {
+            <div class="projects-gallery" data-swiper="main" data-swiper-destroy="true" data-swiper-pagination data-swiper-navigation data-breakpoints='{"0": {"slidesPerView" : 1},"500": {"spaceBetween": 16}, "992": {"spaceBetween": 24}, "1300": {"spaceBetween": 36}}'
+                data-swiper-slide="3">
+                } @@if (!slides) {
+                <div class="projects-gallery">
+                    }
+                    <div class="swiper projects-gallery-carousel">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide projects-gallery-slide">
+                                <div class="swiper projects-gallery-carousel-children" data-swiper="main" data-swiper-pagination data-swiper-touch>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <p class="projects-gallery-title">Лестница на стальном монокосоуре с площадкой</p>
+                                <ul class="projects-gallery-list">
+                                    <li class="projects-gallery-list-element">
+                                        Где и когда:
+                                        <p>Пенза, 2022.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ограждение:
+                                        <p>закаленное стекло, толщиной 20 мм.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ступени:
+                                        <p>дуб.</p>
+                                    </li>
+                                </ul>
+                                <button class="link link--underlined">
+                                <span class="link__text">Хочу так же</span>
+                            </button>
+                            </div>
+                            <div class="swiper-slide projects-gallery-slide">
+                                <div class="swiper projects-gallery-carousel-children" data-swiper="main" data-swiper-pagination data-swiper-touch>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <p class="projects-gallery-title">Лестница на стальном монокосоуре с забежными ступенями</p>
+                                <ul class="projects-gallery-list">
+                                    <li class="projects-gallery-list-element">
+                                        Где и когда:
+                                        <p>Пенза, 2022.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ограждение:
+                                        <p>закаленное стекло, толщиной 20 мм.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ступени:
+                                        <p>дуб.</p>
+                                    </li>
+                                </ul>
+                                <button class="link link--underlined">
+                                <span class="link__text">Хочу так же</span>
+                            </button>
+                            </div>
+                            <div class="swiper-slide projects-gallery-slide">
+                                <div class="swiper projects-gallery-carousel-children" data-swiper="main" data-swiper-pagination data-swiper-touch>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <p class="projects-gallery-title">Лестница на стальном монокосоуре
+                                </p>
+                                <ul class="projects-gallery-list">
+                                    <li class="projects-gallery-list-element">
+                                        Где и когда:
+                                        <p>Пенза, 2022.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ограждение:
+                                        <p>закаленное стекло, толщиной 20 мм.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ступени:
+                                        <p>дуб.</p>
+                                    </li>
+                                </ul>
+                                <button class="link link--underlined">
+                                <span class="link__text">Хочу так же</span>
+                            </button>
+                            </div>
+                            <div class="swiper-slide projects-gallery-slide">
+                                <div class="swiper projects-gallery-carousel-children" data-swiper="main" data-swiper-pagination data-swiper-touch>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide projects-gallery-children-slide">
+                                            <img src="./img/proud/case-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <p class="projects-gallery-title">Лестница на стальном монокосоуре с площадкой</p>
+                                <ul class="projects-gallery-list">
+                                    <li class="projects-gallery-list-element">
+                                        Где и когда:
+                                        <p>Пенза, 2022.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ограждение:
+                                        <p>закаленное стекло, толщиной 20 мм.</p>
+                                    </li>
+                                    <li class="projects-gallery-list-element">
+                                        Ступени:
+                                        <p>дуб.</p>
+                                    </li>
+                                </ul>
+                                <button class="link link--underlined">
+                                <span class="link__text">Хочу так же</span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-buttons projects-gallery-buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__page">45</div>
+        </div>
+    </div>

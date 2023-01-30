@@ -1,0 +1,74 @@
+.faq {
+    .bayan {
+        padding: 24px 0
+    }
+    .accordion__head {
+        padding: 0
+    }
+    .accordion__title {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+    }
+    .accordion__body {
+        padding-left: 0;
+    }
+    .faq__title {
+        margin-bottom: 53px;
+    }
+    .button {
+        width: 100%;
+        background: #EEF0F1;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--c-text-regular);
+        border: none;
+        margin-top: 45px;
+        padding: 21px 0
+    }
+    @media (max-width:1300px) {
+        .button {
+            margin-top: 24px;
+            font-size: 12px;
+            padding: 18px 0
+        }
+        .faq__title {
+            margin-bottom: 30px;
+        }
+        .accordion__title {
+            font-size: 16px;
+            line-height: 150%;
+        }
+        .bayan {
+            padding: 16px 12px 16px 0
+        }
+    }
+    @media (max-width: 650px) {
+        .faq__title {
+            margin-bottom: 27px;
+            font-size: 24px;
+        }
+        .accordion__title {
+            font-size: 14px;
+            line-height: 160%;
+            width: 85%
+        }
+        .accordion .bayan__toggler {
+            --width: 12px;
+            --height: 8px;
+            background-size: cover;
+            background-position: center;
+        }
+        .button {
+            margin-top: 24px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 160%;
+            padding: 19px 0 18px
+        }
+    }
+}
