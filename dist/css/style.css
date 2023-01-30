@@ -1047,6 +1047,7 @@
 
 .bayan--opened .bayan__toggler {
   transform: rotate(180deg);
+  transform-origin: center;
 }
 
 @media (max-width: 1199px) {
@@ -2138,13 +2139,6 @@ input[type=search]::-webkit-search-cancel-button {
   background-repeat: no-repeat;
   transition: all 0.3s ease;
 }
-@media (max-width: 992px) {
-  .accordion .bayan__toggler {
-    --width: 8px;
-    --height: 4px;
-  }
-}
-
 /**
  * States
  */
@@ -7854,7 +7848,7 @@ select {
 }
 
 .faq .bayan {
-  padding: 24px 0;
+  padding: 24px 16px 24px 0;
 }
 .faq .accordion__head {
   padding: 0;
@@ -8491,7 +8485,7 @@ select {
   position: absolute;
   left: 0px;
   max-width: 46.511%;
-  width: auto;
+  width: 100%;
   height: 1080px;
 }
 @media (max-width: 1300px) {
@@ -8554,7 +8548,7 @@ select {
   width: 16px;
   height: 16px;
 }
-.product-page--circle:focus .product-page--circle--popup {
+.product-page--circle:hover .product-page--circle--popup, .product-page--circle:focus .product-page--circle--popup {
   transform: translateY(0);
   opacity: 1;
   z-index: 2;
@@ -8592,35 +8586,40 @@ select {
     top: calc(var(--radius-circle));
   }
   .product-page--circle:nth-of-type(1) .product-page--circle--popup {
-    left: calc(300px / var(--radius-circle) + 18%);
+    left: -12vw;
+    top: 110%;
   }
   .product-page--circle:nth-of-type(2) {
     left: calc(var(--radius-circle) + 32%);
     top: calc(var(--radius-circle) + 15%);
   }
   .product-page--circle:nth-of-type(2) .product-page--circle--popup {
-    left: calc(300px / var(--radius-circle) + 40%);
+    left: -32vw;
+    top: 110%;
   }
   .product-page--circle:nth-of-type(3) {
     left: calc(var(--radius-circle) + 68%);
     top: calc(var(--radius-circle) + 32%);
   }
   .product-page--circle:nth-of-type(3) .product-page--circle--popup {
-    left: calc(300px / var(--radius-circle) + 65%);
+    left: -68vw;
+    top: 110%;
   }
   .product-page--circle:nth-of-type(4) {
     left: calc(var(--radius-circle) + 50%);
     top: calc(var(--radius-circle) + 56%);
   }
   .product-page--circle:nth-of-type(4) .product-page--circle--popup {
-    left: calc(300px / var(--radius-circle) + 54%);
+    left: -50vw;
+    top: 110%;
   }
   .product-page--circle:nth-of-type(5) {
     top: calc(var(--radius-circle) + 82%);
     left: calc(var(--radius-circle) + 16%);
   }
   .product-page--circle:nth-of-type(5) .product-page--circle--popup {
-    left: calc(300px / var(--radius-circle) + 81%);
+    left: -16vw;
+    top: 110%;
   }
 }
 
@@ -8699,9 +8698,11 @@ select {
   border-radius: var(--radius-border);
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .product-page--views--element._active {
   border: 1px solid var(--c-text-regular);
+  cursor: default;
 }
 @media (max-width: 1300px) {
   .product-page--views--element {
@@ -8762,7 +8763,7 @@ select {
   font-size: 64px;
   line-height: 120%;
   width: 62%;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 @media (max-width: 1300px) {
   .product-page-title {
@@ -8791,6 +8792,13 @@ select {
   position: static;
   opacity: 1;
   z-index: 1;
+}
+@media (min-width: 1441px) {
+  .product-page--views--block-text-descr {
+    max-width: 84%;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 1300px) {
   .product-page--views--block-text-descr {
@@ -8821,6 +8829,7 @@ select {
 }
 .accord-mobile-views .accordion {
   padding-left: 16px;
+  padding-right: 16px;
 }
 .accord-mobile-views .accordion__title {
   font-size: 10px;
@@ -8875,8 +8884,9 @@ select {
     margin: 16px 0 0;
   }
   .product-page-btn .button {
-    font-size: 8px;
+    font-size: 0.5291003rem;
     padding: 16px 0;
+    text-transform: uppercase;
   }
 }
 
@@ -9165,6 +9175,7 @@ select {
 
 .prod-info-text__img {
   display: flex;
+  flex-wrap: wrap;
   grid-gap: 52px;
 }
 .prod-info-text__img img {
@@ -9804,6 +9815,21 @@ select {
     background-size: cover;
     bottom: -13%;
   }
+}
+
+.product-page__inner-pic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-page__inner-pic._active {
+  opacity: 1;
+  pointer-events: initial;
 }
 
 .page-contacts__title {
