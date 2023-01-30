@@ -58,7 +58,7 @@ quizes.forEach((quiz, index) => {
         if (sliderStatusStepEl) {
           const TOTAL_STEPS = this.slides.length;
           const CURRENT_STEP = this.activeIndex + 1;
-          sliderStatusStepEl.innerText = `${CURRENT_STEP} / ${TOTAL_STEPS}`;
+          sliderStatusStepEl.innerText = ` ${CURRENT_STEP} / ${TOTAL_STEPS}`;
         }
 
         const stepNameEl = quiz.parentElement.querySelector('.quiz-status__name')

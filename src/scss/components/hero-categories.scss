@@ -1,3 +1,16 @@
+.hero-categories {
+    @media (max-width: 700px) {
+        overflow-x: hidden;
+    }
+}
+.hero-categories__container {
+    @media (max-width: 700px) {
+        margin-left: -28px;
+        margin-right: -28px;
+        width: calc(100% + calc(28px * 2));
+        max-width: initial;
+    }
+}
 .hero-categories__gallery {
     display: flex;
     justify-content: space-between;
@@ -10,6 +23,10 @@
     @media (max-width: 992px) {
         grid-template-columns: repeat(4, minmax(140px, 1fr));
         overflow-x: auto;
+    }
+    @media (max-width: 700px) {
+        padding-left: 28px;
+        padding-right: 28px;
     }
 }
 
