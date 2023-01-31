@@ -4713,7 +4713,7 @@ select {
 }
 @media (max-width: 1300px) {
   .offer {
-    padding: 68px 0 72px 0;
+    padding: 68px 0 60px 0;
   }
   .offer .offer__title {
     margin-bottom: 37px;
@@ -4933,7 +4933,7 @@ select {
 }
 @media (max-width: 1300px) {
   .quiz__container {
-    padding: 47px;
+    padding: 47px 47px 41px;
   }
 }
 @media (max-width: 768px) {
@@ -5260,6 +5260,11 @@ select {
 @media (max-width: 1440px) {
   .quiz-answer {
     padding: 1.4rem;
+  }
+}
+@media (max-width: 1300px) {
+  .quiz-answer {
+    padding: 0.6rem 0.8rem;
   }
 }
 @media (max-width: 768px) {
@@ -6008,8 +6013,12 @@ select {
   }
 }
 @media (max-width: 1300px) {
+  .shifter-form-main {
+    padding-top: 0;
+  }
   .shifter-form-main .shifter__card {
     padding-bottom: 48px;
+    padding-top: 48px;
   }
 }
 @media (max-width: 650px) {
@@ -6395,7 +6404,7 @@ select {
     margin-top: 0;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1281px) {
   .shifter-form-main {
     margin-left: 84px;
   }
@@ -6451,10 +6460,13 @@ select {
 }
 
 @media (max-width: 1300px) {
+  .shifter-callback {
+    padding-top: 75px;
+  }
   .shifter-callback .shifter-callback-card {
     padding: 48px;
-    grid-template-columns: 41% 55.7%;
-    grid-gap: 4%;
+    grid-template-columns: 39% 55.7%;
+    grid-gap: 5.5%;
   }
 }
 @media (max-width: 992px) {
@@ -6723,7 +6735,7 @@ select {
     display: none;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1281px) {
   .reviews {
     padding-top: 5.8rem;
   }
@@ -7734,7 +7746,7 @@ select {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1281px) {
   .projects__container {
     max-width: 82.2vw;
     padding-left: 30px;
@@ -7774,9 +7786,12 @@ select {
 .projects .tabs {
   overflow: visible;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1280px) {
   .projects {
+    padding-top: 64px;
     padding-bottom: 91px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .projects .section-title {
     margin-bottom: 16px;
@@ -8280,6 +8295,9 @@ select {
   color: #8196B1;
 }
 @media (max-width: 1300px) {
+  .work {
+    padding-top: 66px;
+  }
   .work .section-title {
     margin-bottom: 32px;
   }
