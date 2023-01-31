@@ -4723,6 +4723,9 @@ select {
   .offer {
     padding: 48px 0;
   }
+  .offer .offer__title {
+    margin-bottom: 23px;
+  }
 }
 @media (max-width: 600px) {
   .offer {
@@ -4936,6 +4939,11 @@ select {
     padding: 47px 47px 41px;
   }
 }
+@media (max-width: 920px) and (min-width: 651px) {
+  .quiz__container {
+    grid-template-columns: 64.481% 33.56%;
+  }
+}
 @media (max-width: 768px) {
   .quiz__container {
     padding: 32px;
@@ -5111,6 +5119,11 @@ select {
 .quiz-status {
   color: #8196B1;
   margin-bottom: 21px;
+}
+@media (max-width: 920px) and (min-width: 651px) {
+  .quiz-status {
+    margin-bottom: 13px;
+  }
 }
 @media (max-width: 768px) {
   .quiz-status {
@@ -5442,9 +5455,9 @@ select {
     padding-top: 59px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .quiz-buttons {
-    padding-top: 46px;
+    padding-top: 42px;
   }
 }
 @media (max-width: 650px) {
@@ -5669,8 +5682,12 @@ select {
   }
 }
 @media (max-width: 992px) {
+  .why {
+    padding-top: 30px;
+    padding-bottom: 48px;
+  }
   .why .section-title {
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
   .why .link__text {
     font-size: 10px;
@@ -5689,9 +5706,11 @@ select {
 @media (max-width: 650px) {
   .why {
     padding-top: 32px;
+    padding-bottom: 33px;
   }
   .why .section-title {
     line-height: 120%;
+    margin-bottom: 18px;
   }
   .why .section-heading__links,
   .why .accordion__icon {
@@ -5727,6 +5746,12 @@ select {
     display: none;
   }
 }
+@media (min-width: 651px) and (max-width: 992px) {
+  .why__desc {
+    max-width: 73%;
+    font-size: 12px;
+  }
+}
 @media (max-width: 650px) {
   .why__desc {
     font-size: 12px;
@@ -5754,6 +5779,7 @@ select {
 @media (max-width: 992px) {
   .why__content {
     grid-template-columns: 100%;
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 650px) {
@@ -5879,10 +5905,11 @@ select {
 }
 @media (max-width: 992px) {
   .numbers-about-card__digit {
-    margin-bottom: 12px;
+    font-size: 48px;
+    margin-bottom: 18px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 650px) {
   .numbers-about-card__digit {
     font-size: 36px;
     margin-bottom: 16px;
@@ -5959,6 +5986,7 @@ select {
   .shifter__card {
     grid-template-columns: auto 52%;
     padding: 24px;
+    padding-bottom: 33px;
   }
   .shifter__card .shifter__phone .link__text {
     font-size: 16px;
@@ -6019,6 +6047,11 @@ select {
   .shifter-form-main .shifter__card {
     padding-bottom: 48px;
     padding-top: 48px;
+  }
+}
+@media (max-width: 992px) {
+  .shifter-form-main .shifter__desc br {
+    display: none;
   }
 }
 @media (max-width: 650px) {
@@ -6266,8 +6299,8 @@ select {
     margin-right: 32px;
   }
   .radio__row .radio__title {
-    font-size: 16px;
-    margin-left: 12px;
+    font-size: 10px;
+    margin-left: 8px;
   }
   .radio__row .radio__check {
     width: 16px;
@@ -6508,6 +6541,14 @@ select {
 @media (min-width: 1300px) {
   .shifter-callback {
     padding-top: 7rem;
+  }
+}
+@media (max-width: 922px) {
+  .shifter-callback .section-title {
+    font-size: 20px;
+  }
+  .shifter-callback .shifter-callback__desc {
+    font-size: 10px;
   }
 }
 @media (max-width: 650px) {
@@ -7072,6 +7113,11 @@ select {
     margin-bottom: 38px;
   }
 }
+@media (max-width: 992px) {
+  .proud .proud__title {
+    margin-bottom: 18px;
+  }
+}
 @media (max-width: 600px) {
   .proud .proud__title {
     margin-bottom: 30px;
@@ -7261,6 +7307,11 @@ select {
   .proud-card--has-callout .proud-card__desc {
     grid-template-columns: 100%;
     grid-gap: 25px;
+  }
+}
+@media (max-width: 992px) {
+  .proud-card--has-callout:nth-of-type(1) .proud-card__img {
+    max-height: 188px;
   }
 }
 @media (max-width: 650px) {
@@ -7706,6 +7757,11 @@ select {
     grid-template-columns: 100%;
   }
 }
+@media (max-width: 992px) {
+  .proud-card--has-callout .proud-card__hero .proud-card__media {
+    margin-right: 0;
+  }
+}
 @media (max-width: 650px) {
   .proud-card--has-callout .proud-card__hero .proud-card__media {
     margin-right: 0;
@@ -7735,6 +7791,12 @@ select {
   }
   .proud-card:not(.proud-card--has-callout) .link--underlined .link__text {
     margin-top: 16px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 651px) {
+  .proud-card__callout--box {
+    max-width: 93%;
   }
 }
 

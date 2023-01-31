@@ -16,6 +16,9 @@
     @media (max-width:1300px) {
         padding: 47px 47px 41px;
     }
+    @media (max-width: 920px) and (min-width: 651px) {
+        grid-template-columns: 64.481% 33.56%;
+    }
     @media (max-width: 768px) {
         padding: 32px
     }
@@ -155,6 +158,9 @@
 .quiz-status {
     color: #8196B1;
     margin-bottom: 21px;
+    @media (max-width: 920px) and (min-width: 651px) {
+        margin-bottom: 13px;
+    }
     @media (max-width: 768px) {
         font-size: 12px;
     }
@@ -433,8 +439,8 @@
     @media (max-width: 1440px) {
         padding-top: 59px;
     }
-    @media (max-width: 768px) {
-        padding-top: 46px;
+    @media (max-width: 920px) {
+        padding-top: 42px;
     }
     @media (max-width: 650px) {
         padding-top: 53px;

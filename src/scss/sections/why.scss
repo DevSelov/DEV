@@ -31,8 +31,11 @@
         }
     }
     @media (max-width:992px) {
+        padding-top: 30px;
+        padding-bottom: 48px;
         .section-title {
-            margin-bottom: 16px;
+            // margin-bottom: 16px;
+            margin-bottom: 22px;
         }
         .link__text {
             font-size: 10px;
@@ -50,8 +53,10 @@
     }
     @media (max-width:650px) {
         padding-top: 32px;
+        padding-bottom: 33px;
         .section-title {
             line-height: 120%;
+            margin-bottom: 18px;
         }
         .section-heading__links,
         .accordion__icon {
@@ -85,6 +90,10 @@
             display: none;
         }
     }
+    @media (min-width: 651px) and (max-width: 992px) {
+        max-width: 73%;
+        font-size: 12px;
+    }
     @media (max-width:650px) {
         font-size: 12px;
         margin-bottom: 16px;
@@ -107,6 +116,7 @@
     }
     @media (max-width:992px) {
         grid-template-columns: 100%;
+        margin-bottom: 16px;
     }
     @media (max-width:650px) {
         grid-gap: 48px;

@@ -53,6 +53,7 @@
     @media (max-width:992px) {
         grid-template-columns: auto 52%;
         padding: 24px;
+        padding-bottom: 33px;
         .shifter__phone {
             .link__text {
                 font-size: 16px;
@@ -112,6 +113,11 @@
         .shifter__card {
             padding-bottom: 48px;
             padding-top: 48px;
+        }
+    }
+    @media (max-width: 992px) {
+        .shifter__desc br {
+            display: none;
         }
     }
     @media (max-width:650px) {
@@ -348,8 +354,10 @@
             }
         }
         .radio__title {
-            font-size: 16px;
-            margin-left: 12px;
+            // font-size: 16px;
+            // margin-left: 12px;
+            font-size: 10px;
+            margin-left: 8px;
         }
         .radio__check {
             width: 16px;
@@ -595,6 +603,14 @@
     }
     @media (min-width:1300px) {
         padding-top: 7rem;
+    }
+    @media (max-width: 922px) {
+        .section-title {
+            font-size: 20px;
+        }
+        .shifter-callback__desc {
+            font-size: 10px;
+        }
     }
     @media (max-width: 650px) {
         padding: 0;
