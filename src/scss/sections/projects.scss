@@ -1,3 +1,16 @@
+.projects {
+    @media (min-width: 1280px) {
+        padding-top: 5.4rem;
+        padding-bottom: 5.5rem;
+        margin-right: -30px;
+    }
+}
+.projects__container {
+    @media (min-width: 1280px) {
+        max-width: 82.2vw;
+        padding-left: 30px;
+    }
+}
 .projects-gallery {
     position: relative;
     .link .link__text {

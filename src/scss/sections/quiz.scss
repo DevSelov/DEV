@@ -3,7 +3,7 @@
     background-color: var(--c-text-regular);
     padding-left: 4.6rem;
     padding-right: 4.4rem;
-    padding-top: 70px;
+    padding-top: 64px;
     padding-bottom: 70px;
     display: grid;
     grid-template-areas: "desc pic" "quiz quiz";
@@ -44,7 +44,7 @@
 
 .quiz__title {
     font-size: 2rem; //32
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     line-height: 1.4;
     font-weight: 600;
     font-family: var(--ff-title);
@@ -154,7 +154,7 @@
 
 .quiz-status {
     color: #8196B1;
-    margin-bottom: 19px;
+    margin-bottom: 21px;
     @media (max-width: 768px) {
         font-size: 12px;
     }
@@ -177,7 +177,8 @@
 }
 
 .quiz-status__step {
-    margin-right: 1.3125rem;
+    // margin-right: 1.3125rem;
+    margin-right: 0.613rem;
     @media (max-width: 1300px) {
         margin-right: 14px;
     }
@@ -285,6 +286,7 @@
 
 .quiz-slide--prints .quiz-answer {
     background-color: #D6DBEB;
+    padding-bottom: 40px;
 }
 
 .quiz-answer__radio {
@@ -415,6 +417,9 @@
     @media (max-width: 1440px) {
         font-size: 14px;
     }
+    @media (max-width: 1300px) {
+        font-size: 12px;
+    }
 }
 .quiz-buttons {
     position: static;
@@ -424,11 +429,6 @@
     padding-top: 2.75rem;
     @media (max-width: 1440px) {
         padding-top: 59px;
-    }
-    @media (max-width: 1300px) {
-        .swiper-button-next {
-            font-size: 12px;
-        }
     }
     @media (max-width: 768px) {
         padding-top: 46px;
@@ -451,6 +451,7 @@
 
 .quiz-button-next {
     background: #8196B1;
+    margin-top: -20px;
     @media (max-width: 1440px) {
         padding: 21px 0
     }
@@ -469,6 +470,7 @@
     background-size: 1.375rem;
     background-position: center;
     margin-right: 1.5rem;
+    margin-top: -30px;
     @media (max-width: 650px) {
         width: 100%;
         margin: 16px 0 0 0;

@@ -70,6 +70,7 @@
         font-size: 16px;
         line-height: 160%;
         margin-bottom: 24px;
+        max-width: 80%;
     }
     .shifter__card {
         padding-bottom: 71px;
@@ -77,6 +78,7 @@
     @media (max-width: 1300px) {
         .shifter__desc {
             font-size: 14px;
+            max-width: 100%;
         }
         .section-title {
             font-size: 32px;
@@ -91,6 +93,7 @@
 .shifter-form-main {
     .shifter__card {
         padding-bottom: 68px;
+        padding-top: 68px;
     }
     @media (max-width: 1550px) {
         .shifter__card {
@@ -241,6 +244,7 @@
     font-size: 2rem;
     line-height: 1.4;
     font-weight: 600;
+    letter-spacing: 0.005em;
     @media (max-width: 1300px) {
         font-size: 24px;
         br {
@@ -280,7 +284,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 160%;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     @media (max-width: 1300px) {
         font-size: 14px;
         margin-bottom: 24px;
@@ -484,6 +488,9 @@
             }
         }
     }
+    @media (min-width: 1280px) {
+        margin-left: 84px;
+    }
 }
 
 .form-callback__row {
@@ -527,6 +534,7 @@
 
 .shifter__title {
     line-height: 1.4;
+    margin-bottom: 0.7em;
     .shifter__title--color {
         color: var(--icon-color);
         display: block;
@@ -559,7 +567,7 @@
 .shifter-callback-card {
     border-radius: var(--radius-border);
     background: #EEEFF1;
-    padding: 72px;
+    padding: 68px 72px 73px;
     display: grid;
     grid-template-columns: 34% 50%;
     grid-gap: 13%;
@@ -574,7 +582,8 @@
 
 .shifter-callback {
     .section-title {
-        line-height: 140%
+        line-height: 140%;
+        margin-bottom: 0.7em;
     }
     @media (min-width:1300px) {
         padding-top: 7rem;

@@ -88,6 +88,10 @@
             display: none;
         }
     }
+    @media (min-width: 1280px) {
+        padding-top: 5.8rem;
+        
+    }
 }
 
 .reviews-card {
@@ -280,7 +284,7 @@
 
 .reviews__container {
     .section-heading {
-        margin-bottom: 30px;
+        margin-bottom: 45px;
     }
     @media (max-width:1300px) {
         .section-heading {
