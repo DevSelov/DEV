@@ -88,6 +88,9 @@
             padding-bottom: 54px
         }
     }
+    @media (max-width: 700px) {
+        padding-bottom: 30px;
+    }
 }
 
 .shifter-form-main {

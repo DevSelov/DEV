@@ -9,13 +9,13 @@
     }
 }
 
-.proud__title {
+.proud .proud__title {
     margin-bottom: 57px;
     @media (max-width: 1300px) {
         margin-bottom: 38px
     }
     @media (max-width: 600px) {
-        margin-bottom: 24px
+        margin-bottom: 30px
     }
 }
 
@@ -30,7 +30,13 @@
         }
     }
     .proud-card-stats {
-        width: max-content
+        width: max-content;
+        @media (max-width: 700px) {
+            width: 90%;
+            font-size: 14px;
+            padding-top: 11px;
+            line-height: 1.6;
+        }
     }
     .proud-card__desc {
         display: flex;
@@ -142,6 +148,9 @@
             .proud-card__desc {
                 .proud-card__cta {
                     margin-top: 31px;
+                    @media (max-width: 700px) {
+                        margin-top: 0;
+                    }
                 }
             }
             .proud-card__info {
@@ -332,6 +341,9 @@
         font-size: 14px;
         margin-bottom: 8px;
     }
+    @media (max-width: 700px) {
+        line-height: 1.6;
+    }
 }
 
 .proud-card__cta {
@@ -369,6 +381,13 @@
     }
     @media (max-width:1200px) {
         font-size: 14px;
+    }
+    @media (max-width: 700px) {
+        font-size: 20px;
+        max-width: 90%;
+        br {
+            display: none;
+        }
     }
 }
 
@@ -457,6 +476,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 32px;
         .play-button__icon {
             margin-right: 12px;
             margin-top: 2px;

@@ -6,6 +6,9 @@
     @media (min-width: 992px) and (max-width: 1300px) {
         padding-bottom: 36px;
     }
+    @media (max-width: 650px) {
+        padding: 48px 0 24px;
+    }
 }
 
 .footer__address {
@@ -55,7 +58,8 @@
         font-size: 24px;
     }
     @media (max-width: 650px) {
-        margin-bottom: 32px;
+        // margin-bottom: 32px;
+        margin-bottom: 15px;
         line-height: 150%;
     }
 }
@@ -310,7 +314,7 @@
     line-height: 100%;
     margin-bottom: 32px;
     @media (max-width: 650px) {
-        display: none;
+        // display: none;
     }
 }
 

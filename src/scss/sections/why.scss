@@ -49,6 +49,7 @@
         }
     }
     @media (max-width:650px) {
+        padding-top: 32px;
         .section-title {
             line-height: 120%;
         }
@@ -57,7 +58,7 @@
             display: none;
         }
         .accordion__head {
-            padding: 22px 0;
+            padding: 20px 0;
         }
         .accordion .bayan__toggler {
             max-width: 12px;
@@ -109,7 +110,8 @@
     }
     @media (max-width:650px) {
         grid-gap: 48px;
-        margin-bottom: 6px;
+        // margin-bottom: 6px;
+        margin-bottom: 0;
     }
 }
 
@@ -171,4 +173,7 @@
 
 .why .accordion__head {
     padding-right: 12px;
+}
+.why__faq .accordion__title {
+    line-height: 1.4;
 }
