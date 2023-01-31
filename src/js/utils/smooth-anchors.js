@@ -18,10 +18,11 @@ function scrollToAnchor(distanceTop = 0) {
     for (let i = 0; i < linkElems.length; i++) {
         const link = linkElems[i];
         link.addEventListener('click', (e) => {
-            e.preventDefault()
-            let href = link.getAttribute('href')
+            e.preventDefault();
+            let href = link.getAttribute('href');
             if (!href || href == "#") return;
-            let anchor = document.querySelector(href)
+            let anchor = document.querySelector(href);
+            if (anchor.classList.contains('poppa')) return;
             if (!anchor) return;
             window.scroll({
                 top: anchor.getBoundingClientRect().top + pageYOffset - distanceTop,

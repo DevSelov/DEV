@@ -126,7 +126,7 @@ class Poppa {
     let { id } = poppa;
 
     if (id == "") {
-      console.warn('set the id to ', poppa)
+      // console.warn('set the id to ', poppa)
       return;
     }
 

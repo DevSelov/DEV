@@ -108,7 +108,6 @@ formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    console.log("submit");
     form.querySelectorAll(".input").forEach((input) => {
       validateInput(input);
     });
@@ -123,13 +122,9 @@ formsList.forEach((form) => {
     });
     // try {
     // let result = await response.json();
-    // console.log(result);
-    console.log(form);
-    console.log("thanks");
     const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
       submitButton.dataset.buttonText = submitButton.innerHTML;
-      // submitButton.innerText = "Message envoyé"
       submitButton.innerHTML = "✓";
       disableButton(submitButton);
 
@@ -143,6 +138,15 @@ formsList.forEach((form) => {
       cancelable: false,
     });
     form.dispatchEvent(sentEvent);
+
+    const openedPop = document.querySelector('.poppa__overlay._show')
+      // console.log(openedPop)
+    if (openedPop) {
+      window.poppa.closePop(openedPop.querySelector('.poppa').id);
+    }
+    setTimeout(() => {
+      window.poppa.openPop('thanks')
+    },400)
     // } catch {
     // console.log("error");
     // }

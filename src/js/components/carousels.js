@@ -33,6 +33,7 @@ quizes.forEach((quiz, index) => {
   let carousel = new Swiper(`#${CURRENT_SWIPER_NAME}`, {
     modules: [Navigation, Pagination, EffectFade],
     autoHeight: true,
+    allowTouchMove: false,
     spaceBetween: 10,
     pagination: {
       el: `#${CURRENT_SWIPER_NAME} .${SWIPER_NAME}-pagination`,
