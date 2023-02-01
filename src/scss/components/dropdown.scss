@@ -4,12 +4,16 @@
     align-items: center;
     cursor: pointer;
     &._active {
+        color: var(--active-color);
         .dropdown__body {
             opacity: 1;
             z-index: 999;
             transform: translateY(40px);
             visibility: visible;
         }
+    }
+    .dropdown__body--wide.dropdown__body {
+        transform: translate(-50%, 40px);
     }
     &:after {
         content: '';
@@ -46,6 +50,15 @@
         }
     }
 }
+.dropdown__body--wide {
+     max-width: 1096px;
+     left: 50%;
+     width: max-content;
+     padding: 24px;
+}
+.dropdown__body--more-8 {
+    max-width: 952px;
+}
 
 .dropdown__body-title {
     font-size: 20px;
@@ -63,6 +76,23 @@
     grid-auto-flow: column;
     grid-template-rows: repeat(5, 1fr);
 }
+.dropdown__body--wide .dropdown__body--list {
+    column-gap: initial;
+    row-gap: initial;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.dropdown__body--less-9 .dropdown__body--list {
+    display: flex;
+}
+.dropdown__body--more-8 .dropdown__body--list {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: initial;
+    grid-auto-flow: row;
+    column-gap: 20px;
+    row-gap: 24px;
+}
 
 .dropdown__body--list-element {
     width: max-content;
@@ -74,6 +104,39 @@
     &._active {
         color: #8196B1;
     }
+}
+.dropdown__body--wide .dropdown__body--list-element {
+    width: 100%;
+    width: 112px;
+    position: relative;
+}
+.dropdown__body--less-9 .dropdown__body--list-element {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.dropdown__body--wide .dropdown__body--list-element:last-child {
+    margin-right: auto;
+}
+.dropdown__body--wide .dropdown__body--list-element a {
+    font-family: var(--ff-title);
+}
+.dropdown__body--wide .dropdown__body--list-element a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.dropdown__body--list-element-img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 126px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    object-fit: cover;
 }
 
 .esc-block {

@@ -11,6 +11,18 @@ const blockCityMenu = document.querySelector('.menu-city__popup-list');
 //   headerMenuMobile.classList.add('_active');
 // })
 
+const dropdownsVariable = document.querySelectorAll('.dropdown--variable');
+dropdownsVariable.forEach((dropdown) => {
+    const elementsCount = [...dropdown.querySelectorAll('.dropdown__body--list-element')].length;
+    const dropdownBody = dropdown.querySelector('.dropdown__body');
+
+    if (elementsCount < 9) {
+        dropdownBody.classList.add('dropdown__body--less-9');
+    } else  {
+        dropdownBody.classList.add('dropdown__body--more-8');
+    }
+})
+
 
 
 window.addEventListener('click', function(e) {
