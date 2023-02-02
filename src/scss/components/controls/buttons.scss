@@ -112,7 +112,7 @@
 .button--secondary:hover {
     @media (any-hover: hover) {
         border: 1px solid #EFF2F5;
-        background: transparent;
+        --button-bg: transparent;
         --button-color: var(--c-text-regular);
     }
 }

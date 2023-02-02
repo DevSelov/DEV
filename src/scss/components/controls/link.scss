@@ -49,8 +49,12 @@
         padding-bottom: 10px;
         transition: .45s;
         &:hover {
-            background-size: 3px 1px;
-            color: var(--c-text-regular)
+            // background-size: 0px 0px;
+            // background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
+            @media (any-hover:hover) {
+                background-image: linear-gradient(to right, transparent 4px, transparent 4px);
+                color: var(--c-text-regular);
+            }
         }
         @media (max-width: 1300px) {
             &:not(.offer__link--text) {

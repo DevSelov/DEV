@@ -81,7 +81,9 @@
         background: #fff;
     }
     &:hover {
-        background: #8196B1;
+        @media (any-hover:hover) {
+            background: #8196B1;
+        }
     }
 }
 

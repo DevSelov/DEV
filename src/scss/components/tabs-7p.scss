@@ -112,8 +112,10 @@
 }
 
 .tabs-7p__industry:hover {
-  color: #fff;
-  background: var(--c-text-regular);
+  @media (any-hover:hover) {
+    color: #fff;
+    background: var(--c-text-regular);
+  }
 }
 
 .tabs-7p__industry--active {
@@ -124,7 +126,9 @@
   }
 }
 .tabs-7p__industry--active:hover  {
-  background: #8196B1;
+  @media (any-hover:hover) {
+    background: #8196B1;
+  }
 }
 
 .tabs-7p__industries-more {

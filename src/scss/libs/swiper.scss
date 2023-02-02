@@ -261,7 +261,14 @@
     @include getmask("../img/common/angle-left.svg");
     width: 12px;
     height: 12px;
-    background: #2B3B50;
+    background: #77828F;
+    transition: all 0.3s ease;
+}
+.swiper-button-prev:hover:after,
+.swiper-rtl .swiper-button-next:hover:after {
+    @media (any-hover:hover) {
+        background: #2B3B50;
+    }
 }
 
 .swiper-button-next,
@@ -279,8 +286,15 @@
     @include getmask("../img/common/angle-left.svg");
     width: 12px;
     height: 12px;
-    background: #2B3B50;
+    background: #77828F;
     transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+.swiper-button-next:hover:after,
+.swiper-rtl .swiper-button-prev:hover:after {
+    @media (any-hover:hover) {
+        background: #2B3B50;
+    }
 }
 
 .swiper-button-lock {

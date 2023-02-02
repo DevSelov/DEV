@@ -5,6 +5,7 @@
     cursor: pointer;
     &._active {
         color: var(--active-color);
+        transform-origin: center;
         .dropdown__body {
             opacity: 1;
             z-index: 999;
@@ -25,7 +26,11 @@
         background-repeat: no-repeat;
         background-position: center;
         margin-left: 6px;
+        transition: all 0.3s ease;
     }
+}
+.dropdown._active:after {
+    transform: rotate(180deg);
 }
 
 .dropdown__body {
