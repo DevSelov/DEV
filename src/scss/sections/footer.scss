@@ -181,6 +181,11 @@
             }
         }
     }
+    .button--ghost:hover {
+        @media (any-hover:hover) {
+            --button-bg: var(--bg-button-secondary);
+        }
+    }
     .button {
         padding: 19px 48px;
         background: #8196B1;

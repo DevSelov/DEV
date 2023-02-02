@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230201123305">
+    <link rel="stylesheet" href="./css/style.css?_v=20230202213041">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -1062,11 +1062,21 @@
                 <button class="tabs__toggler">Консольные лестницы</button>
                 <button class="tabs__toggler">Лестницы эконом</button>
                 <div class="tabs__toggler--end-dots">
-                    <button class="tabs__toggler">
-                <span class="button-more__dot"></span>
-                <span class="button-more__dot"></span>
-                <span class="button-more__dot"></span>                  
-            </button>
+                    <button class="tabs__toggler dropdown-targeted" data-dropdown-name="projects">
+                        <span class="button-more__dot"></span>
+                        <span class="button-more__dot"></span>
+                        <span class="button-more__dot"></span>                  
+                    </button>
+                </div>
+                </div>
+            <div class="dropdown-targeted__body" data-dropdown-name="projects">
+                <div class="dropdown__body">
+                    <ul class="dropdown__body--list">
+                        <li class="dropdown__body--list-element"><a href="#">Другие выпадайки</a></li>
+                        <li class="dropdown__body--list-element _active"><a href="#">Какой-то раздел</a></li>
+                        <li class="dropdown__body--list-element"><a href="#">Еще раздел</a></li>
+                        <li class="dropdown__body--list-element"><a href="#">Вот раздел</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -1266,7 +1276,7 @@
                             <form action="./callback.php" class="form form-callback shifter__form">
                                 <div class="radio__row">
                                     <label class="radio">
-                      <input type="radio" name="user_connect" class="radio__input">
+                      <input type="radio" name="user_connect" class="radio__input" checked>
                       <span class="radio__check"></span>
                       <span class="radio__title">Телефон</span>
                     </label>
@@ -1327,26 +1337,18 @@
             <section class="reviews section">
                 <div class="container">
                     <div class="reviews__container">
-                        <h2 class="section-title reviews__title">Отзывы клиентов</h2>
                         <div class="section-heading">
-                            <div class="tabs">
-                                <div class="tabs-top-box">
-                                    <div class="tabs__toggler-container" data-tabs="otzyv" data-scroll>
-                                        <div class="tabs__toggler--box">
-                                            <button class="tabs__toggler tab--active">Все</button>
-                                            <button class="tabs__toggler">Отзывы на Яндекс Картах</button>
-                                            <button class="tabs__toggler">Отзывы на нашем сайте</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tabs__page-container" data-tabs="otzyv">
-                                    <div class="tabs__page">
-                                    </div>
-                                </div>
-                            </div>
+                            <h1 class="section-title reviews__title sect-otzyvi-page__title">Отзывы клиентов</h1>
                             <div class="section-heading__links">
-                                <a href="#" class="link link--underlined"><span class="link__text">Написать отзыв</span></a>
-                                <a href="#" class="link link--underlined"><span class="link__text">Все отзывы</span></a>
+                                <a href="#" class="link link--underlined">
+                                    <span class="link__text">НАПИСАТЬ ОТЗЫВ</span>
+                                </a>
+                                <a href="#" class="link link--underlined">
+                                    <span class="link__text">Отзывы на Яндекс Картах</span>
+                                </a>
+                                <a href="#" class="link link--underlined">
+                                    <span class="link__text">Отзывы на нашем сайте</span>
+                                </a>
                             </div>
                         </div>
                         <div class="reviews-slider" data-swiper="main" data-swiper-slide="2" data-breakpoints='{"0": {"slidesPerView": 1}, "600": {"slidesPerView": 2, "spaceBetween": 16}, "992": {"spaceBetween": 24}, "1300": {"spaceBetween": 36}}' data-swiper-pagination data-swiper-navigation
@@ -2530,9 +2532,9 @@
     </div>
 </section>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff&_v=20230201123305"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff&_v=20230202213041"></script>
 
-    <script src="./js/index.js?_v=20230201123305"></script>
+    <script src="./js/index.js?_v=20230202213041"></script>
 </body>
 
 </html>

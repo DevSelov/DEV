@@ -39,6 +39,15 @@ import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
 
 
+import "./libs/rellax.js";
+// let rellax = new Rellax('.proud-card', {
+//     speed: 1,
+//     center: false,
+//     wrapper: null,
+//     round: true,
+//     vertical: true,
+//     horizontal: false
+//   });
 
 
 import "./unstable/tabs.js";

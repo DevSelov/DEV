@@ -1,7 +1,7 @@
 .faq {
     .bayan {
         // padding: 24px 0;
-      padding: 24px 16px 24px 0;
+      padding: 24px 16px 24px 24px;
     }
     .accordion__head {
         padding: 0
@@ -12,7 +12,7 @@
         line-height: 150%;
     }
     .accordion__body {
-        padding-left: 0;
+        padding-left: 66px;
     }
     .faq__title {
         margin-bottom: 58px;
@@ -45,7 +45,10 @@
             line-height: 150%;
         }
         .bayan {
-            padding: 16px 12px 16px 0
+            padding: 16px 12px 16px 16px;
+        }
+        .accordion__body {
+            padding-left: 20px;
         }
     }
     @media (max-width: 650px) {

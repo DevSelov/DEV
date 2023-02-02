@@ -3,6 +3,14 @@
 import "../unstable/inputster/formich.js";
 import "../unstable/burger.js";
 
+const dropdowns = document.querySelectorAll('.dropdown-targeted');
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener("click", (e) => {
+        const target = dropdown.dataset.dropdownName
+        const targetDropdown = document.querySelector(`.dropdown-targeted__body[data-dropdown-name="${target}"]`);
+        targetDropdown.classList.toggle('_active')
+    });
+})
 
 /**
  * Dropdown Select

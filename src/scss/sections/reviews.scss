@@ -1,7 +1,7 @@
 .reviews {
-    .section-title {
-        margin-bottom: 30px;
-    }
+    // .section-title {
+    //     margin-bottom: 30px;
+    // }
     .swiper-pagination {
         display: none;
     }
@@ -356,5 +356,10 @@
     }
     @media (max-width:992px) {
         margin-top: 36px;
+    }
+}
+.reviews__title {
+    @media (min-width: 701px) {
+        margin-bottom: 10px;
     }
 }

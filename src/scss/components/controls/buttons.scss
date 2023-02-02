@@ -119,7 +119,9 @@
 
 .button--ghost {
     --button-bg: transparent;
+    background: var(--button-bg);
     border-color: var(--bg-button-secondary);
+    transition: var(--tr-regular);
 }
 
 .button--on:hover {
