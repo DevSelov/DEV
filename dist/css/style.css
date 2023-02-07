@@ -2015,6 +2015,67 @@ input[type=search]::-webkit-search-cancel-button {
   background-color: var(--link-icon);
 }
 
+.link-popup .link__text {
+  padding-bottom: 5px;
+  background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  transition: 0.45s ease;
+}
+
+@media (any-hover: hover) {
+  .link-popup:hover .link__text {
+    background-size: 8px 0px;
+  }
+}
+
+.link-regular .link__text {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #959da7;
+  transition: 0.45s ease;
+}
+
+@media (any-hover: hover) {
+  .link-regular:hover .link__text {
+    border-color: transparent;
+  }
+}
+
+.link--external {
+  display: flex;
+  align-items: center;
+}
+
+.link--external::after {
+  content: "";
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-color: #77828F;
+  margin-top: -0.5em;
+  margin-left: 0.4em;
+  -webkit-mask: url("../img/common/arrow-right-up-mask.svg");
+  mask: url("../img/common/arrow-right-up-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: 0.45s ease;
+}
+
+@media (any-hover: hover) {
+  .link--external:hover::after {
+    background-color: #8196B1;
+  }
+}
+
+.link--external .link__text {
+  padding-bottom: 5px;
+}
+
 .link--geo::before {
   content: "";
   -webkit-mask: url("../img/common/geo-icon.svg");
@@ -5678,7 +5739,7 @@ select {
 
 .quiz-answer__check {
   display: block;
-  --size: 1.425rem;
+  --size: 24px;
   max-width: var(--size);
   min-width: var(--size);
   width: var(--size);
@@ -5707,7 +5768,7 @@ select {
 }
 
 .quiz-answer__radio:checked ~ .quiz-answer__check {
-  border-width: 4px;
+  border-width: 6px;
   background-color: var(--c-text-regular);
   border-color: var(--c-text-on);
 }
@@ -5824,7 +5885,7 @@ select {
   position: static;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 2.75rem;
 }
 @media (max-width: 1440px) {
@@ -5842,6 +5903,7 @@ select {
     padding-top: 53px;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
   }
 }
 
