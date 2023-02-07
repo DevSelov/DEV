@@ -1807,8 +1807,12 @@ input[type=search]::-webkit-search-cancel-button {
 
 .logo {
   display: block;
-  max-width: 11.6rem;
-  height: 2.35rem;
+  margin-right: 53px;
+}
+@media (max-width: 992px) {
+  .logo {
+    margin-right: 0;
+  }
 }
 
 .logo__img {
@@ -4884,6 +4888,10 @@ select {
   margin-left: 0;
 }
 
+.header__nav-list:first-child {
+  margin-right: auto;
+}
+
 .header__nav-item {
   margin-right: 2em;
   font-size: 1rem;
@@ -5143,6 +5151,11 @@ select {
 }
 .button-more__dot:not(:last-child) {
   margin-right: 8px;
+}
+
+.header__bottom-nav {
+  display: flex;
+  width: 100%;
 }
 
 .offer {

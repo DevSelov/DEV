@@ -50,6 +50,9 @@
         margin-left: 0;
     }
 }
+.header__nav-list:first-child {
+    margin-right: auto;
+}
 
 .header__nav-item {
     margin-right: 2em;
@@ -314,4 +317,9 @@
     &:not(:last-child) {
         margin-right: 8px;
     }
+}
+
+.header__bottom-nav {
+    display: flex;
+    width: 100%;
 }
