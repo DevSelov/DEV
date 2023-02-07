@@ -1,15 +1,13 @@
 .product-page-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 44px;
-    .accordion {
-        padding: 0 24px;
-    }
-    @media (max-width:1300px) {
-        grid-gap: 0;
+    grid-gap: 36px 44px;
+    @media (max-width: 992px) {
+        row-gap: 78px;
     }
     @media (max-width:650px) {
         grid-template-columns: 100%;
+        row-gap: 24px;
     }
 }
 
@@ -18,8 +16,7 @@
         .container {
             padding: 0
         }
-        .product-page--right-content,
-        .accord-mobile-views {
+        .product-page--right-content {
             padding-left: 28px;
             padding-right: 28px;
         }
@@ -53,15 +50,23 @@
 
 .product-page--right-content {
     grid-column: 2/2;
-    @media (max-width: 992px) {
-        .accordions {
-            display: none;
-        }
-    }
     @media (max-width:650px) {
         grid-column: auto;
     }
 }
+.product-page__accordions {
+    grid-column: 2/2;
+    @media (max-width: 992px) {
+        grid-column: 1/3;
+    }
+    @media (max-width:650px) {
+        grid-column: auto;
+        max-width: #{'calc(100% - calc(2 * 28px))'};
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 .product-page--picture--img {
     object-fit: cover;
@@ -340,33 +345,6 @@
     }
 }
 
-.accord-mobile-views {
-    display: none;
-    margin-top: 36px;
-    .accordions__title {
-        font-weight: 500;
-        font-size: 8px;
-        line-height: 100%;
-    }
-    .accordions__header {
-        padding: 14px 16px
-    }
-    .accordion {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    .accordion__title {
-        font-size: 10px;
-        line-height: 160%;
-    }
-    @media (max-width: 992px) {
-        display: block;
-    }
-    @media (max-width: 650px) {
-        margin-top: 22px;
-    }
-}
-
 .product-page-list {
     grid-gap: 16px;
     display: flex;
@@ -382,7 +360,7 @@
 }
 
 .product-page-btn {
-    margin: 36px 0;
+    margin: 36px 0 0 0;
     display: flex;
     grid-gap: 16px;
     button {

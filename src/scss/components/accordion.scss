@@ -1,12 +1,25 @@
 //accordion.scss
 :root {
     --accordion-border-color: #DDE0E3;
+    --bg-accordion-active: #F5F5F5;
 }
 
 .accordion {
     border-top: 1px solid var(--accordion-border-color);
-    --icon-size: 48px;
+    --icon-size: 40px;
     --icon-mr: 1rem;
+    --padding-hor: 24px;
+    transition: all 0.3s ease;
+    @media (max-width: 992px) {
+        --icon-size: 30px;
+        --icon-mr: 12px;
+        --padding-hor: 16px;
+    }
+}
+.accordion:hover {
+    @media (any-hover:hover) {
+        background: var(--bg-accordion-active);
+    }
 }
 
 .accordion:last-of-type {
@@ -17,10 +30,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 12px 0;
-    padding-right: 0;
+    padding: 24px #{'calc(var(--padding-hor) + 4px)'} 24px var(--padding-hor);
     @media (max-width: 1300px) {
-        padding: 8px 0
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 }
 
@@ -45,55 +58,22 @@
 .accordion__title {
     font-size: 1.125rem;
     @media (max-width: 1300px) {
+        font-size: 1.1429rem;
+        line-height: 150%;
+    }
+    @media (max-width:992px) {
         font-size: 12px;
     }
     @media (max-width:650px) {
         font-size: 14px;
+        line-height: 160%;
         width: 85%
     }
 }
 
 .accordion__body {
-    padding: 0.1875rem 1.5rem 1.5rem; //16-24
-}
-
-.accordion .bayan__toggler {
-    --width: 12px;
-    --height: 14px;
-    width: var(--width);
-    min-width: var(--width);
-    max-width: var(--width);
-    height: var(--height);
-    display: block;
-    margin-left: auto;
-    background-image: url('../img/common/angle-down.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: all 0.3s ease;
-    @media (max-width: 992px) {
-        // --width: 10px;
-        // --height: 6px;
-    }
-}
-
-
-/**
- * States
- */
-
-.accordion.bayan--opened {
-    background: #F5F5F5;
-    .accordion__head {}
-}
-
-.accordion--has-icon .accordion__body {
-    padding-left: calc(0.5rem + var(--icon-size) + var(--icon-mr));
-    @media (max-width: 1300px) {
-        padding-left: calc(-0.5rem + var(--icon-size) + var(--icon-mr))
-    }
-    @media (max-width:650px) {
-        padding-left: 10px;
-    }
+    padding: 0 1.5rem 1.5rem 5.625rem; //16-24
+    max-width: 48.4375rem;
 }
 
 .accordion__desc {
@@ -104,4 +84,67 @@
     @media (max-width: 1300px) {
         font-size: 12px
     }
+    @media (max-width:992px) {
+        font-size: 10px;
+    }
+    @media (max-width:650px) {
+        font-size: 12px;
+    }
 }
+
+.accordion .bayan__toggler {
+    --width: 24px;
+    --height: 24px;
+    width: var(--width);
+    min-width: var(--width);
+    max-width: var(--width);
+    height: var(--height);
+    display: block;
+    margin-left: auto;
+    background-image: url('../img/common/angle-down.svg');
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    @media (max-width: 992px) {
+        // --width: 10px;
+        // --height: 6px;
+    }
+    @media (max-width: 650px) {
+        --width: 12px;
+        --height: 8px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+/**
+ * States
+ */
+
+.accordion.bayan--opened {
+    background: var(--bg-accordion-active);
+}
+
+.accordion--has-icon .accordion__head {
+    padding-top: 19px;
+    padding-bottom: 21px;
+    @media (max-width: 992px) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+.accordion--has-icon .accordion__body {
+    padding-left: calc(var(--icon-size) + var(--icon-mr) + var(--padding-hor));
+    // @media (max-width:650px) {
+    //     padding-left: 10px;
+    // }
+}
+.accordion--has-icon .accordion__desc {
+    max-width: 478px;
+    @media (max-width:650px) {
+        max-width: #{'calc(100% - 20px)'};
+    }
+}
+

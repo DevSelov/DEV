@@ -101,14 +101,13 @@
 }
 
 .accordion--has-icon .accordion__body {
-  padding-left: calc(0.5rem + var(--icon-size) + var(--icon-mr));
-}
-
-@media (max-width: 1300px) {
-  .accordion--has-icon .accordion__body {
-    padding-left: calc(-0.5rem + var(--icon-size) + var(--icon-mr));
+  padding-left: #{'calc(0.5rem + var(--icon-size) + var(--icon-mr))'};
+  padding-top: 0.5rem;
+  @media (max-width: 1300px) {
+      padding-left: calc(-0.5rem + var(--icon-size) + var(--icon-mr));
   }
 }
+
 
 @media (max-width: 650px) {
   .accordion--has-icon .accordion__body {
