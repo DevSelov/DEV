@@ -9423,40 +9423,40 @@ select {
     top: calc(var(--radius-circle) + 4%);
   }
   .product-page--circle:nth-of-type(1) .product-page--circle--popup {
-    left: -12vw;
-    top: 110%;
+    left: -5vw;
+    top: -110%;
   }
   .product-page--circle:nth-of-type(2) {
     left: calc(var(--radius-circle) + 25%);
     top: calc(var(--radius-circle) + 20%);
   }
   .product-page--circle:nth-of-type(2) .product-page--circle--popup {
-    left: -32vw;
-    top: 110%;
+    left: -27vw;
+    top: -390%;
   }
   .product-page--circle:nth-of-type(3) {
     left: calc(var(--radius-circle) + 59.5%);
     top: calc(var(--radius-circle) + 34.8%);
   }
   .product-page--circle:nth-of-type(3) .product-page--circle--popup {
-    left: -68vw;
-    top: 110%;
+    left: -59vw;
+    top: -610%;
   }
   .product-page--circle:nth-of-type(4) {
     left: calc(var(--radius-circle) + 41%);
     top: calc(var(--radius-circle) + 58.3%);
   }
   .product-page--circle:nth-of-type(4) .product-page--circle--popup {
-    left: -50vw;
-    top: 110%;
+    left: -43vw;
+    top: -1060%;
   }
   .product-page--circle:nth-of-type(5) {
     top: calc(var(--radius-circle) + 81.9%);
     left: calc(var(--radius-circle) + 9.3%);
   }
   .product-page--circle:nth-of-type(5) .product-page--circle--popup {
-    left: -16vw;
-    top: 110%;
+    left: -9vw;
+    top: -1310%;
   }
 }
 
