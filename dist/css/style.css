@@ -1913,11 +1913,14 @@ input[type=search]::-webkit-search-cancel-button {
 .button--primary {
   --button-bg: var(--bg-button-primary);
   --button-color: var(--c-text-on);
+  color: var(--button-color);
 }
 
 @media (any-hover: hover) {
   .button--primary:hover {
     --button-bg: var(--bg-button-secondary);
+    --button-color: var(--c-text-on);
+    color: var(--button-color);
   }
 }
 
@@ -1951,6 +1954,7 @@ input[type=search]::-webkit-search-cancel-button {
 @media (any-hover: hover) {
   .button--primary-light:hover {
     background-color: #DDE0E3;
+    color: var(--c-text-regular);
   }
 }
 
@@ -9605,23 +9609,6 @@ select {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #FFFFFF;
-}
-.product-page-btn .button--secondary {
-  --button-color: #1D2025;
-  --button-bg: #E1E6EC;
-  background-color: var(--button-bg);
-  color: var(--button-color);
-  border-color: transparent;
-}
-@media (any-hover: hover) {
-  .product-page-btn .button--secondary:hover {
-    --button-bg: #DDE0E3;
-  }
-}
-@media (any-hover: hover) {
-  .product-page-btn .button--primary:hover {
-    color: var(--c-text-on);
-  }
 }
 @media (max-width: 1300px) {
   .product-page-btn button {

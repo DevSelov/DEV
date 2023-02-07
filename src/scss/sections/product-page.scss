@@ -371,23 +371,23 @@
         text-transform: uppercase;
         color: #FFFFFF;
     }
-    .button--secondary {
-        --button-color: #1D2025;
-        --button-bg: #E1E6EC;
-        background-color: var(--button-bg);
-        color: var(--button-color);
-        border-color: transparent;
-    }
-    .button--secondary:hover {
-        @media (any-hover:hover) {
-            --button-bg: #DDE0E3;
-        }
-    }
-    .button--primary:hover {
-        @media (any-hover:hover) {
-            color: var(--c-text-on);
-        }
-    }
+    // .button--secondary {
+    //     --button-color: #1D2025;
+    //     --button-bg: #E1E6EC;
+    //     background-color: var(--button-bg);
+    //     color: var(--button-color);
+    //     border-color: transparent;
+    // }
+    // .button--secondary:hover {
+    //     @media (any-hover:hover) {
+    //         --button-bg: #DDE0E3;
+    //     }
+    // }
+    // .button--primary:hover {
+    //     @media (any-hover:hover) {
+    //         color: var(--c-text-on);
+    //     }
+    // }
     @media (max-width: 1300px) {
         button {
             padding: 23px 34px;

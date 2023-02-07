@@ -96,10 +96,13 @@
 .button--primary {
     --button-bg: var(--bg-button-primary);
     --button-color: var(--c-text-on);
+    color: var(--button-color);
 }
 .button--primary:hover {
     @media (any-hover: hover) {
         --button-bg: var(--bg-button-secondary);
+        --button-color: var(--c-text-on);
+        color: var(--button-color);
     }
 }
 
@@ -128,6 +131,7 @@
 .button--primary-light:hover {
     @media (any-hover:hover) {
         background-color: #DDE0E3;
+        color: var(--c-text-regular);
     }
 }
 
