@@ -43,13 +43,6 @@
         .section-heading__links {
             margin-top: 13px;
         }
-        .accordion .bayan__toggler {
-            background-size: cover;
-            height: 10px;
-        }
-        .accordion__head {
-            padding: 7px
-        }
     }
     @media (max-width:650px) {
         padding-top: 32px;
@@ -61,17 +54,6 @@
         .section-heading__links,
         .accordion__icon {
             display: none;
-        }
-        .accordion__head {
-            padding: 20px 0;
-        }
-        .accordion .bayan__toggler {
-            max-width: 12px;
-            width: 12px;
-            height: 8px;
-            margin-right: 2%;
-            background-size: cover;
-            background-position: center;
         }
     }
 }
@@ -181,9 +163,8 @@
     }
 }
 
-.why .accordion__head {
-    padding-right: 12px;
-}
-.why__faq .accordion__title {
-    line-height: 1.4;
+.why .accordion__body {
+    @media (max-width: 650px) {
+        padding-left: 16px;
+    }
 }

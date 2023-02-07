@@ -2213,18 +2213,18 @@ input[type=search]::-webkit-search-cancel-button {
 
 .accordion__desc {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: var(--c-text-regular);
 }
 @media (max-width: 1300px) {
   .accordion__desc {
-    font-size: 12px;
+    font-size: 0.857rem;
   }
 }
 @media (max-width: 992px) {
   .accordion__desc {
-    font-size: 10px;
+    font-size: 0.951rem;
   }
 }
 @media (max-width: 650px) {
@@ -6072,13 +6072,6 @@ select {
   .why .section-heading__links {
     margin-top: 13px;
   }
-  .why .accordion .bayan__toggler {
-    background-size: cover;
-    height: 10px;
-  }
-  .why .accordion__head {
-    padding: 7px;
-  }
 }
 @media (max-width: 650px) {
   .why {
@@ -6092,17 +6085,6 @@ select {
   .why .section-heading__links,
   .why .accordion__icon {
     display: none;
-  }
-  .why .accordion__head {
-    padding: 20px 0;
-  }
-  .why .accordion .bayan__toggler {
-    max-width: 12px;
-    width: 12px;
-    height: 8px;
-    margin-right: 2%;
-    background-size: cover;
-    background-position: center;
   }
 }
 
@@ -6230,12 +6212,10 @@ select {
   }
 }
 
-.why .accordion__head {
-  padding-right: 12px;
-}
-
-.why__faq .accordion__title {
-  line-height: 1.4;
+@media (max-width: 650px) {
+  .why .accordion__body {
+    padding-left: 16px;
+  }
 }
 
 .numbers-about {
