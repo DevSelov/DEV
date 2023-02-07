@@ -361,7 +361,8 @@
 
 .product-page-btn {
     margin: 36px 0 0 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
     button {
         font-weight: 700;
@@ -371,23 +372,6 @@
         text-transform: uppercase;
         color: #FFFFFF;
     }
-    // .button--secondary {
-    //     --button-color: #1D2025;
-    //     --button-bg: #E1E6EC;
-    //     background-color: var(--button-bg);
-    //     color: var(--button-color);
-    //     border-color: transparent;
-    // }
-    // .button--secondary:hover {
-    //     @media (any-hover:hover) {
-    //         --button-bg: #DDE0E3;
-    //     }
-    // }
-    // .button--primary:hover {
-    //     @media (any-hover:hover) {
-    //         color: var(--c-text-on);
-    //     }
-    // }
     @media (max-width: 1300px) {
         button {
             padding: 23px 34px;
@@ -396,6 +380,7 @@
         }
     }
     @media (max-width: 992px) {
+        grid-template-columns: 1fr;
         flex-direction: column;
         grid-gap: 8px;
         margin: 16px 0 0;

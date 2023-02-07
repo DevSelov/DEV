@@ -97,6 +97,7 @@
     --button-bg: var(--bg-button-primary);
     --button-color: var(--c-text-on);
     color: var(--button-color);
+    text-transform: uppercase;
 }
 .button--primary:hover {
     @media (any-hover: hover) {
@@ -110,22 +111,25 @@
     background: #EEF0F1;
     border-radius: 4px;
     font-weight: 700;
-    font-size: 14px;
+    // font-size: 14px;
     line-height: 100%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--c-text-regular);
     border: none;
-    padding: 21px 0;
+    padding-top: 21px;
+    padding-bottom: 21px;
     @media (max-width: 1300px) {
-        font-size: 12px;
-        padding: 18px 0
+        // font-size: 12px;
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
     @media (max-width: 650px) {
         font-weight: 700;
-        font-size: 12px;
+        // font-size: 12px;
         line-height: 160%;
-        padding: 19px 0 18px
+        padding-top: 19px;
+        padding-bottom: 18px;
     }
 }
 .button--primary-light:hover {

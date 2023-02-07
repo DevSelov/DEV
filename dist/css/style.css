@@ -1918,6 +1918,7 @@ input[type=search]::-webkit-search-cancel-button {
   --button-bg: var(--bg-button-primary);
   --button-color: var(--c-text-on);
   color: var(--button-color);
+  text-transform: uppercase;
 }
 
 @media (any-hover: hover) {
@@ -1932,26 +1933,26 @@ input[type=search]::-webkit-search-cancel-button {
   background: #EEF0F1;
   border-radius: 4px;
   font-weight: 700;
-  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--c-text-regular);
   border: none;
-  padding: 21px 0;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 @media (max-width: 1300px) {
   .button--primary-light {
-    font-size: 12px;
-    padding: 18px 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 }
 @media (max-width: 650px) {
   .button--primary-light {
     font-weight: 700;
-    font-size: 12px;
     line-height: 160%;
-    padding: 19px 0 18px;
+    padding-top: 19px;
+    padding-bottom: 18px;
   }
 }
 
@@ -9679,7 +9680,8 @@ select {
 
 .product-page-btn {
   margin: 36px 0 0 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
 }
 .product-page-btn button {
@@ -9699,6 +9701,7 @@ select {
 }
 @media (max-width: 992px) {
   .product-page-btn {
+    grid-template-columns: 1fr;
     flex-direction: column;
     grid-gap: 8px;
     margin: 16px 0 0;
