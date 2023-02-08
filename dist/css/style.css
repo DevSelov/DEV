@@ -2033,16 +2033,16 @@ input[type=search]::-webkit-search-cancel-button {
 
 .link-popup .link__text {
   padding-bottom: 5px;
-  background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
+  background-image: linear-gradient(to right, rgb(149, 157, 167) 4px, transparent 4px);
   background-size: 8px 1px;
   background-repeat: repeat-x;
   background-position: 0 bottom;
-  transition: 0.45s ease;
+  transition: all 0.45s ease;
 }
 
 @media (any-hover: hover) {
   .link-popup:hover .link__text {
-    background-size: 8px 0px;
+    background-size: 0px 1px;
   }
 }
 

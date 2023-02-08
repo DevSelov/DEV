@@ -25,15 +25,16 @@
 
 .link-popup .link__text {
     padding-bottom: 5px;
-    background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
+    background-image: linear-gradient(to right, rgba(149, 157, 167, 1) 4px, transparent 4px);
     background-size: 8px 1px;
     background-repeat: repeat-x;
     background-position: 0 bottom;
-    transition: .45s ease;
+    transition: all .45s ease;
 }
 .link-popup:hover .link__text {
     @media (any-hover:hover) {
-        background-size: 8px 0px;
+        background-size: 0px 1px;
+        // background-image: linear-gradient(to right, rgba(149, 157, 167, 0) 4px, transparent 4px);
     }
 }
 
