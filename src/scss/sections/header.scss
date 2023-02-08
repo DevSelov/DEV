@@ -82,6 +82,7 @@
     font-weight: 600;
     line-height: 100%;
     color: #2B3B50;
+    transition: color 0.25s ease;
 }
 
 .header__contacts-calc-icon {
@@ -91,6 +92,11 @@
     width: var(--size);
     height: var(--size);
     margin-right: 0.75em;
+    fill: #2B3B50;
+    transition: fill 0.25s ease;
+}
+.header__contacts-calc:hover .header__contacts-calc-icon {
+    fill: var(--c-link-hover);
 }
 
 .header__contacts-call {
@@ -297,15 +303,33 @@
     }
 }
 
+
 .button-more {
+    --dots-color: var(--c-text-regular);
     display: flex;
     align-items: center;
     margin-left: 32px;
     cursor: pointer;
-    &:focus+.header__nav-list__dropdown-block {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.button-more:focus+.header__nav-list__dropdown-block {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.header__nav-item-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header__nav-item-dropdown .button-more {
+    margin-left: 1.5rem;
+}
+.header__nav-link-dropdown:hover + .button-more,
+.button-more:hover {
+    @media (any-hover:hover) {
+        --dots-color: var(--c-link-hover);
     }
 }
 
@@ -313,10 +337,11 @@
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: var(--c-text-regular);
-    &:not(:last-child) {
-        margin-right: 8px;
-    }
+    background: var(--dots-color);
+    transition: background 0.3s ease;
+}
+.button-more__dot:not(:last-child) {
+    margin-right: 8px;
 }
 
 .header__bottom-nav {

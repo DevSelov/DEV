@@ -430,6 +430,10 @@
         font-size: 12px;
     }
 }
+.quiz-button-next.button--secondary:hover {
+    border-color: transparent;
+    background: var(--bg-button-secondary);
+}
 .quiz-buttons {
     position: static;
     display: flex;
@@ -611,10 +615,22 @@
     padding: 21px;
     background: #8196B1;
 }
+.quiz__submit:hover {
+    @media (any-hover:hover) {
+        border-color: transparent;
+        background: var(--bg-button-secondary);
+    }
+}
 
 .quiz .input-attach,
 .quiz .input-attach .link__text {
-    color: var(--c-text-regular);
-    --color: var(--c-text-regular);
+    color: var(--color);
+    --color: var(--c-text-on);
     --icon-color: var(--color);
+}
+.quiz .input-attach:hover,
+.quiz .input-attach:hover .link__text {
+    @media (any-hover:hover) {
+        --color: var(--c-text-secondary);
+    }
 }

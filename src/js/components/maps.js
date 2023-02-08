@@ -1,5 +1,5 @@
 //import { data } from '/data_map.json';
-if (document.querySelector('#map')) {
+if (document.querySelector('#map') && ymaps != undefined) {
     ymaps.ready(init);
 
     function init() {

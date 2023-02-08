@@ -1267,6 +1267,7 @@
   --radius-border: 4px;
   --c-text-regular: #2B3B50;
   --c-text-secondary: #77828F;
+  --c-link-hover: #8196B1;
   --icon-color: #8196B1;
   --active-color: #8196B1;
   --c-text-on: #fff;
@@ -1930,6 +1931,10 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .button--primary-light {
+  background-color: #8196B1;
+}
+
+.button--primary-white {
   background: #EEF0F1;
   border-radius: 4px;
   font-weight: 700;
@@ -1942,13 +1947,13 @@ input[type=search]::-webkit-search-cancel-button {
   padding-bottom: 21px;
 }
 @media (max-width: 1300px) {
-  .button--primary-light {
+  .button--primary-white {
     padding-top: 18px;
     padding-bottom: 18px;
   }
 }
 @media (max-width: 650px) {
-  .button--primary-light {
+  .button--primary-white {
     font-weight: 700;
     line-height: 160%;
     padding-top: 19px;
@@ -1957,7 +1962,7 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 @media (any-hover: hover) {
-  .button--primary-light:hover {
+  .button--primary-white:hover {
     background-color: #DDE0E3;
     color: var(--c-text-regular);
   }
@@ -1981,6 +1986,12 @@ input[type=search]::-webkit-search-cancel-button {
   background: var(--button-bg);
   border-color: var(--bg-button-secondary);
   transition: var(--tr-regular);
+}
+
+@media (any-hover: hover) {
+  .button--ghost:hover {
+    --button-bg: var(--bg-button-secondary);
+  }
 }
 
 @media (any-hover: hover) {
@@ -2431,12 +2442,12 @@ input[type=search]::-webkit-search-cancel-button {
 @media (max-width: 1300px) {
   .hero-categories-card--current {
     max-width: 48.94%;
-    padding-top: 0;
   }
 }
 @media (max-width: 1128px) {
   .hero-categories-card--current {
     max-width: 100%;
+    padding-top: 0;
   }
 }
 @media (max-width: 768px) {
@@ -4006,6 +4017,11 @@ input[type=search]::-webkit-search-cancel-button {
   font-family: var(--ff-title);
   margin-bottom: 24px;
   color: var(--c-text-regular);
+  transition: color 0.3s ease;
+}
+
+.dropdown__body-title:hover {
+  color: var(--active-color);
 }
 
 .dropdown__body--list {
@@ -4107,6 +4123,16 @@ input[type=search]::-webkit-search-cancel-button {
   .esc-block {
     top: 18px;
     right: 28px;
+  }
+}
+
+.dropdown--title {
+  transition: color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .dropdown--title:hover {
+    color: var(--c-link-hover);
   }
 }
 
@@ -4788,9 +4814,15 @@ select {
 }
 
 .tabs-7p__industries-more {
+  --dots-color: var(--c-text-regular);
   letter-spacing: -100em;
   color: transparent;
   margin-right: 0;
+}
+
+.tabs-7p__industries-more:hover {
+  --dots-color: var(--c-text-on);
+  background-color: var(--c-text-regular);
 }
 
 .tabs-7p__industries-dropdown {
@@ -4918,6 +4950,7 @@ select {
   font-weight: 600;
   line-height: 100%;
   color: #2B3B50;
+  transition: color 0.25s ease;
 }
 
 .header__contacts-calc-icon {
@@ -4927,6 +4960,12 @@ select {
   width: var(--size);
   height: var(--size);
   margin-right: 0.75em;
+  fill: #2B3B50;
+  transition: fill 0.25s ease;
+}
+
+.header__contacts-calc:hover .header__contacts-calc-icon {
+  fill: var(--c-link-hover);
 }
 
 .header__contacts-call {
@@ -5130,23 +5169,46 @@ select {
 }
 
 .button-more {
+  --dots-color: var(--c-text-regular);
   display: flex;
   align-items: center;
   margin-left: 32px;
   cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
+
 .button-more:focus + .header__nav-list__dropdown-block {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
+.header__nav-item-dropdown {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header__nav-item-dropdown .button-more {
+  margin-left: 1.5rem;
+}
+
+@media (any-hover: hover) {
+  .header__nav-link-dropdown:hover + .button-more,
+  .button-more:hover {
+    --dots-color: var(--c-link-hover);
+  }
+}
+
 .button-more__dot {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--c-text-regular);
+  background: var(--dots-color);
+  transition: background 0.3s ease;
 }
+
 .button-more__dot:not(:last-child) {
   margin-right: 8px;
 }
@@ -5259,6 +5321,7 @@ select {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  font-family: var(--ff-title);
 }
 
 @media (max-width: 700px) {
@@ -5892,6 +5955,11 @@ select {
   }
 }
 
+.quiz-button-next.button--secondary:hover {
+  border-color: transparent;
+  background: var(--bg-button-secondary);
+}
+
 .quiz-buttons {
   position: static;
   display: flex;
@@ -6096,11 +6164,25 @@ select {
   background: #8196B1;
 }
 
+@media (any-hover: hover) {
+  .quiz__submit:hover {
+    border-color: transparent;
+    background: var(--bg-button-secondary);
+  }
+}
+
 .quiz .input-attach,
 .quiz .input-attach .link__text {
-  color: var(--c-text-regular);
-  --color: var(--c-text-regular);
+  color: var(--color);
+  --color: var(--c-text-on);
   --icon-color: var(--color);
+}
+
+@media (any-hover: hover) {
+  .quiz .input-attach:hover,
+  .quiz .input-attach:hover .link__text {
+    --color: var(--c-text-secondary);
+  }
 }
 
 .why .section-title {
@@ -7396,6 +7478,7 @@ select {
   line-height: 100%;
   font-family: "OpenSans";
   padding: 0;
+  transition: all 0.3s ease;
 }
 @media (max-width: 1300px) {
   .reviews__photos-more {
@@ -7416,6 +7499,13 @@ select {
     width: 64px;
     height: 64px;
     font-size: 14px;
+  }
+}
+
+@media (any-hover: hover) {
+  .reviews__photos-more:hover {
+    background-color: var(--c-text-regular);
+    color: var(--c-text-on);
   }
 }
 
@@ -8501,6 +8591,11 @@ select {
   z-index: 1;
 }
 
+.projects-gallery-buttons .swiper-button-prev,
+.projects-gallery-buttons .swiper-button-next {
+  top: 34%;
+}
+
 .news__title {
   margin-bottom: 56px;
 }
@@ -8642,6 +8737,7 @@ select {
   margin: auto;
   bottom: 0;
   top: 0;
+  transition: all 0.3s ease;
 }
 @media (max-width: 1300px) {
   .videos-card__play {
@@ -8664,6 +8760,19 @@ select {
   margin: auto;
   --color-icon-svg: #fff;
   fill: var(--color-icon-svg);
+  transition: fill 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .videos-card__play:hover {
+    background-color: var(--bg-element);
+  }
+}
+
+@media (any-hover: hover) {
+  .videos-card__play:hover .videos-card__icon {
+    --color-icon-svg: var(--c-text-regular);
+  }
 }
 
 .videos-slider {
@@ -12723,7 +12832,11 @@ img {
   border-radius: var(--radius-border);
 }
 
+a {
+  transition: color 0.3s ease;
+}
+
 a:hover {
-  color: #8196B1;
+  color: var(--c-link-hover);
 }
 /*# sourceMappingURL=../maps/style.css.map */

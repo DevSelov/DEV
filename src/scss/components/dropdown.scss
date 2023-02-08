@@ -71,7 +71,11 @@
     font-weight: 600;
     font-family: var(--ff-title);
     margin-bottom: 24px;
-    color: var(--c-text-regular)
+    color: var(--c-text-regular);
+    transition: color 0.3s ease;
+}
+.dropdown__body-title:hover {
+    color: var(--active-color);
 }
 
 .dropdown__body--list {
@@ -162,5 +166,13 @@
     @media (max-width:600px) {
         top: 18px;
         right: 28px;
+    }
+}
+.dropdown--title {
+    transition: color 0.3s ease;
+}
+.dropdown--title:hover {
+    @media (any-hover:hover) {
+        color: var(--c-link-hover);
     }
 }

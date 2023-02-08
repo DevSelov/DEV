@@ -132,6 +132,7 @@
 }
 
 .tabs-7p__industries-more {
+  --dots-color: var(--c-text-regular);
   // margin-left: auto;
   // margin-right: 16px;
   // font-size: 0;
@@ -149,6 +150,10 @@
   letter-spacing: -100em;
   color: transparent;
   margin-right: 0;
+}
+.tabs-7p__industries-more:hover {
+  --dots-color: var(--c-text-on);
+  background-color: var(--c-text-regular);
 }
 .tabs-7p__industries-dropdown {
   transform-origin: top right;

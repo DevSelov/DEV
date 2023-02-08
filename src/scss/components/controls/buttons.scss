@@ -108,6 +108,10 @@
 }
 
 .button--primary-light {
+    background-color: #8196B1;
+}
+
+.button--primary-white {
     background: #EEF0F1;
     border-radius: 4px;
     font-weight: 700;
@@ -132,7 +136,7 @@
         padding-bottom: 18px;
     }
 }
-.button--primary-light:hover {
+.button--primary-white:hover {
     @media (any-hover:hover) {
         background-color: #DDE0E3;
         color: var(--c-text-regular);
@@ -157,6 +161,11 @@
     background: var(--button-bg);
     border-color: var(--bg-button-secondary);
     transition: var(--tr-regular);
+}
+.button--ghost:hover { 
+    @media (any-hover:hover) {
+        --button-bg: var(--bg-button-secondary);
+    }
 }
 
 .button--on:hover {

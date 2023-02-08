@@ -90,6 +90,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    font-family: var(--ff-title);
 }
 @media (max-width: 700px) {
     .offer-bullet:nth-child(1) {
