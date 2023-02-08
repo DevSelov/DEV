@@ -392,7 +392,7 @@
 }
 
 .product-page-btn {
-    margin: 36px 0 0 0;
+    margin: 50px 0 0 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px;
@@ -431,33 +431,29 @@
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
-    svg {
-        width: 32px;
-        height: 32px;
-        margin-right: 16px;
-        background: var(--c-text-regular);
-        border-radius: 50%;
-        padding: 10px;
-        transition: all 0.3s ease;
+}
+.product-page-list--link .link__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.04em;
+
+    @media (max-width: 992px) {
+        font-size: 10px;
+        padding-bottom: 6px;
     }
-    .link__text {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 100%;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-    }
-    @media (max-width:992px) {
-        svg {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-            padding: 6px
-        }
-        .link__text {
-            font-size: 10px;
-            padding-bottom: 6px;
-        }
+}
+.product-page-list--link svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    fill: var(--c-text-regular);
+    @media (max-width: 992px) {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
     }
 }
 .product-page-list--link:hover {
@@ -467,7 +463,7 @@
 }
 .product-page-list--link:hover svg {
   @media (any-hover:hover) {
-    background: #556273;
+    fill: #556273;
     }
 }
 

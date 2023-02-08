@@ -14,7 +14,7 @@
         }
     }
     .dropdown__body--wide.dropdown__body {
-        transform: translate(-50%, 40px);
+        // transform: translate(-50%, 40px);
     }
     &:after {
         content: '';
@@ -57,7 +57,7 @@
 }
 .dropdown__body--wide {
      max-width: 1096px;
-     left: 50%;
+     left: 0%;
      width: max-content;
      padding: 24px;
 }

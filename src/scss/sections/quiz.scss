@@ -333,7 +333,7 @@
 }
 
 .quiz-answer__radio:checked ~ .quiz-answer__check {
-    border-width: 4px;
+    border-width: 6px;
     background-color: var(--c-text-regular);
     border-color: var(--c-text-on);
     @media (max-width: 920px) {
