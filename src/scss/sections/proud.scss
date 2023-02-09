@@ -423,21 +423,24 @@
 .proud-card__callout {
     position: relative;
     height: max-content;
-    &:before {
-        content: '';
-        height: 1px;
-        background: #959DA7;
-        width: 95%;
-        position: absolute;
-        margin-top: 80px;
-        left: -100%;
-        z-index: -1;
-        @media (max-width: 1300px) {
-            margin-top: 14%;
-        }
-        @media (max-width:650px) {
-            display: none;
-        }
+    @media (max-width: 700px) {
+        order: -1;
+    }
+}
+.proud-card__callout:before {
+    content: '';
+    height: 1px;
+    background: #959DA7;
+    width: 95%;
+    position: absolute;
+    margin-top: 80px;
+    left: -100%;
+    z-index: -1;
+    @media (max-width: 1300px) {
+        margin-top: 14%;
+    }
+    @media (max-width:650px) {
+        display: none;
     }
 }
 
