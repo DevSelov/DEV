@@ -159,6 +159,7 @@
         background-position: center;
         background-repeat: no-repeat;
         @media (max-width: 700px) {
+            display: none;
             width: 60%;
             height: 232px;
         }

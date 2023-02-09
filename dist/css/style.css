@@ -8590,6 +8590,7 @@ select {
 }
 @media (max-width: 700px) {
   .projects-gallery-slide .link::before {
+    display: none;
     width: 60%;
     height: 232px;
   }
@@ -12662,7 +12663,6 @@ select {
     order: 2;
     margin-left: 0;
     margin-top: 12px;
-    display: none;
   }
 }
 
