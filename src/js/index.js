@@ -111,6 +111,7 @@ const casesFilterDropdown = document.querySelector(
   ".tabs-7p__industries-dropdown"
 );
 
+import {debounce} from "./utils/helpers.js";
 if ([...casesFilterIndustries].length > 0) {
   casesFilterIndustries.forEach((industry) => {
     industry.addEventListener("click", () => {

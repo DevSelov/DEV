@@ -33,7 +33,7 @@
 }
 .link-popup:hover .link__text {
     @media (any-hover:hover) {
-        background-size: 0px 1px;
+        background-size: 1px 1px;
         // background-image: linear-gradient(to right, rgba(149, 157, 167, 0) 4px, transparent 4px);
     }
 }
@@ -89,46 +89,45 @@
 }
 
 .link--underlined {
-    .link__text {
-        background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
-        background-size: 8px 1px;
-        background-repeat: repeat-x;
-        background-position: 0 bottom;
-        padding-bottom: 5px;
-        transition: .45s;
-        &:hover {
-            // background-size: 0px 0px;
-            // background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
-            @media (any-hover:hover) {
-                background-image: linear-gradient(to right, transparent 4px, transparent 4px);
-                color: var(--c-text-regular);
-            }
-        }
-        @media (max-width: 1300px) {
-            &:not(.offer__link--text) {
-                font-size: 12px;
-            }
-        }
-        @media (max-width: 992px) {
-            &:not(.offer__link--text) {
-                background: #E1E6EC;
-                font-weight: 700;
-                font-size: 10px;
-                line-height: 100%;
-                letter-spacing: 0.04em;
-                text-transform: uppercase;
-                color: #1D2025;
-                font-family: 'OpenSans';
-                padding: 12px 24px;
-                border-radius: var(--radius-border)
-            }
-        }
-    }
     @media (max-width:600px) {
         width: 100%;
         .link__text:not(.offer__link--text) {
             width: 100%;
             padding: 14px 24px;
         }
+    }
+}
+.link--underlined .link__text {
+    background-image: linear-gradient(to right, #959DA7 4px, transparent 4px);
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    padding-bottom: 5px;
+    transition: .45s;
+    @media (max-width: 1300px) {
+        &:not(.offer__link--text) {
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 992px) {
+        &:not(.offer__link--text) {
+            background: #E1E6EC;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 100%;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #1D2025;
+            font-family: 'OpenSans';
+            padding: 12px 24px;
+            border-radius: var(--radius-border)
+        }
+    }
+}
+.link--underlined:hover .link__text {
+    @media (any-hover:hover) {
+        // background-image: linear-gradient(to right, transparent 4px, transparent 4px);
+        color: var(--c-text-regular);
+        background-size: 1px 1px;
     }
 }

@@ -108,3 +108,8 @@
 .videos-slider {
     position: relative;
 }
+
+.videos-slider .swiper-button-prev,
+.videos-slider .swiper-button-next{
+    top: 33%;
+}
