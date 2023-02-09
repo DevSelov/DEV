@@ -9712,7 +9712,8 @@ select {
 }
 .product-page--circle:nth-of-type(5) .product-page--circle--popup {
   left: -690%;
-  top: -880%;
+  top: unset;
+  bottom: 110%;
 }
 @media (max-width: 992px) {
   .product-page--circle:nth-of-type(5) {
@@ -9723,7 +9724,8 @@ select {
 @media (max-width: 768px) {
   .product-page--circle:nth-of-type(5) .product-page--circle--popup {
     left: -9vw;
-    top: -1310%;
+    top: unset;
+    bottom: 200%;
   }
 }
 
