@@ -4755,9 +4755,13 @@ select {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 28px;
-  padding-right: 28px;
-  width: fit-content;
+}
+@media (max-width: 700px) {
+  .filters-7p__track {
+    padding-left: 28px;
+    padding-right: 28px;
+    width: fit-content;
+  }
 }
 
 .tabs-7p-tab {
