@@ -9597,6 +9597,8 @@ select {
 .product-page--circle svg {
   width: 16px;
   height: 16px;
+  transition: all 0.3s ease;
+  transform-origin: center;
 }
 @media (max-width: 992px) {
   .product-page--circle svg {
@@ -9605,11 +9607,16 @@ select {
   }
 }
 
-.product-page--circle:hover .product-page--circle--popup,
-.product-page--circle:focus .product-page--circle--popup {
+.product-page--circle._active {
+  border: 8px solid #DFE9F5;
+}
+.product-page--circle._active .product-page--circle--popup {
   transform: translateY(0);
   opacity: 1;
   z-index: 2;
+}
+.product-page--circle._active svg {
+  transform: rotate(45deg);
 }
 
 .product-page--circle:nth-of-type(1) {

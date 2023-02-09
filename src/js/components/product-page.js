@@ -16,3 +16,23 @@
         });
     });
 })();
+
+import {isClickedBeyond} from "../utils/helpers.js";
+const hotspotCircles = document.querySelectorAll('.product-page--circle');
+
+hotspotCircles.forEach((hotspot, index) => {
+    const hotspotClass = `hotspot-${index}`
+    hotspot.classList.add(hotspotClass);
+    window.addEventListener("click", (e) => {
+        if (hotspot.classList.contains('_active')) {
+            hotspot.classList.remove('_active');
+            return;
+        }
+
+        if (isClickedBeyond(e, hotspotClass)) {
+            hotspot.classList.remove('_active');
+        } else {
+            hotspot.classList.add('_active');
+        }
+    })
+});
