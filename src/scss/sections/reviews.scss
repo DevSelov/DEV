@@ -1,12 +1,28 @@
+.reviews .reviews__container .section-heading__links {
+    transform: translateY(-14px);
+    justify-content: flex-start;
+    @media (max-width:600px) {
+        margin-left: -28px;
+        margin-right: -28px;
+        padding-left: 28px;
+        padding-right: 28px;
+        margin-bottom: -20px;
+        padding-bottom: 20px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        transform: translateY(0);
+        width: #{'calc(100% + calc(28px * 2))'};
+    }
+}
+.reviews .reviews__container .section-heading__links a {
+    white-space: nowrap;
+    display: flex;
+    margin-right: -0.3em;
+}
 .reviews {
-    // .section-title {
-    //     margin-bottom: 30px;
-    // }
     .swiper-pagination {
         display: none;
-    }
-    .section-heading__links {
-        transform: translateY(-14px);
     }
     @media (max-width:1300px) {
         padding-top: 69px;
@@ -19,21 +35,6 @@
         .reviews__container {
             position: relative;
         }
-        .section-heading__links {
-            .link:last-child {
-                display: none
-            }
-            .link:first-child {
-                position: absolute;
-                bottom: -60px;
-                left: 0;
-                right: 0;
-                margin: auto;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-            }
-        }
     }
     @media (max-width:600px) {
         padding-top: 30px;
@@ -42,35 +43,6 @@
         .section-title {
             font-size: 24px;
             line-height: 120%;
-        }
-        .reviews__container {
-            .section-heading__links {
-                transform: translateY(0);
-                position: absolute;
-                bottom: -84px;
-                width: 100%;
-                .link {
-                    display: block;
-                    text-align: center;
-                    position: absolute;
-                }
-                .link__text {
-                    display: block;
-                    padding: 19px 0 18px 0;
-                    font-size: 12px;
-                    line-height: 160%;
-                }
-                .link:first-child {
-                    bottom: -104px;
-                }
-                .link:last-child {
-                    bottom: -35px;
-                    .link__text {
-                        background: var(--c-text-regular);
-                        color: #fff
-                    }
-                }
-            }
         }
         .swiper-pagination {
             display: flex;
@@ -288,35 +260,25 @@
     }
 }
 
-.reviews__container {
-    .section-heading {
-        margin-bottom: 45px;
+.reviews__container .section-heading {
+    margin-bottom: 45px;
+    @media (max-width: 1300px) {
+        margin-bottom: 34px;
     }
+    @media (max-width: 992px) {
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 36px;
+    }
+}
+.reviews__container .section-heading__links .link__text {
     @media (max-width:1300px) {
-        .section-heading {
-            margin-bottom: 34px;
-        }
-        .section-heading__links {
-            .link__text {
-                font-size: 12px;
-                line-height: 100%;
-            }
-        }
-    }
-    @media (max-width:992px) {
-        .section-heading {
-            margin-bottom: 24px;
-        }
-        .section-heading__links {
-            .link__text {
-                display: none;
-            }
-        }
-    }
-    @media (max-width:600px) {
-        .section-heading {
-            margin-bottom: 36px;
-        }
+        font-size: 12px;
+        line-height: 100%;
     }
 }
 
@@ -326,7 +288,7 @@
     }
     @media (max-width:982px) {
         .section-heading__links {
-            position: absolute;
+            // position: absolute;
             display: flex;
             margin: auto;
             justify-content: center;
