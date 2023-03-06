@@ -1,6 +1,7 @@
 .order-form__list {
     counter-reset: list;
     width: 57%;
+    margin-right: 50px;
     li {
         display: grid;
         grid-template-columns: 5% 95%;
@@ -19,16 +20,34 @@
             margin-right: 29px;
         }
     }
+    @media (max-width: 767px) {
+        li {
+            &:before {
+                font-size: 20px
+            }
+        }
+        .order-form__title {
+            font-size: 18px;
+            margin-left: 10px;
+            margin-bottom: 0;
+        }
+    }
 }
 
 .field-column-max {
     grid-column: 3/1;
     padding-left: 5%;
+    @media (max-width: 767px) {
+        padding-left: 0;
+    }
 }
 
 .order {
     margin-top: 55px;
     padding-left: 30px;
+    @media (max-width: 767px) {
+        padding-left: 0;
+    }
 }
 
 .order-form__title {
@@ -84,6 +103,24 @@
             }
         }
     }
+    @media (max-width:992px) {
+        &.order-tabs {
+            .tabs__toggler {
+                font-size: 16px;
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    @media (max-width:767px) {
+        &.order-tabs {
+            .tabs__toggler {
+                margin-bottom: 0px;
+                margin-top: 10px;
+            }
+        }
+    }
 }
 
 .fields {
@@ -119,6 +156,16 @@
             }
             &:nth-of-type(n+3) {
                 grid-column: 3/1;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
+        .fields-box__line {
+            &:not(:last-child) {
+                margin-bottom: 10px;
             }
         }
     }
@@ -207,7 +254,7 @@
     align-items: center;
     padding: 19px 13px;
     position: relative;
-    height: 78px;
+    min-height: 78px;
     &:not(:last-child) {
         margin-bottom: 10px;
     }
@@ -292,6 +339,11 @@
     &:not(:last-child) {
         margin-bottom: 6px;
     }
+    @media (max-width:767px) {
+        label {
+            width: 80%;
+        }
+    }
 }
 
 .order-form__element--radio {
@@ -314,17 +366,28 @@
 
 .order-form {
     display: flex;
+    @media (max-width: 992px) {
+        flex-direction: column;
+        .order-form__list {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
 }
 
 .order-total {
     position: sticky;
     top: 20px;
     width: 404px;
+    max-width: 100%;
     margin-left: auto;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px #FEDA29, 0px 8px 32px rgba(255, 126, 0, 0.16);
     padding: 25px 33px 18px 33px;
     height: max-content;
+    @media (max-width: 767px) {
+        margin-top: 40px;
+    }
 }
 
 .order-total__list {
@@ -416,6 +479,11 @@
             margin-bottom: 42px;
         }
     }
+    @media (max-width: 767px) {
+        &[data-tabs="method-delivery"] {
+            width: 100%;
+        }
+    }
 }
 
 .tabs__page {
@@ -423,10 +491,16 @@
     position: absolute;
     left: 0;
     transition: opacity .1s;
+    width: 100%;
     &.tab--active {
         opacity: 1;
         position: static;
     }
+}
+
+.block-overflow {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .order-form__radio__top,
