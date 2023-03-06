@@ -5,158 +5,164 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
+    <title>Избранное</title>
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
 
-    <!-- Отключить кэширование. Нужен только при разработке, чтобы все было свежим -->
-    <!--<meta http-equiv="Cache-Control" content="no-cache" >-->
-    <!--<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate" >-->
 </head>
 
 <body>
     <div class="wrapper">
-        @@include('tpls/header.html',{})
+        @@include('tpls/sections/header.html',{})
+
         <main>
-            @@include('tpls/breadcrumbs.html',{})
-            <section class="page-contacts section-page-m">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Контакты
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">Контакты</h1>
+            </div>
+
+            <section class="contacts contacts--page">
                 <div class="container">
-                    <h1 class="section-title page-contacts__title">Контакты</h1>
-                    <div class="page-contacts__box">
-                        <div class="page-contacts__left">
-                            <div class="page-contacts__desc">
-                                <article class="bayan accordion accordion--has-icon ">
-                                    <div class="accordion__head">
-                                        <h3 class="accordion__title">Пенза</h3>
-                                    </div>
-                                    <div class="accordion__body">
-                                        <div class="accordion__body--container">
-                                            <h3 class="accordion__desc">
-                                                Пенза. Производство, офис, выставочный зал.
-                                            </h3>
-                                            <div class="accordion__contacts">
-                                                <a href="#" class="link link--geo">
-                                                    <span class="link--line">г. Пенза, ул. Рябова 31Г.</span>
-                                                    <span class="link--line"><span>Режим работы:</span> Пн.-Пт. с 9 до 18.</span>
-                                                </a>
-                                                <a href="tel:+78412234345" class="link link--tel">+7 (8412) 23-43-45</a>
-                                                <a href="mailto:sale@steppnz.ru" class="link link--email">sale@steppnz.ru</a>
-                                            </div>
-                                            <div class="accordion__mess">
-                                                <a href="" class="accordion__mess--whatsapp"></a>
-                                                <a href="" class="accordion__mess--viber"></a>
-                                                <a href="tel:+79512992139" class="accordion__mess--phone">+7 (951) 299-21-39</a>
-                                            </div>
-                                            <button class="accordion__mess--marshrut button button--primary">Проложить маршрут</button>
-                                        </div>
-                                        <div class="accordion__body--container">
-                                            <h3 class="accordion__desc">
-                                                Пенза. Производство, офис, выставочный зал.
-                                            </h3>
-                                            <div class="accordion__contacts">
-                                                <a href="#" class="link link--geo">
-                                                    <span class="link--line">г. Пенза, ул. Рябова 31Г.</span>
-                                                    <span class="link--line"><span>Режим работы:</span> Пн.-Пт. с 9 до 18.</span>
-                                                </a>
-                                                <a href="tel:+78412234345" class="link link--tel">+7 (8412) 23-43-45</a>
-                                                <a href="mailto:sale@steppnz.ru" class="link link--email">sale@steppnz.ru</a>
-                                            </div>
-                                            <div class="accordion__mess">
-                                                <a href="" class="accordion__mess--whatsapp"></a>
-                                                <a href="" class="accordion__mess--viber"></a>
-                                                <a href="tel:+79512992139" class="accordion__mess--phone">+7 (951) 299-21-39</a>
-                                            </div>
-                                            <button class="accordion__mess--marshrut button button--primary">Проложить маршрут</button>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="bayan accordion accordion--has-icon">
-                                    <div class="accordion__head">
-                                        <h3 class="accordion__title">Москва</h3>
-                                    </div>
-                                    <div class="accordion__body">
-                                        <div class="accordion__body--container">
-                                            <h3 class="accordion__desc">
-                                                Москва. Производство, офис, выставочный зал.
-                                            </h3>
-                                            <div class="accordion__contacts">
-                                                <a href="#" class="link link--geo">
-                                                    <span class="link--line">г. Москва, ул. Пятницкая 11/23</span>
-                                                    <span class="link--line"><span>Режим работы:</span> Пн.-Пт. с 9 до 18.</span>
-                                                </a>
-                                                <a href="tel:+78412234345" class="link link--tel">+7 (8412) 23-43-45</a>
-                                                <a href="mailto:sale@steppnz.ru" class="link link--email">sale@steppnz.ru</a>
-                                            </div>
-                                            <div class="accordion__mess">
-                                                <a href="" class="accordion__mess--whatsapp"></a>
-                                                <a href="" class="accordion__mess--viber"></a>
-                                                <a href="tel:+79512992139" class="accordion__mess--phone">+7 (951) 299-21-39</a>
-                                            </div>
-                                            <button class="accordion__mess--marshrut button button--primary">Проложить маршрут</button>
-                                        </div>
-                                    </div>
-                                </article>
+                    <div class="contacts-top">
+                        <div class="contacts-top__col">
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#phone-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Телефон</p>
+                                    <a class="contacts-top__text" href="">8 (499) 202 10 00</a>
+                                </div>
                             </div>
-                            <div class="page-contacts__mobile">
-                                <article class="bayan accordion accordion--has-icon ">
-                                    <div class="accordion__head">
-                                        <h3 class="accordion__title">Все города</h3>
-                                    </div>
-                                    <div class="accordion__body">
-                                        <div class="accordion__body--container">
-                                            <h3 class="accordion__desc">
-                                                Пенза. Производство, офис, выставочный зал.
-                                            </h3>
-                                            <div class="accordion__contacts">
-                                                <a href="#" class="link link--geo">
-                                                    <span class="link--line">г. Пенза, ул. Рябова 31Г.</span>
-                                                    <span class="link--line"><span>Режим работы:</span> Пн.-Пт. с 9 до 18.</span>
-                                                </a>
-                                                <a href="tel:+78412234345" class="link link--tel">+7 (8412) 23-43-45</a>
-                                                <a href="mailto:sale@steppnz.ru" class="link link--email">sale@steppnz.ru</a>
-                                            </div>
-                                            <div class="accordion__mess">
-                                                <a href="" class="accordion__mess--whatsapp"></a>
-                                                <a href="" class="accordion__mess--viber"></a>
-                                                <a href="tel:+79512992139" class="accordion__mess--phone">+7 (951) 299-21-39</a>
-                                            </div>
-                                            <button class="accordion__mess--marshrut button button--primary">Проложить маршрут</button>
-                                        </div>
-                                        <div class="accordion__body--container">
-                                            <h3 class="accordion__desc">
-                                                Пенза. Производство, офис, выставочный зал.
-                                            </h3>
-                                            <div class="accordion__contacts">
-                                                <a href="#" class="link link--geo">
-                                                    <span class="link--line">г. Пенза, ул. Рябова 31Г.</span>
-                                                    <span class="link--line"><span>Режим работы:</span> Пн.-Пт. с 9 до 18.</span>
-                                                </a>
-                                                <a href="tel:+78412234345" class="link link--tel">+7 (8412) 23-43-45</a>
-                                                <a href="mailto:sale@steppnz.ru" class="link link--email">sale@steppnz.ru</a>
-                                            </div>
-                                            <div class="accordion__mess">
-                                                <a href="" class="accordion__mess--whatsapp"></a>
-                                                <a href="" class="accordion__mess--viber"></a>
-                                                <a href="tel:+79512992139" class="accordion__mess--phone">+7 (951) 299-21-39</a>
-                                            </div>
-                                            <button class="accordion__mess--marshrut button button--primary">Проложить маршрут</button>
-                                        </div>
-                                    </div>
-                                </article>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#mail-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Почта</p>
+                                    <a class="contacts-top__text" href="">info@namedomen.com</a>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#adress-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Адрес магазина</p>
+                                    <a class="contacts-top__text" href="">г. Балашиха, ул юбилейная 24.</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="contacts-top__col">
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#time-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Понедельник-суббота</p>
+                                    <p class="contacts-top__text">09:00 - 21:00</p>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#time-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Воскресенье</p>
+                                    <p class="contacts-top__text">09:00 - 18:00 </p>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <img src="./img/company/icon.svg" alt="">
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Праздники, не рабочие дни магазина</p>
+                                    <a class="contacts-top__text" href="">1,2 и 7 января.</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="contacts-bottom">
+                        <div class="contacts-map block-parent-map">
+                            <div id="map" class="map-block"></div>
+                            <div class="contacts-map__adress">
+                                <div class="contacts-map__adress--icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#contact-map"></use>
+                                    </svg>
+                                </div>
+                                <p class="contacts-map__adress--text">г. Балашиха, ул юбилейная 24.</p>
                             </div>
                         </div>
-                        <div class="page-contacts__right">
-                            <div class="page-contacts__map" id="map-contact"></div>
+                        <div class="contacts-form">
+                            <p class="contacts-form__consult">Бесплатная консультация</p>
+                            <h2 class="contacts-form__title">Помощь с подбором шин и дисков для автомобиля</h2>
+                            <p class="contacts-form__text">В течении 10 минут вам позвонит менеджер магазина и подберёт лучшие запчасти для вашего автомобиля</p>
+                            <form action="#" class="form-c">
+                                <div class="form-field">
+                                    <label for="name">ФИО</label>
+                                    <input type="text" name="name" placeholder="Ваше имя  ...">
+                                </div>
+                                <div class="form-field">
+                                    <label for="phone">Телефон</label>
+                                    <input type="text" name="phone" placeholder="Ваш телефон  ...">
+                                </div>
+                                <div class="form-field form-textarea">
+                                    <label for="name">КОММЕНТАРИЙ</label>
+                                    <textarea name="" id="" placeholder="Введите ваш комментарий..."></textarea>
+                                </div>
+                                <div class="form-bottom">
+                                    <div class="form-bottom__info">
+                                        <div class="contacts-top__line">
+                                            <div class="contacts-top__icon">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#phone-contact-white"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="contacts-top__right">
+                                                <p class="contacts-top__title">СРОЧНАЯ ПОМОЩЬ</p>
+                                                <a class="contacts-top__text" href="">8 (499) 202 10 00</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Отправить заявку">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
+
+
         </main>
 
 
-        @@include('tpls/footer.html',{})
+        @@include('tpls/sections/footer.html',{})
     </div>
 
     @@include('tpls/modals.html', {})

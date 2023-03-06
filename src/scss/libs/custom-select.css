@@ -1,0 +1,29 @@
+.select-filter {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.select-filter .choices__inner {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 2px;
+  height: 40px;
+}
+
+.select-filter .choices__inner:after {
+  background: transparent;
+}
+
+.select-filter__custom {
+  width: 288px;
+  height: 40px;
+}
+
+.select-filter__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6A6A6A;
+  margin-left: 17px;
+}

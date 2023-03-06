@@ -80,15 +80,13 @@
 
 .choices[data-type*=select-one]::after {
     content: "";
-    height: 0;
-    width: 0;
-    border-style: solid;
-    border-color: #333 transparent transparent;
-    border-width: 5px;
+    height: 5px;
+    width: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.76876 0.199699C10.0771 0.465964 10.0771 0.897675 9.76876 1.16391L5.55822 4.80029C5.24991 5.06657 4.75012 5.06657 4.4418 4.80029L0.23123 1.16391C-0.0770765 0.897675 -0.0770765 0.465964 0.23123 0.199699C0.539536 -0.0665662 1.03941 -0.0665662 1.34772 0.199699L5.00001 3.35392L8.65234 0.199699C8.96066 -0.0665662 9.46045 -0.0665662 9.76876 0.199699Z' fill='%238E9499'/%3E%3C/svg%3E%0A");
     position: absolute;
-    right: 11.5px;
+    right: 8.5px;
     top: 50%;
-    margin-top: -2.5px;
+    margin-top: -1.5px;
     pointer-events: none
 }
 
@@ -140,13 +138,25 @@
     display: inline-block;
     vertical-align: top;
     width: 100%;
-    background-color: #f9f9f9;
-    padding: 7.5px 7.5px 3.75px;
-    border: 1px solid #ddd;
-    border-radius: 2.5px;
-    font-size: 14px;
-    min-height: 44px;
-    overflow: hidden
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #E6E9EC;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    height: 36px;
+    overflow: hidden;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 26px;
+        background: #E6E9EC;
+    }
 }
 
 .is-focused .choices__inner,
@@ -170,7 +180,7 @@
 
 .choices__list--single {
     display: inline-block;
-    padding: 4px 16px 4px 4px;
+    padding: 0;
     width: 100%
 }
 

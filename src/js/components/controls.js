@@ -1,16 +1,16 @@
 "use strict"
 
-import "../unstable/inputster/formich.js";
-import "../unstable/burger.js";
+//import "../unstable/inputster/formich.js";
+// import "../unstable/burger.js";
 
-const dropdowns = document.querySelectorAll('.dropdown-targeted');
-dropdowns.forEach(dropdown => {
-    dropdown.addEventListener("click", (e) => {
-        const target = dropdown.dataset.dropdownName
-        const targetDropdown = document.querySelector(`.dropdown-targeted__body[data-dropdown-name="${target}"]`);
-        targetDropdown.classList.toggle('_active')
-    });
-})
+// const dropdowns = document.querySelectorAll('.dropdown-targeted');
+// dropdowns.forEach(dropdown => {
+//     dropdown.addEventListener("click", (e) => {
+//         const target = dropdown.dataset.dropdownName
+//         const targetDropdown = document.querySelector(`.dropdown-targeted__body[data-dropdown-name="${target}"]`);
+//         targetDropdown.classList.toggle('_active')
+//     });
+// })
 
 /**
  * Dropdown Select
@@ -19,9 +19,31 @@ import Choices from "choices.js";
 
 //var secondElement = new Choices('#demo-2', { allowSearch: false }).setValue(['Set value 1', 'Set value 2']);
 
-var multipleDefault = new Choices(
-    document.getElementById('choices-single-default'), { allowHTML: true }
-);
+// var multipleDefault = new Choices(
+//     '[data-trigger]', { allowHTML: true }
+// );
+
+document.querySelectorAll('[data-trigger]').forEach(el => {
+    new Choices(
+        el, { allowHTML: true }
+    );
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('header-menu-mobile') || e.target.closest('.header-menu-mobile')) {
+        document.querySelector('.header_right').classList.add('_active');
+    }
+
+    if (e.target.classList.contains('poppa__closer')) {
+        console.log(e.target);
+        e.target.closest('.header_right').classList.remove('_active');
+    }
+    if (e.target.classList.contains('filter-fixed-mobile') || e.target.closest('.filter-fixed-mobile')) {
+        document.querySelector('.catalog-filter').classList.toggle('_active');
+        e.target.closest('.filter-fixed-mobile') ? e.target.closest('.filter-fixed-mobile').classList.toggle('_active') :
+            e.target.classList.toggle('_active');
+    }
+});
 
 
 // const element = document.querySelector('#demo-2');
@@ -224,223 +246,223 @@ var multipleDefault = new Choices(
 //     });
 // }
 
-if (document.querySelector(".timepicker")) {
-    const timepickers = document.querySelectorAll(".timepicker");
-    timepickers.forEach((timepicker) => {
-        let choicesOptions = {
-            searchEnabled: false,
-            searchPlaceholderValue: "Поиск",
-            noResultsText: "Нет результатов",
-            shouldSort: false,
-            classNames: {
-                containerOuter: "timepicker__outer",
-                input: "timepicker__input",
-                inputCloned: "timepicker__input--cloned",
-                list: "timepicker__list",
-                listItems: "timepicker__list--multiple",
-                listSingle: "timepicker__list--single",
-                listDropdown: "timepicker__list--dropdown",
-                item: "timepicker__item",
-                itemtimepickerable: "timepicker__item--selectable",
-                itemDisabled: "timepicker__item--disabled",
-                itemChoice: "timepicker__item--choice",
-                placeholder: "timepicker__placeholder",
-                group: "timepicker__group",
-                groupHeading: "timepicker__heading",
-                button: "timepicker__button",
-                activeState: "is-active",
-                focusState: "is-focused",
-                openState: "is-open",
-                disabledState: "is-disabled",
-                highlightedState: "is-highlighted",
-                selectedState: "is-selected",
-                flippedState: "is-flipped",
-                loadingState: "is-loading",
-                noResults: "has-no-results",
-                noChoices: "has-no-choices",
-            },
-        }
+// if (document.querySelector(".timepicker")) {
+//     const timepickers = document.querySelectorAll(".timepicker");
+//     timepickers.forEach((timepicker) => {
+//         let choicesOptions = {
+//             searchEnabled: false,
+//             searchPlaceholderValue: "Поиск",
+//             noResultsText: "Нет результатов",
+//             shouldSort: false,
+//             classNames: {
+//                 containerOuter: "timepicker__outer",
+//                 input: "timepicker__input",
+//                 inputCloned: "timepicker__input--cloned",
+//                 list: "timepicker__list",
+//                 listItems: "timepicker__list--multiple",
+//                 listSingle: "timepicker__list--single",
+//                 listDropdown: "timepicker__list--dropdown",
+//                 item: "timepicker__item",
+//                 itemtimepickerable: "timepicker__item--selectable",
+//                 itemDisabled: "timepicker__item--disabled",
+//                 itemChoice: "timepicker__item--choice",
+//                 placeholder: "timepicker__placeholder",
+//                 group: "timepicker__group",
+//                 groupHeading: "timepicker__heading",
+//                 button: "timepicker__button",
+//                 activeState: "is-active",
+//                 focusState: "is-focused",
+//                 openState: "is-open",
+//                 disabledState: "is-disabled",
+//                 highlightedState: "is-highlighted",
+//                 selectedState: "is-selected",
+//                 flippedState: "is-flipped",
+//                 loadingState: "is-loading",
+//                 noResults: "has-no-results",
+//                 noChoices: "has-no-choices",
+//             },
+//         }
 
-        const choices = new Choices(timepicker.querySelector(".timepicker__select"), choicesOptions)
-    });
-}
-
-
-
-/**
- * Calendars
- */
-import flatpickr from "flatpickr";
-import { Russian } from "flatpickr/dist/l10n/ru.js"
-import { getShortHumanDate } from "../utils/helpers.js"
-import { getTodayPlus } from "../utils/helpers.js"
-const calendars = document.querySelectorAll('.calendar');
-calendars.forEach((calendar) => {
-    const calendarInput = calendar.querySelector('.calendar__input');
-    if (!calendarInput) return
-
-    let calendarSettings = {
-        altInput: true,
-        altFormat: "D, j M Y",
-        locale: Russian,
-        time_24hr: true,
-        disableMobile: "true",
-    }
-    if (calendar.classList.contains('calendar--inline')) {
-        calendarSettings.inline = true;
-    } else {
-        calendarSettings.appendTo = calendar;
-    }
-    if (calendar.classList.contains('calendar--only-future')) {
-        calendarSettings.disable = [{ to: new Date(), }, ];
-        calendarSettings.minDate = new Date();
-        calendarSettings.defaultDate = getTodayPlus(2);
-    }
-
-
-    const flatCalendar = flatpickr(calendarInput, calendarSettings);
-
-    const dayPrev = document.createElement('span');
-    const dayNext = document.createElement('span');
-    dayNext.classList.add('calendar__button-day-next');
-    dayPrev.classList.add('calendar__button-day-prev');
-    calendar.querySelector('.flatpickr-months').append(dayPrev);
-    calendar.querySelector('.flatpickr-months').append(dayNext);
-
-    function getCalendarDate() {
-        let today = calendar.querySelector('.calendar__input.flatpickr-input').value
-        return new Date(Date.parse(today));
-    }
-
-    function moveCurrentCalendarDate(modifier) {
-        let dayOld = getCalendarDate();
-        let dayNew = getCalendarDate();
-        dayNew.setDate(dayOld.getDate() + modifier)
-        return dayNew
-    }
-
-    dayNext.addEventListener("click", (e) => {
-        let day = moveCurrentCalendarDate(1)
-        flatCalendar.setDate(day, true, "D, j M Y")
-    });
-    dayPrev.addEventListener("click", (e) => {
-        let day = moveCurrentCalendarDate(-1)
-        if (calendar.classList.contains('calendar--only-future')) {
-            let newDate = new Date(day).getTime()
-            let today = new Date(flatCalendar.now).getTime()
-            if (newDate > today) {
-                flatCalendar.setDate(newDate, true, "D, j M Y")
-            }
-        } else {
-            flatCalendar.setDate(newDate, true, "D, j M Y")
-        }
-    });
-});
+//         const choices = new Choices(timepicker.querySelector(".timepicker__select"), choicesOptions)
+//     });
+// // }
 
 
 
+// /**
+//  * Calendars
+//  */
+// import flatpickr from "flatpickr";
+// import { Russian } from "flatpickr/dist/l10n/ru.js"
+// import { getShortHumanDate } from "../utils/helpers.js"
+// import { getTodayPlus } from "../utils/helpers.js"
+// const calendars = document.querySelectorAll('.calendar');
+// calendars.forEach((calendar) => {
+//     const calendarInput = calendar.querySelector('.calendar__input');
+//     if (!calendarInput) return
+
+//     let calendarSettings = {
+//         altInput: true,
+//         altFormat: "D, j M Y",
+//         locale: Russian,
+//         time_24hr: true,
+//         disableMobile: "true",
+//     }
+//     if (calendar.classList.contains('calendar--inline')) {
+//         calendarSettings.inline = true;
+//     } else {
+//         calendarSettings.appendTo = calendar;
+//     }
+//     if (calendar.classList.contains('calendar--only-future')) {
+//         calendarSettings.disable = [{ to: new Date(), }, ];
+//         calendarSettings.minDate = new Date();
+//         calendarSettings.defaultDate = getTodayPlus(2);
+//     }
 
 
-/**
- * Textarea resize
- */
-const textareas = document.querySelectorAll('.textarea');
+//     const flatCalendar = flatpickr(calendarInput, calendarSettings);
 
-function createResizer(area) {
-    const resizer = document.createElement('div');
-    resizer.classList.add('textarea__resizer');
-    area.appendChild(resizer);
+//     const dayPrev = document.createElement('span');
+//     const dayNext = document.createElement('span');
+//     dayNext.classList.add('calendar__button-day-next');
+//     dayPrev.classList.add('calendar__button-day-prev');
+//     calendar.querySelector('.flatpickr-months').append(dayPrev);
+//     calendar.querySelector('.flatpickr-months').append(dayNext);
 
-    return {
-        resizer,
-        width: area.getBoundingClientRect().width,
-        height: area.getBoundingClientRect().height,
-        x: 0,
-        y: 0,
-        dx: 0,
-        dy: 0,
-    }
-}
-textareas.forEach(area => {
-    let { resizer, width, height, y, dy } = createResizer(area);
-    area.dataset.initialHeight = height;
+//     function getCalendarDate() {
+//         let today = calendar.querySelector('.calendar__input.flatpickr-input').value
+//         return new Date(Date.parse(today));
+//     }
 
-    let startResize = function(evt) {
-        // x = evt.screenX;
-        y = evt.screenY;
-    };
+//     function moveCurrentCalendarDate(modifier) {
+//         let dayOld = getCalendarDate();
+//         let dayNew = getCalendarDate();
+//         dayNew.setDate(dayOld.getDate() + modifier)
+//         return dayNew
+//     }
 
-    let resize = function(evt) {
-        // dx = x - evt.screenX;
-        dy = y - evt.screenY;
-        // x = evt.screenX;
-        y = evt.screenY;
-        // width += dx;
-        height -= dy;
-        // area.style.width = width + "px";
-        area.style.height = height + "px";
-    };
-
-    resizer.addEventListener("mousedown", function(evt) {
-        startResize(evt);
-        document.body.addEventListener("mousemove", resize);
-        document.body.addEventListener("mouseup", function() {
-            document.body.removeEventListener("mousemove", resize);
-        });
-    });
-});
+//     dayNext.addEventListener("click", (e) => {
+//         let day = moveCurrentCalendarDate(1)
+//         flatCalendar.setDate(day, true, "D, j M Y")
+//     });
+//     dayPrev.addEventListener("click", (e) => {
+//         let day = moveCurrentCalendarDate(-1)
+//         if (calendar.classList.contains('calendar--only-future')) {
+//             let newDate = new Date(day).getTime()
+//             let today = new Date(flatCalendar.now).getTime()
+//             if (newDate > today) {
+//                 flatCalendar.setDate(newDate, true, "D, j M Y")
+//             }
+//         } else {
+//             flatCalendar.setDate(newDate, true, "D, j M Y")
+//         }
+//     });
+// });
 
 
-/**
- * Stepper
- */
-const steppers = document.querySelectorAll('.stepper');
 
-function getStepperInput(stepper) {
-    return stepper.querySelector('.stepper__value');
-}
 
-function getStepperValue(stepper) {
-    let value = +getStepperInput(stepper).value;
-    return value
-}
 
-function setStepperValue(stepper, value) {
-    getStepperInput(stepper).value = value;
-}
+// /**
+//  * Textarea resize
+//  */
+// const textareas = document.querySelectorAll('.textarea');
 
-function decrementStepper(stepper) {
-    let value = getStepperValue(stepper)
-    value = value < 1 ? value : value - 1;
-    setStepperValue(stepper, value)
-}
+// function createResizer(area) {
+//     const resizer = document.createElement('div');
+//     resizer.classList.add('textarea__resizer');
+//     area.appendChild(resizer);
 
-function incrementStepper(stepper) {
-    let value = getStepperValue(stepper)
-    value++;
-    setStepperValue(stepper, value)
-}
+//     return {
+//         resizer,
+//         width: area.getBoundingClientRect().width,
+//         height: area.getBoundingClientRect().height,
+//         x: 0,
+//         y: 0,
+//         dx: 0,
+//         dy: 0,
+//     }
+// }
+// textareas.forEach(area => {
+//     let { resizer, width, height, y, dy } = createResizer(area);
+//     area.dataset.initialHeight = height;
 
-function leaveOnlyDigits(stepper) {
-    let value = getStepperInput(stepper).value;
-    value = value.replaceAll(/\D+/g, '');
-    getStepperInput(stepper).value = value;
-}
-steppers.forEach((stepper) => {
-    const minus = stepper.querySelector('.stepper__button-minus');
-    const plus = stepper.querySelector('.stepper__button-plus');
-    const input = stepper.querySelector('.stepper__value');
+//     let startResize = function(evt) {
+//         // x = evt.screenX;
+//         y = evt.screenY;
+//     };
 
-    minus.addEventListener("click", (e) => {
-        decrementStepper(stepper)
-    });
-    input.addEventListener('input', () => {
-        leaveOnlyDigits(stepper);
-    })
-    input.addEventListener('change', () => {
-        leaveOnlyDigits(stepper);
-    })
-    plus.addEventListener("click", (e) => {
-        incrementStepper(stepper)
-    });
-})
+//     let resize = function(evt) {
+//         // dx = x - evt.screenX;
+//         dy = y - evt.screenY;
+//         // x = evt.screenX;
+//         y = evt.screenY;
+//         // width += dx;
+//         height -= dy;
+//         // area.style.width = width + "px";
+//         area.style.height = height + "px";
+//     };
+
+//     resizer.addEventListener("mousedown", function(evt) {
+//         startResize(evt);
+//         document.body.addEventListener("mousemove", resize);
+//         document.body.addEventListener("mouseup", function() {
+//             document.body.removeEventListener("mousemove", resize);
+//         });
+//     });
+// });
+
+
+// /**
+//  * Stepper
+//  */
+// const steppers = document.querySelectorAll('.stepper');
+
+// function getStepperInput(stepper) {
+//     return stepper.querySelector('.stepper__value');
+// }
+
+// function getStepperValue(stepper) {
+//     let value = +getStepperInput(stepper).value;
+//     return value
+// }
+
+// function setStepperValue(stepper, value) {
+//     getStepperInput(stepper).value = value;
+// }
+
+// function decrementStepper(stepper) {
+//     let value = getStepperValue(stepper)
+//     value = value < 1 ? value : value - 1;
+//     setStepperValue(stepper, value)
+// }
+
+// function incrementStepper(stepper) {
+//     let value = getStepperValue(stepper)
+//     value++;
+//     setStepperValue(stepper, value)
+// }
+
+// function leaveOnlyDigits(stepper) {
+//     let value = getStepperInput(stepper).value;
+//     value = value.replaceAll(/\D+/g, '');
+//     getStepperInput(stepper).value = value;
+// }
+// steppers.forEach((stepper) => {
+//     const minus = stepper.querySelector('.stepper__button-minus');
+//     const plus = stepper.querySelector('.stepper__button-plus');
+//     const input = stepper.querySelector('.stepper__value');
+
+//     minus.addEventListener("click", (e) => {
+//         decrementStepper(stepper)
+//     });
+//     input.addEventListener('input', () => {
+//         leaveOnlyDigits(stepper);
+//     })
+//     input.addEventListener('change', () => {
+//         leaveOnlyDigits(stepper);
+//     })
+//     plus.addEventListener("click", (e) => {
+//         incrementStepper(stepper)
+//     });
+// })

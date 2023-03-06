@@ -7,8 +7,8 @@
         font-style: $fstyle;
         font-weight: $fweight;
         font-stretch: 100%;
-        src: url("#{$furl}.woff2") format("woff2"),
-        url("#{$furl}.woff") format("woff");
+        src: url("#{$furl}.ttf") format("opentype"),
+        url("#{$furl}.ttf") format("opentype");
         font-display: swap;
     }
 }
@@ -213,7 +213,7 @@ $backgroundTrack: #fff) {
 
 @mixin macscrollbar($width: 6px,
 $border: 6px,
-$background: #CED8E4) {
+$background: #d6e0ec) {
     /* total width */
     &::-webkit-scrollbar {
         background-color: #{$background};
@@ -230,7 +230,7 @@ $background: #CED8E4) {
     }
     /* scrollbar itself */
     &::-webkit-scrollbar-thumb {
-        background-color: #465A74;
+        background-color: var(--c-yellow);
         border-radius: #{$width};
         height: 1px;
         // border: 1px solid #{$background};

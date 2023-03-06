@@ -50,125 +50,167 @@
     }
 }
 
-//========================================================================================================================================================
-// Раздел
-.section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    @media (max-width: 1300px) {
-        padding-bottom: 72px;
-        padding-top: 72px;
-        .section-title {
-            font-size: 32px;
-            line-height: 140%;
-        }
+.page-stati {
+    margin: 65px 0 200px 0;
+    @media (max-width: 992px) {
+        margin-bottom: 100px;
     }
-    @media (max-width:992px) {
-        padding-top: 36px;
-        padding-bottom: 36px;
-        .section-title {
-            font-size: 24px;
-        }
-    }
-    @media (max-width:600px) {
-        .section-title {
-            font-size: 22px;
-        }
+    @media (max-width: 767px) {
+        margin: 30px 0 80px
     }
 }
 
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 48px;
-    .tabs__toggler-container {
-        margin-bottom: 0;
-    }
-}
-
-.section-heading__links {
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #1D2025;
-    font-size: 0.875rem;
-    //padding-top: 1rem;
-    display: flex;
-    grid-gap: 24px
-}
-
-.section-page-m {
-    margin: 88px 0 96px 0;
-    display: block;
-    h1 {
-        font-size: 64px;
-        line-height: 100%;
-        font-family: var(--ff-title);
-        font-weight: 600;
-        margin-bottom: 56px;
-    }
-    @media (max-width:1300px) {
-        margin: 66px 0 72px 0;
-        h1 {
-            font-size: 48px;
-            margin-bottom: 54px;
-        }
-    }
-    @media (max-width:992px) {
-        margin: 48px 0;
-        h1 {
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
-    }
-    @media (max-width:500px) {
-        h1 {
-            font-size: 22px;
-            margin-bottom: 16px;
-        }
-        margin: 32px 0
-    }
-}
-
-
-/*
-.section {
-  margin: 120px 0;
-
-  &.is-fill {
-    // background: $frame-light;
-    padding: 50px 0;
-  }
-
-  &.have-margin-s {
-    margin: 80px 0;
-
-    @media (max-width: $mobile-l) {
-      margin: 60px 0;
-    }
-  }
-
-  @media (max-width: $mobile-l) {
-    margin: 80px 0;
-  }
-}
-*/
-
-//========================================================================================================================================================
-// Шапка раздела
-.s-header {
-    margin-bottom: 40px;
-    @media (max-width: $mobile-l) {
+.page-stati__banner {
+    height: 426px;
+    border-radius: 16px;
+    width: 100%;
+    margin-bottom: 63px;
+    object-fit: cover;
+    @media (max-width: 767px) {
+        height: 300px;
         margin-bottom: 30px;
     }
 }
 
-.s-header__title {}
+.content-stati {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}
 
-.s-header__subtitle {}
+ul:not([class]) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    li:before {
+        content: '•';
+        margin-right: 5px;
+    }
+}
 
-.s-header__text {}
+.search-error {
+    margin-top: 60px;
+}
 
-//========================================================================================================================================================
+.error-page {
+    margin: 80px 0 300px 0;
+    text-align: center;
+    @media (max-width: 992px) {
+        margin-bottom: 150px;
+    }
+}
+
+.error-page__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100.9%;
+    margin-bottom: 30px;
+}
+
+.error-page__container {
+    display: flex;
+    align-items: flex-end;
+    span {
+        font-weight: 800;
+        font-size: 600px;
+        line-height: 100.9%;
+        color: var(--c-yellow);
+        &:first-child {
+            transform: translate(129px, 56px);
+        }
+        &:last-child {
+            transform: translate(-133px, 56px);
+            z-index: 3;
+        }
+    }
+    img {
+        width: 650px;
+        height: 650px;
+        z-index: 2;
+    }
+    @media (max-width:1300px) {
+        justify-content: center;
+        img {
+            width: 100vw;
+            height: 50vw;
+        }
+        span {
+            font-size: 50vw;
+        }
+    }
+    @media (max-width:700px) {
+        img {
+            width: 230px;
+            height: 185px;
+        }
+        span {
+            font-size: 200px;
+            &:first-child {
+                transform: translate(47px, 0px);
+            }
+            &:last-child {
+                transform: translate(-47px, 0px);
+            }
+        }
+    }
+}
+
+.points {
+    margin: 20px 0 60px 0
+}
+
+.points-item {
+    &:not(:last-child) {
+        margin-bottom: 118px;
+        @media (max-width: 767px) {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.points-info {
+    display: grid;
+    grid-template-columns: 67% 30%;
+    grid-gap: 36px;
+    margin-top: 62px;
+    margin-bottom: 93px;
+    .points-info__map {
+        width: auto;
+    }
+    @media (max-width:992px) {
+        grid-template-columns: 100%;
+    }
+    @media (max-width:767px) {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+.points-info__picture {
+    height: 420px;
+    box-shadow: 0px 10px 30px -13px #878B90;
+    border-radius: 15px;
+    object-fit: cover;
+    @media (max-width: 767px) {
+        height: 250px;
+    }
+}
+
+.points-info__box {
+    position: relative;
+    .contacts-map__adress {
+        height: 62px;
+        bottom: 15px
+    }
+    .contacts-map__adress--icon {
+        width: 39px;
+        height: 28px;
+        margin-right: 30px;
+        &:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='54' height='39' viewBox='0 0 54 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1.13672' y='1.0293' width='52.0145' height='37.2628' rx='16' fill='transparent' stroke='url(%23paint0_linear_7_139013)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_7_139013' x1='1.13672' y1='1.0293' x2='36.4188' y2='50.279' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FEDA29'/%3E%3Cstop offset='1' stop-color='%23583FBC' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23583FBC' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+            width: 54px;
+            height: 39px;
+        }
+    }
+}

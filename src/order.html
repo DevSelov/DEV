@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('tpls/sections/header.html',{})
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Оформление заказа
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">Оформление заказа</h1>
+            </div>
+
+            <section class="order">
+                <div class="container">
+                    <form class="order-form" action="#">
+                        <ol class="order-form__list">
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Контактная информация</h2>
+                                <div class="tabs field-column-max">
+                                    <div class="tabs__toggler-container order-tabs" data-tabs="contact-info">
+                                        <button class="tabs__toggler">Физическое лицо</button>
+                                        <button class="tabs__toggler">Юридическое лицо</button>
+                                        <button class="tabs__toggler">Индивидуальный предприниматель</button>
+                                    </div>
+                                </div>
+                                <div class="fields-box field-column-max">
+                                    <div class="fields-box__line">
+                                        <label for="">Фамилия*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Имя*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Отчество*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Email*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Телефон*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <span class="fields-box__info">* Поля являются обязательными для заполнения</span>
+                                </div>
+                                <div class="tabs__page-container field-column-max" data-tabs="contact-info">
+                                    <div class="tabs__page"></div>
+                                    <div class="tabs__page">
+                                        <h3 class="tabs__page__title-order">Компания</h3>
+                                        <div class="fields-box" data-cols="2">
+                                            <div class="fields-box__line">
+                                                <label for="">ИНН*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Компания*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">КПП*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Юридический адрес*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Почтовый адрес*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <div class="selection-item__checkbox--item checbox-custom">
+                                                    <input type="checkbox" name="not-ship">
+                                                    <span class="selection-item__checkbox--field"></span>
+                                                    <label for="not-ship">
+                                                        совпадает с юридическим адресом
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <span class="fields-box__info">* Поля являются обязательными для заполнения</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Способ получения</h2>
+                                <div class="tabs field-column-max">
+                                    <div class="tabs__toggler-container order-tabs" data-tabs="method-delivery">
+                                        <button class="tabs__toggler">Самовывоз</button>
+                                        <button class="tabs__toggler">Доставка</button>
+                                    </div>
+                                </div>
+                                <div class="tabs__page-container field-column-max" data-tabs="method-delivery">
+                                    <div class="tabs__page">
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio">
+                                                <span></span>
+                                            </div>
+                                            <div class="order-form__radio--text">
+                                                <p class="order-form__radio--title">г. Балашиха, ул юбилейная 24.</p>
+                                                <p class="order-form__radio--time">Ежедневно с 9:00 до 21:00, без перерывов</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__page">
+                                        <div class="fields-box" data-cols="2">
+                                            <div class="fields-box__line">
+                                                <label for="">Регион*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Адрес*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/delivery.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>Курьерская доставка</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <span class="order-form__radio--p">Доставка до подъезда по Москве и Подмосковью</span>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 1 - 3 дней</p>
+                                                    <p class="order-form__radio__delivery--right">Стоимость доставки: 1 000₽</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/cdek.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>ТК СДЭК</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 2-3 дня в зависимости от вашего местоположения </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/delovye.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>ТК Деловые Линии</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 2-3 дня в зависимости от вашего местоположения </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/pek.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>ТК ПЭК</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 2-3 дня в зависимости от вашего местоположения </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__alert">
+                                            <span class="order-form__alert--green">* Доставка до транспортной компании 1 000 рублей</span>
+                                            <span class="order-form__alert--red">* Доставка строго до подъезда</span>
+                                            <span class="order-form__alert--gray">* Поля являются обязательными для заполнения</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Дополнительные услуги</h2>
+                                <div class="order-form__element--checkbox field-column-max">
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Незамерзающая жидкость - 30С
+                                        </label>
+                                    </div>
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Полироль для чернения шин
+                                        </label>
+                                    </div>
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Щетка для уборки снега автомобильная со скребком
+                                        </label>
+                                    </div>
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Полировочная паста полироль для хрома автомобиля
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Консультация специалиста</h2>
+                                <div class="order-form__element--radio field-column-max">
+                                    <div class="order-form__radio">
+                                        <div class="order-form__radio--input">
+                                            <input type="radio" name="consult">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__radio--text">
+                                            <p>Мне требуется консультация менеджера</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__radio">
+                                        <div class="order-form__radio--input">
+                                            <input type="radio" name="consult">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__radio--text">
+                                            <p>Я уверен в выбранных товарах, консультация менеджера мне не нужна</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Способ оплаты</h2>
+                                <div class="order-form__element--payment field-column-max">
+                                    <div class="order-form__element--payment__radio">
+                                        <input type="radio" name="payment-s">
+                                        <div class="order-form__radio--input">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__element--payment--text">
+                                            <p>При получении</p>
+                                            <span>Наличными или банковской картой в магазине</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__element--payment__radio">
+                                        <input type="radio" name="payment-s">
+                                        <div class="order-form__radio--input">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__element--payment--text">
+                                            <p>Онлайн-оплата</p>
+                                            <span>Картами Visa, MasterCard, Мир.</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__element--payment__radio">
+                                        <input type="radio" name="payment-s">
+                                        <div class="order-form__radio--input">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__element--payment--text">
+                                            <p>Система быстрых платежей</p>
+                                            <span>Оплата по QR-коду через мобильное приложение Вашего банка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-form__element--textarea field-column-max">
+                                    <h3 class="order-form__element--textarea--title">Комментарий к заказу</h3>
+                                    <textarea name="" placeholder="На что нам стоит обратить внимание?"></textarea>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="order-total">
+                            <ul class="order-total__list">
+                                <li>
+                                    <span>Стоимость</span>
+                                    <span>10 000 ₽</span>
+                                </li>
+                                <li>
+                                    <span>Скидка</span>
+                                    <span>-250 ₽</span>
+                                </li>
+                                <li>
+                                    <span>Итоговая цена</span>
+                                    <span>9 750 ₽</span>
+                                </li>
+                            </ul>
+                            <button class="order-total__btn">Оформить заказ</button>
+                            <div class="order-total__polc">
+                                <input type="checkbox" checked>
+                                <p>Я согласен получать новости об акциях<br> и новинках интернет магазина</p>
+                            </div>
+                            <div class="order-total__polc">
+                                <input type="checkbox" checked>
+                                <p>Я согласен с <a href=""> условиями публичной оферты </a><br> и правилами продажи товаров</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        @@include('tpls/sections/footer.html',{})
+    </div>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

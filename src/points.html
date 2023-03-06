@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('tpls/sections/header.html',{})
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Пункт выдачи
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="points">
+                <div class="container">
+                    <div class="points-item">
+                        <h2 class="section-title">Название магазина пункта выдачи №1</h2>
+                        <div class="points-info">
+                            <img class="points-info__picture" src="./img/points/points-1.png" alt="">
+                            <div class="points-info__box block-parent-map">
+                                <div id="map" class="map-block"></div>
+                                <div class="contacts-map__adress">
+                                    <div class="contacts-map__adress--icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#contact-map"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="contacts-map__adress--text">г. Балашиха, ул юбилейная 24.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts-top">
+                            <div class="contacts-top__col">
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#phone-contact"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Телефон</p>
+                                        <a class="contacts-top__text" href="">8 (499) 202 10 00</a>
+                                    </div>
+                                </div>
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#adress-contact"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Адрес магазина</p>
+                                        <a class="contacts-top__text" href="">г. Балашиха, ул юбилейная 24.</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="contacts-top__col">
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#time-contact"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Понедельник-суббота</p>
+                                        <p class="contacts-top__text">09:00 - 21:00</p>
+                                    </div>
+                                </div>
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <img src="./img/company/icon.svg" alt="">
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Праздники, не рабочие дни магазина</p>
+                                        <a class="contacts-top__text" href="">1,2 и 7 января.</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="points-item">
+                        <h2 class="section-title">Название магазина пункта выдачи №1</h2>
+                        <div class="points-info">
+                            <img class="points-info__picture" src="./img/points/points-1.png" alt="">
+                            <div class="points-info__box block-parent-map">
+                                <div id="map-1" class="map-block"></div>
+                                <div class="contacts-map__adress">
+                                    <div class="contacts-map__adress--icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#contact-map"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="contacts-map__adress--text">г. Балашиха, ул юбилейная 24.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts-top">
+                            <div class="contacts-top__col">
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#phone-contact"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Телефон</p>
+                                        <a class="contacts-top__text" href="">8 (499) 202 10 00</a>
+                                    </div>
+                                </div>
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#adress-contact"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Адрес магазина</p>
+                                        <a class="contacts-top__text" href="">г. Балашиха, ул юбилейная 24.</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="contacts-top__col">
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <svg>
+                                            <use xlink:href="/img/sprite.svg#time-contact"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Понедельник-суббота</p>
+                                        <p class="contacts-top__text">09:00 - 21:00</p>
+                                    </div>
+                                </div>
+                                <div class="contacts-top__line">
+                                    <div class="contacts-top__icon">
+                                        <img src="./img/company/icon.svg" alt="">
+                                    </div>
+                                    <div class="contacts-top__right">
+                                        <p class="contacts-top__title">Праздники, не рабочие дни магазина</p>
+                                        <a class="contacts-top__text" href="">1,2 и 7 января.</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        @@include('tpls/sections/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

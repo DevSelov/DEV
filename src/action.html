@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('tpls/sections/header.html',{})
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Акции
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">Акции</h1>
+
+            </div>
+
+            <section class="special-offer">
+                <div class="container">
+                    <div class="special-offer__content">
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-1.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Бесплатное хранение шин до установки!</h3>
+                            <a class="special-offer__content--item-link link-block" href="">Подробнее</a>
+                            <span class="special-offer__content--item-discount">-100%</span>
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-2.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Скидка на монтаж зимней резины 30% от стоимости услуги</h3>
+                            <span class="special-offer__content--item-discount">-30%</span>
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-3.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Липучка со скидкой 10%</h3>
+                            <span class="special-offer__content--item-discount">-10%</span>
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-4.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Бесплатный шиномонтаж при покупке литых дисков</h3>
+                            <span class="special-offer__content--item-discount">-100%</span>
+
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-2.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Скидка на монтаж зимней резины 30% от стоимости услуги</h3>
+                            <span class="special-offer__content--item-discount">-30%</span>
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-2.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Скидка на монтаж зимней резины 30% от стоимости услуги</h3>
+                            <span class="special-offer__content--item-discount">-30%</span>
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-2.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Скидка на монтаж зимней резины 30% от стоимости услуги</h3>
+                            <span class="special-offer__content--item-discount">-30%</span>
+                        </div>
+                        <div class="special-offer__content--item">
+                            <a href="" class="special-offer__content--item--all-link"> </a>
+                            <img class="special-offer__content--item-picture" src="./img/special-offer/c-2.jpg" alt="">
+                            <h3 class="special-offer__content--item-title">Скидка на монтаж зимней резины 30% от стоимости услуги</h3>
+                            <span class="special-offer__content--item-discount">-30%</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+
+
+        @@include('tpls/sections/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

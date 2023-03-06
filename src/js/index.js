@@ -4,7 +4,7 @@
 // import DismalModules, { acc } from "./utils/modules.js";
 
 
-import "./components/header.js"
+// import "./components/header.js"
 import "./components/controls.js"
 // import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
@@ -17,14 +17,15 @@ import "./components/controls.js"
 // });
 
 import './sliders.js';
-import "./components/element_position.js";
 import "./components/maps.js";
-import "./components/contacts_map.js";
-import "./components/product-page.js";
-import "./components/swiper_thumbs.js";
-import "./components/delivery.js";
+// import "./components/element_position.js";
 
-import "./unstable/inputster/input-tel-mask.js";
+// import "./components/contacts_map.js";
+// import "./components/product-page.js";
+// import "./components/swiper_thumbs.js";
+// import "./components/delivery.js";
+
+// import "./unstable/inputster/input-tel-mask.js";
 
 
 /**
@@ -57,6 +58,7 @@ let lazyLoadInstance = new LazyLoad();
 
 import "./unstable/tabs.js";
 import "./unstable/inputster/input.js";
+import "./unstable/inputster/range.js";
 
 /**
  * Smooth anchors
@@ -86,12 +88,12 @@ if (servicesLeadButton) {
   })
 }
 */
-import "./components/carousels.js";
-import "./unstable/scroll-mouse.js";
-import "./libs/masonry.pkgd.min.js";
-import "./components/grid-masonry.js"
-import "./components/otzyvi_block.js";
+// import "./components/carousels.js";
+// import "./unstable/scroll-mouse.js";
+// import "./libs/masonry.pkgd.min.js";
+// import "./components/grid-masonry.js"
+// import "./components/otzyvi_block.js";
 
 
 
-import "./components/filter-7p.js"
+// import "./components/filter-7p.js"

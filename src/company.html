@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('tpls/sections/header.html',{})
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Избранное
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">О компании</h1>
+            </div>
+
+            <section class="company">
+                <div class="container">
+                    <div class="company-top">
+                        <div class="company-banner">
+                            <img class="company-banner__picture" src="./img/company/bann.jpg" alt="">
+                        </div>
+                        <div class="company-info">
+                            <div class="company-info__box">
+                                <div class="company-info__line">
+                                    <div class="company-info__number">
+                                        534 262
+                                    </div>
+                                    <div class="company-info__text">
+                                        Клиента купили у нас шины за 20 лет безупречной работы
+                                    </div>
+                                </div>
+                                <div class="company-info__line">
+                                    <div class="company-info__number">
+                                        9 из 10
+                                    </div>
+                                    <div class="company-info__text">
+                                        Клиентов, заказывают у нас повторно или рекомендуют друзьям
+                                    </div>
+                                </div>
+                                <div class="company-info__line">
+                                    <div class="company-info__number">
+                                        20 лет
+                                    </div>
+                                    <div class="company-info__text">
+                                        Занимаемся продажей автозапчастей в России
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius felis sed metus mattis mattis. In hac habitasse platea dictumst. Etiam non justo ac sem sollicitudin rutrum. Vestibulum auctor leo et sapien interdum volutpat quis id magna. Proin ut
+                        nisl ipsum. Maecenas vitae dolor posuere, scelerisque sem in, mattis nunc. Proin porta, risus tempus fringilla eleifend, massa turpis laoreet magna, sed bibendum lectus elit ut augue. Etiam consequat enim at pellentesque tempus.
+                        Praesent convallis tellus quis eros auctor, at ultrices neque eleifend. Etiam aliquam, tellus at laoreet semper, mi leo elementum ante, id interdum erat tellus non magna. Aliquam ornare condimentum sapien eu mattis. Vestibulum
+                        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum malesuada elementum pharetra. Phasellus sit amet porttitor arcu. Vivamus eros mi, viverra vel velit id, posuere pretium libero.
+                        <br><br> Morbi urna ex, laoreet in sagittis nec, cursus in ante. Pellentesque id justo eu velit mattis placerat id vitae mi. Nam tristique feugiat laoreet. Sed quis malesuada justo, eu interdum odio. Vivamus ornare venenatis tortor,
+                        nec placerat quam tincidunt vel. Phasellus interdum purus rhoncus nibh vestibulum viverra. Phasellus sit amet mauris viverra, consequat velit sit amet, semper elit.
+                        <br><br> Maecenas ut facilisis tellus, sed fringilla sem. Mauris consequat varius elit, suscipit egestas nisl vestibulum sed. Integer id urna mi. Pellentesque laoreet ante justo, id convallis libero porttitor congue. Mauris ac
+                        nunc porta, auctor nibh sed, posuere orci. Etiam neque leo, pulvinar et laoreet a, facilisis id felis. Mauris pulvinar tortor sit amet malesuada pellentesque. Sed mollis justo enim, rhoncus blandit est varius ac. Nunc mattis elit
+                        nulla, eu vulputate ante hendrerit in.
+                        <br><br> Aliquam pretium faucibus lobortis. Suspendisse rhoncus nulla a risus sodales sollicitudin. Maecenas pulvinar sem vestibulum leo pretium gravida quis ut velit. Sed venenatis a eros id finibus. Fusce ac facilisis orci, et
+                        scelerisque ante. Fusce quam justo, pellentesque vitae vulputate sed, pellentesque id massa. Etiam diam ipsum, luctus id arcu eu, ultrices mollis sapien. Etiam facilisis in sapien non interdum. Sed tempus odio eget elit euismod
+                        semper. Pellentesque suscipit auctor elit. Aliquam erat justo, vehicula sit amet lorem non, congue feugiat arcu. Sed posuere tincidunt erat, quis pretium orci dignissim in.
+                        <br><br> Mauris a purus ligula. Nam non volutpat tellus. Mauris porttitor, felis et pharetra convallis, nisi velit malesuada nunc, ut consequat orci libero blandit nibh. Sed orci felis, mattis vel sodales eget, finibus sit amet
+                        leo. Mauris ante nisl, tincidunt a porta at, efficitur vitae nisl. Nullam nec sapien mauris. Cras malesuada ultricies congue. In tristique vulputate risus, sit amet mattis risus eleifend non. Curabitur sem odio, vehicula quis nunc
+                        eget, tincidunt iaculis justo. Aenean sed nisi dui. Ut ornare justo sit amet euismod hendrerit.
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="recommended">
+                <div class="container">
+                    <div class="recommended-title">
+                        <div class="recommended-title__icon">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <h2 class="recommended-title__heading"> Рекомендуемые разделы</h2>
+                    </div>
+                    <div class="recommended-slider" data-swiper="main" data-swiper-slide="3" data-swiper-margin="0" data-swiper-navigation data-breakpoints='{"0": {"slidesPerView" : 1},"700": {"slidesPerView" : 2}, "1200": {"slidesPerView" : 3}}'>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-1.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Моторные масла</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-2.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Аккумуляторы</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-3.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Автомобильные шины</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-2.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Аккумуляторы</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contacts">
+                <div class="container">
+                    <div class="contacts-top">
+                        <div class="contacts-top__col">
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#phone-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Телефон</p>
+                                    <a class="contacts-top__text" href="">8 (499) 202 10 00</a>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#mail-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Почта</p>
+                                    <a class="contacts-top__text" href="">info@namedomen.com</a>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#adress-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Адрес магазина</p>
+                                    <a class="contacts-top__text" href="">г. Балашиха, ул юбилейная 24.</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="contacts-top__col">
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#time-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Понедельник-суббота</p>
+                                    <p class="contacts-top__text">09:00 - 21:00</p>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#time-contact"></use>
+                                    </svg>
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Воскресенье</p>
+                                    <p class="contacts-top__text">09:00 - 18:00 </p>
+                                </div>
+                            </div>
+                            <div class="contacts-top__line">
+                                <div class="contacts-top__icon">
+                                    <img src="./img/company/icon.svg" alt="">
+                                </div>
+                                <div class="contacts-top__right">
+                                    <p class="contacts-top__title">Праздники, не рабочие дни магазина</p>
+                                    <a class="contacts-top__text" href="">1,2 и 7 января.</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="contacts-bottom">
+                        <div class="contacts-map block-parent-map">
+                            <div id="map" class="map-block"></div>
+                            <div class="contacts-map__adress">
+                                <div class="contacts-map__adress--icon">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#contact-map"></use>
+                                    </svg>
+                                </div>
+                                <p class="contacts-map__adress--text">г. Балашиха, ул юбилейная 24.</p>
+                            </div>
+                        </div>
+                        <div class="contacts-form">
+                            <p class="contacts-form__consult">Бесплатная консультация</p>
+                            <h2 class="contacts-form__title">Помощь с подбором шин и дисков для автомобиля</h2>
+                            <p class="contacts-form__text">В течении 10 минут вам позвонит менеджер магазина и подберёт лучшие запчасти для вашего автомобиля</p>
+                            <form action="#" class="form-c">
+                                <div class="form-field">
+                                    <label for="name">ФИО</label>
+                                    <input type="text" name="name" placeholder="Ваше имя  ...">
+                                </div>
+                                <div class="form-field">
+                                    <label for="phone">Телефон</label>
+                                    <input type="text" name="phone" placeholder="Ваш телефон  ...">
+                                </div>
+                                <div class="form-field form-textarea">
+                                    <label for="name">КОММЕНТАРИЙ</label>
+                                    <textarea name="" id="" placeholder="Введите ваш комментарий..."></textarea>
+                                </div>
+                                <div class="form-bottom">
+                                    <div class="form-bottom__info">
+                                        <div class="contacts-top__line">
+                                            <div class="contacts-top__icon">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#phone-contact-white"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="contacts-top__right">
+                                                <p class="contacts-top__title">СРОЧНАЯ ПОМОЩЬ</p>
+                                                <a class="contacts-top__text" href="">8 (499) 202 10 00</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Отправить заявку">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog-main blog-main--page" data-swiper="main" data-swiper-slide="3" data-swiper-navigation data-breakpoints='{"0": {"slidesPerView" : 1},"700": {"slidesPerView" : 2}, "1300": {"slidesPerView" : 3}}'>
+                <div class="container">
+                    <div class="blog-main__header">
+                        <h2 class="blog-main__header--title section-title">Наш блог</h2>
+                        <a href="" class="link-block">Все статьи</a>
+                        <div class="blog-main__arrow">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="blog-main__item">
+                                    <img class="blog-main__picture" src="./img/blog-main/blog-1.jpg" alt="">
+                                    <div class="blog-main__content">
+                                        <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                        <a class="blog-main__content--link" href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="blog-main__item">
+                                    <img class="blog-main__picture" src="./img/blog-main/blog-2.jpg" alt="">
+                                    <div class="blog-main__content">
+                                        <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                        <a class="blog-main__content--link" href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="blog-main__item">
+                                    <img class="blog-main__picture" src="./img/blog-main/blog-3.jpg" alt="">
+                                    <div class="blog-main__content">
+                                        <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                        <a class="blog-main__content--link" href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="blog-main__item">
+                                    <img class="blog-main__picture" src="./img/blog-main/blog-1.jpg" alt="">
+                                    <div class="blog-main__content">
+                                        <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                        <a class="blog-main__content--link" href="">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        @@include('tpls/sections/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

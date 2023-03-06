@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230306135404">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <div class="container">
+        <div class="header_left">
+            <div class="header-menu-mobile">
+                <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0C0.447716 0 0 0.447716 0 1C0 1.55228 0.447716 2 1 2H15C15.5523 2 16 1.55228 16 1C16 0.447716 15.5523 0 15 0H1Z" fill="#FADE56"></path>
+                    <path d="M1 5C0.447716 5 0 5.44772 0 6C0 6.55228 0.447716 7 1 7H9C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5H1Z" fill="#FADE56"></path>
+                </svg>
+            </div>
+            <div class="header_logo">
+                <a href="/">
+                    <img src="/img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header_catalog">
+                <h1 class="header_catalog__text">Продажа ШИН и <br>дисков в МОСКВЕ</h1>
+                <div class="header_catalog__menu">
+                    <svg class="header_catalog__menu--icon">
+                        <use xlink:href="/img/sprite.svg#icon-catalog"></use>
+                    </svg>
+                    <p class="header_catalog__menu--title">Каталог</p>
+                    <ul class="header_catalog__dropdown"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="header_right">
+            <div class="header_right--overflow">
+                <div class="header_right--container">
+                    <button class="poppa__closer"></button>
+                    <div class="header_right__top">
+                        <div class="header_right__col" data-col="prodazh">
+                            <p class="header_right__col--title">Отдел продаж:</p>
+                            <a class="header_right__col--info" href="tel:+79637787976">+7 (963) 778-79-76</a>
+                            <button class="header_right__col--btn">Заказать звонок</button>
+                        </div>
+                        <div class="header_right__col" data-col="time">
+                            <p class="header_right__col--title">Время работы:</p>
+                            <p class="header_right__col--info">10:00 - 20:00</p>
+                            <p class="header_right__col--text">Без выходных</p>
+                        </div>
+                        <div class="header_right__col" data-col="street">
+                            <p class="header_right__col--title">Адрес:</p>
+                            <p class="header_right__col--info">г.Балашиха,<br>ул Юбилейная 24.</p>
+                            <a href="" class="header_right__col--scheme">Схема проезда</a>
+                        </div>
+                        <div class="header_right__sign">
+                            <svg>
+                            <use xlink:href="/img/sprite.svg#icon-sign"></use>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="header_right__bottom">
+                        <nav class="header_right__menu">
+                            <ul class="header_right__menu--list">
+                                <li class="header_right__menu--element">
+                                    <a href="">Услуги</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Покупателю</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Пункт выдачи</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Акции</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Блог</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header_right__btn">
+                            <div class="search-input">
+                                <input type="search" placeholder="Например, MICHELIN X-ICE NORTH">
+                            </div>
+                            <span class="header_right--search">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </span>
+                            <span class="header_right--favorites" data-count="8">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-favorites"></use>
+                            </svg>
+                        </span>
+                            <span class="header_right--account">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-account"></use>
+                            </svg>
+                        </span>
+                            <span class="header_right--cart" data-count="12">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Просмотренные товары
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">Просмотренные товары</h1>
+                <div class="select-filter">
+                    <div class="select-filter__custom">
+                        <select name="filter-item select" data-trigger>
+                            <option value="big" selected>Сначала дорогие</option>
+                            <option value="small">Сначала дешевые</option>
+                        </select>
+                    </div>
+                    <span class="select-filter__item">Товаров: 3 492</span>
+                </div>
+                <div class="page-item">
+                    <div class="items-catalog__content">
+                        <div class="tabs__page-container" data-tabs="items">
+                            <div class="tabs__page">
+                                <div class="items-catalog__container">
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <div class="items-catalog__element--price">
+                                            <p class="items-catalog__element--price--new">
+                                                2500
+                                                <span class="sect-count-rubl">/шт</span>
+                                            </p>
+                                            <p class="items-catalog__element--price--old">
+                                                3200
+                                                <span class="sect-count-rubl"></span>
+                                            </p>
+                                        </div>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="hot">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold" data-small>
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                        <div class="items-catalog__element--remains">
+                                            Осталась 1 шт
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                    <div class="items-catalog__element" data-state="cold">
+                                        <div class="items-catalog__element--icon-left">
+                                            <span class="items-catalog__element--state"></span>
+                                            <span class="items-catalog__element--favorites">
+                                                <svg>
+                                                    <use xlink:href="/img/sprite.svg#heart"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="items-catalog__element--icon-right">
+                                            <span class="items-catalog__element--discount">
+                                                скидка 10%
+                                            </span>
+                                            <span class="items-catalog__element-n">
+                                                new
+                                            </span>
+                                            <svg class="items-catalog__element-icon">
+                                                <use xlink:href="/img/sprite.svg#fire"></use>
+                                            </svg>
+                                        </div>
+                                        <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                                        <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                                        <div class="items-catalog__element--star">
+                                            <div class="items-catalog__element--star--icon">
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="all">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                                <svg data-filled="none">
+                                                    <use xlink:href="/img/sprite.svg#item-star"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="items-catalog__element--star--value">4.84</p>
+                                        </div>
+                                        <p class="items-catalog__element--count">
+                                            Достаточно
+                                        </p>
+                                        <p class="items-catalog__element--price">
+                                            2500
+                                            <span class="sect-count-rubl">/шт</span>
+                                        </p>
+                                        <div class="items-catalog__element--bottom">
+                                            <div class="items-catalog__element--bottom-count">
+                                                <span class="minus">-</span>
+                                                <input type="number" value="1" class="items-catalog__element--input">
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <button class="items-catalog__element--cart-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__page"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="recommended">
+                <div class="container">
+                    <div class="recommended-title">
+                        <div class="recommended-title__icon">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <h2 class="recommended-title__heading"> Рекомендуемые разделы</h2>
+                    </div>
+                    <div class="recommended-slider" data-swiper="main" data-swiper-slide="3" data-swiper-margin="0" data-swiper-navigation data-breakpoints='{"0": {"slidesPerView" : 1},"700": {"slidesPerView" : 2}, "1200": {"slidesPerView" : 3}}'>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-1.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Моторные масла</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-2.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Аккумуляторы</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-3.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Автомобильные шины</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+                                <a href="" class="swiper-slide">
+                                    <img class="recommended-slider__picture" src="./img/recommend/slide-2.png" alt="">
+                                    <div class="recommended-slider__right">
+                                        <h3 class="recommended-slider__title">Аккумуляторы</h3>
+                                        <span class="recommended-slider__items">329 товаров</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+    <img class="footer-back" src="/img/footer/back.png" alt="">
+    <div class="footer-top">
+        <div class="container">
+            <nav class="footer-top__menu">
+                <ul class="footer-top__menu--list">
+                    <li><a href="">Каталог ШИН</a></li>
+                    <li><a href="">Каталог ДИСКОВ</a></li>
+                    <li><a href="">АКСЕССУРЫ</a></li>
+                    <li><a href="">ОПЛАТА</a></li>
+                    <li><a href="">ДОСТАВКА</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__content">
+                <div class="footer-bottom__col">
+                    <div class="footer-bottom__head">
+                        <div class="footer-bottom__head--left">
+                            <p class="footer-bottom__head--title">Каталог ШИН ПО авто</p>
+                            <a class="footer-bottom__head--link" href="">Подробнее</a>
+                        </div>
+                        <a class="footer-bottom__head--link" href="">Карта сайта</a>
+                    </div>
+                    <div class="footer-bottom__list">
+                        <ul class="footer-bottom__list--items">
+                            <li><a href="">Kia</a></li>
+                            <li><a href="">Hyundai</a></li>
+                            <li><a href="">Skoda</a></li>
+                            <li><a href="">Volkswagen</a></li>
+                            <li><a href="">Toyota</a></li>
+                            <li><a href="">Brilliance</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom__col">
+                    <p class="footer-bottom__col--header">
+                        УСЛУГИ
+                    </p>
+                    <ul class="footer-bottom__col--menu">
+                        <li><a href="">Шиномонтаж</a></li>
+                        <li><a href="">Доставка</a></li>
+                        <li><a href="">Хранение шин</a></li>
+                        <li><a href="">Ремонт шин</a></li>
+                        <li><a href="">Ремонт дисков</a></li>
+                        <li><a href="">Покраска дисков</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom__col">
+                    <p class="footer-bottom__col--header">
+                        Контакты
+                    </p>
+                    <div class="footer-bottom__col--contacts">
+                        <a class="footer-bottom__col--line footer-phone" href="tel:+79637787976">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#footer-phone"></use>
+                            </svg> +7 (963) 778-79-76
+                        </a>
+                        <div class="footer-bottom__col--line footer-time">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#footer-time"></use>
+                            </svg> Ежедневно с 10:00 до 20:00</div>
+                        <div class="footer-bottom__col--line footer-adress">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#footer-adress"></use>
+                            </svg>
+                            <p>Россия, Балашиха, Юбилейная улица, 24</p>
+                        </div>
+                    </div>
+                    <a href="" class="footer-bottom__col--marshr">Построить маршрут</a>
+                </div>
+                <div class="footer-bottom__col">
+                    <a href="" class="footer-bottom__avito">
+                        <img class="footer-bottom__avito--picture" src="/img/footer/avito.svg" alt="">
+                        <p class="footer-bottom__avito--title">Чёрное & Круглое</p>
+                        <span class="footer-bottom__avito--numb">5.0</span>
+                        <p class="footer-bottom__avito--recommend">Рекомендуют 100%</p>
+                        <svg class="footer-bottom__avito--icon">
+                            <use xlink:href="/img/sprite.svg#footer-star"></use>
+                        </svg>
+                    </a>
+                    <img class="footer-bottom__ya" src="/img/footer/ya.png" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom__pdp">
+                <div class="footer-bottom__pdp--copyright">
+                    <p class="footer-bottom__pdp--info--policy">© 1996 - 2023 Шинный центр "ЧЕРНОЕ&КРУГЛОЕ"</p>
+                    <a class="footer-bottom__pdp--info--link" href="">Политика конфиденциальности</a>
+                    <a class="footer-bottom__pdp--info--link" href="">Пользовательское соглашение</a>
+                </div>
+                <p class="footer-bottom__pdp--text">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.</p>
+                <div class="footer-bottom__pdp--info">
+                    <p>Сделано с любовью </p>
+                    <a href="">Webpro.<span>studio</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <section class="poppa modal" id="cart-added">
+    <div class="modal__inner">
+        <h2 class="modal__title">Товар добавлен в корзину</h2>
+        <div class="line-added-item">
+            <img class="line-added-item__picture" src="./img/items/item-1.png" alt="">
+            <h3 class="line-added-item__name">Шины Yokohama BluEarth*Winter V905 205 45 R17 88V Нешип</h3>
+            <div class="line-added-item__counter">
+                <span>-</span>
+                <input type="number" name="" value="1">
+                <span>+</span>
+            </div>
+            <span class="line-added-item__price">100 000 ₽</span>
+        </div>
+        <div class="line-added-info">
+            <div class="line-added-info__left">
+                <span>В корзине 4 товара</span>
+                <span>на сумму 10 000 ₽</span>
+            </div>
+            <div class="line-added-info__right">
+                <button class="line-added-info__next">Продолжить покупки</button>
+                <a class="line-added-info__cart" href="">Перейти в корзину</a>
+            </div>
+        </div>
+        <section class="recommended">
+
+            <div class="recommended-title">
+                <div class="recommended-title__icon">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <h2 class="recommended-title__heading"> Рекомендуемые разделы</h2>
+            </div>
+            <div class="recommended-slider" data-swiper="main" data-swiper-slide="3" data-swiper-margin="0" data-swiper-navigation>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <a href="" class="swiper-slide">
+                            <img class="recommended-slider__picture" src="./img/recommend/slide-1.png" alt="">
+                            <div class="recommended-slider__right">
+                                <h3 class="recommended-slider__title">Моторные масла</h3>
+                                <span class="recommended-slider__items">329 товаров</span>
+                            </div>
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img class="recommended-slider__picture" src="./img/recommend/slide-2.png" alt="">
+                            <div class="recommended-slider__right">
+                                <h3 class="recommended-slider__title">Аккумуляторы</h3>
+                                <span class="recommended-slider__items">329 товаров</span>
+                            </div>
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img class="recommended-slider__picture" src="./img/recommend/slide-3.png" alt="">
+                            <div class="recommended-slider__right">
+                                <h3 class="recommended-slider__title">Автомобильные шины</h3>
+                                <span class="recommended-slider__items">329 товаров</span>
+                            </div>
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img class="recommended-slider__picture" src="./img/recommend/slide-2.png" alt="">
+                            <div class="recommended-slider__right">
+                                <h3 class="recommended-slider__title">Аккумуляторы</h3>
+                                <span class="recommended-slider__items">329 товаров</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+        </section>
+
+        <section class="recommended-item">
+            <div class="recommended-title">
+                <div class="recommended-title__icon">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <h2 class="recommended-title__heading">Рекомендуемые товары</h2>
+            </div>
+            <div class="items-catalog__container">
+                <div class="items-catalog__element" data-state="cold">
+                    <div class="items-catalog__element--icon-left">
+                        <span class="items-catalog__element--state"></span>
+                        <span class="items-catalog__element--favorites">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#heart"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="items-catalog__element--icon-right">
+                        <span class="items-catalog__element--discount">
+                            скидка 10%
+                        </span>
+                        <span class="items-catalog__element-n">
+                            new
+                        </span>
+                        <svg class="items-catalog__element-icon">
+                            <use xlink:href="/img/sprite.svg#fire"></use>
+                        </svg>
+                    </div>
+                    <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                    <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                    <div class="items-catalog__element--star">
+                        <div class="items-catalog__element--star--icon">
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="none">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                        </div>
+                        <p class="items-catalog__element--star--value">4.84</p>
+                    </div>
+                    <p class="items-catalog__element--count">
+                        Достаточно
+                    </p>
+                    <div class="items-catalog__element--price">
+                        <p class="items-catalog__element--price--new">
+                            2500
+                            <span class="sect-count-rubl">/шт</span>
+                        </p>
+                        <p class="items-catalog__element--price--old">
+                            3200
+                            <span class="sect-count-rubl"></span>
+                        </p>
+                    </div>
+                    <div class="items-catalog__element--bottom">
+                        <div class="items-catalog__element--bottom-count">
+                            <span class="minus">-</span>
+                            <input type="number" value="1" class="items-catalog__element--input">
+                            <span class="plus">+</span>
+                        </div>
+                        <button class="items-catalog__element--cart-btn">В корзину</button>
+                    </div>
+                </div>
+                <div class="items-catalog__element" data-state="hot">
+                    <div class="items-catalog__element--icon-left">
+                        <span class="items-catalog__element--state"></span>
+                        <span class="items-catalog__element--favorites">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#heart"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="items-catalog__element--icon-right">
+                        <span class="items-catalog__element--discount">
+                            скидка 10%
+                        </span>
+                        <span class="items-catalog__element-n">
+                            new
+                        </span>
+                        <svg class="items-catalog__element-icon">
+                            <use xlink:href="/img/sprite.svg#fire"></use>
+                        </svg>
+                    </div>
+                    <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                    <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                    <div class="items-catalog__element--star">
+                        <div class="items-catalog__element--star--icon">
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="none">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                        </div>
+                        <p class="items-catalog__element--star--value">4.84</p>
+                    </div>
+                    <p class="items-catalog__element--count">
+                        Достаточно
+                    </p>
+                    <p class="items-catalog__element--price">
+                        2500
+                        <span class="sect-count-rubl">/шт</span>
+                    </p>
+                    <div class="items-catalog__element--bottom">
+                        <div class="items-catalog__element--bottom-count">
+                            <span class="minus">-</span>
+                            <input type="number" value="1" class="items-catalog__element--input">
+                            <span class="plus">+</span>
+                        </div>
+                        <button class="items-catalog__element--cart-btn">В корзину</button>
+                    </div>
+                </div>
+                <div class="items-catalog__element" data-state="cold">
+                    <div class="items-catalog__element--icon-left">
+                        <span class="items-catalog__element--state"></span>
+                        <span class="items-catalog__element--favorites">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#heart"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="items-catalog__element--icon-right">
+                        <span class="items-catalog__element--discount">
+                            скидка 10%
+                        </span>
+                        <span class="items-catalog__element-n">
+                            new
+                        </span>
+                        <svg class="items-catalog__element-icon">
+                            <use xlink:href="/img/sprite.svg#fire"></use>
+                        </svg>
+                    </div>
+                    <img class="items-catalog__element--picture" src="./img/items/item-1.png" alt="">
+                    <p class="items-catalog__element--title">Yokohama BluEarth * Winter V905 205 45 R17 88V </p>
+                    <div class="items-catalog__element--star">
+                        <div class="items-catalog__element--star--icon">
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="all">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                            <svg data-filled="none">
+                                <use xlink:href="/img/sprite.svg#item-star"></use>
+                            </svg>
+                        </div>
+                        <p class="items-catalog__element--star--value">4.84</p>
+                    </div>
+                    <p class="items-catalog__element--count">
+                        Достаточно
+                    </p>
+                    <p class="items-catalog__element--price">
+                        2500
+                        <span class="sect-count-rubl">/шт</span>
+                    </p>
+                    <div class="items-catalog__element--bottom">
+                        <div class="items-catalog__element--bottom-count">
+                            <span class="minus">-</span>
+                            <input type="number" value="1" class="items-catalog__element--input">
+                            <span class="plus">+</span>
+                        </div>
+                        <button class="items-catalog__element--cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff&_v=20230306135404"></script>
+
+    <script src="./js/index.js?_v=20230306135404"></script>
+</body>
+
+</html>

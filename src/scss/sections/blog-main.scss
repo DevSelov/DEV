@@ -1,0 +1,125 @@
+.blog-main {
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        &>.section-title {
+            margin-bottom: -10px;
+        }
+    }
+    @media (max-width: 767px) {
+        .link-block {
+            margin-left: 0;
+        }
+    }
+}
+
+.blog-main--page {
+    margin-top: 118px;
+}
+
+.blog-main--news {
+    margin: 60px 0 100px 0;
+}
+
+.blog-main__header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 51px;
+    .blog-main__header--title {
+        margin-right: 40px;
+    }
+    @media (max-width:767px) {
+        align-items: center;
+        margin-bottom: 20px;
+        .blog-main__header--title {
+            margin-right: 20px;
+        }
+    }
+}
+
+.blog-main--news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 64px 32px;
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;
+        margin-top: 20px;
+    }
+}
+
+.blog-main__item {
+    border-radius: 25px;
+    height: 339px;
+    position: relative;
+    display: flex;
+    padding: 26px 30px 26px 35px;
+    @media (max-width: 767px) {
+        height: 250px;
+        padding: 20px;
+    }
+}
+
+.blog-main__picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.blog-main__content {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+        .blog-main__content--title {
+            width: 62%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.blog-main__content--title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    font-family: 'Roboto';
+    color: #fff;
+    width: 40%;
+}
+
+.blog-main__content--link {
+    background: var(--c-yellow);
+    width: 152px;
+    height: 43px;
+    border-radius: 6px;
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-main__arrow {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    &>div {
+        position: static;
+    }
+    .swiper-button-prev {
+        margin-right: 13px;
+    }
+}

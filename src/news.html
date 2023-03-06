@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('tpls/sections/header.html',{})
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Новости
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">Новости</h1>
+
+            </div>
+
+            <section class="blog-main">
+                <div class="container">
+                    <div class="blog-main--news">
+
+                        <div class="blog-main__item">
+                            <img class="blog-main__picture" src="./img/blog-main/blog-1.jpg" alt="">
+                            <div class="blog-main__content">
+                                <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                <a class="blog-main__content--link" href="">Подробнее</a>
+                            </div>
+                        </div>
+
+
+                        <div class="blog-main__item">
+                            <img class="blog-main__picture" src="./img/blog-main/blog-2.jpg" alt="">
+                            <div class="blog-main__content">
+                                <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                <a class="blog-main__content--link" href="">Подробнее</a>
+                            </div>
+                        </div>
+
+
+                        <div class="blog-main__item">
+                            <img class="blog-main__picture" src="./img/blog-main/blog-3.jpg" alt="">
+                            <div class="blog-main__content">
+                                <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                <a class="blog-main__content--link" href="">Подробнее</a>
+                            </div>
+                        </div>
+
+
+                        <div class="blog-main__item">
+                            <img class="blog-main__picture" src="./img/blog-main/blog-1.jpg" alt="">
+                            <div class="blog-main__content">
+                                <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                <a class="blog-main__content--link" href="">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="blog-main__item">
+                            <img class="blog-main__picture" src="./img/blog-main/blog-3.jpg" alt="">
+                            <div class="blog-main__content">
+                                <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                <a class="blog-main__content--link" href="">Подробнее</a>
+                            </div>
+                        </div>
+
+
+                        <div class="blog-main__item">
+                            <img class="blog-main__picture" src="./img/blog-main/blog-1.jpg" alt="">
+                            <div class="blog-main__content">
+                                <h3 class="blog-main__content--title">Как выбрать шину на зиму?</h3>
+                                <a class="blog-main__content--link" href="">Подробнее</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        @@include('tpls/sections/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;apikey=55053583-9704-4e95-8a17-d5e58aa501ff"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

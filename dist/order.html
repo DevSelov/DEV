@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избранное</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230306135404">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <div class="container">
+        <div class="header_left">
+            <div class="header-menu-mobile">
+                <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0C0.447716 0 0 0.447716 0 1C0 1.55228 0.447716 2 1 2H15C15.5523 2 16 1.55228 16 1C16 0.447716 15.5523 0 15 0H1Z" fill="#FADE56"></path>
+                    <path d="M1 5C0.447716 5 0 5.44772 0 6C0 6.55228 0.447716 7 1 7H9C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5H1Z" fill="#FADE56"></path>
+                </svg>
+            </div>
+            <div class="header_logo">
+                <a href="/">
+                    <img src="/img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header_catalog">
+                <h1 class="header_catalog__text">Продажа ШИН и <br>дисков в МОСКВЕ</h1>
+                <div class="header_catalog__menu">
+                    <svg class="header_catalog__menu--icon">
+                        <use xlink:href="/img/sprite.svg#icon-catalog"></use>
+                    </svg>
+                    <p class="header_catalog__menu--title">Каталог</p>
+                    <ul class="header_catalog__dropdown"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="header_right">
+            <div class="header_right--overflow">
+                <div class="header_right--container">
+                    <button class="poppa__closer"></button>
+                    <div class="header_right__top">
+                        <div class="header_right__col" data-col="prodazh">
+                            <p class="header_right__col--title">Отдел продаж:</p>
+                            <a class="header_right__col--info" href="tel:+79637787976">+7 (963) 778-79-76</a>
+                            <button class="header_right__col--btn">Заказать звонок</button>
+                        </div>
+                        <div class="header_right__col" data-col="time">
+                            <p class="header_right__col--title">Время работы:</p>
+                            <p class="header_right__col--info">10:00 - 20:00</p>
+                            <p class="header_right__col--text">Без выходных</p>
+                        </div>
+                        <div class="header_right__col" data-col="street">
+                            <p class="header_right__col--title">Адрес:</p>
+                            <p class="header_right__col--info">г.Балашиха,<br>ул Юбилейная 24.</p>
+                            <a href="" class="header_right__col--scheme">Схема проезда</a>
+                        </div>
+                        <div class="header_right__sign">
+                            <svg>
+                            <use xlink:href="/img/sprite.svg#icon-sign"></use>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="header_right__bottom">
+                        <nav class="header_right__menu">
+                            <ul class="header_right__menu--list">
+                                <li class="header_right__menu--element">
+                                    <a href="">Услуги</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Покупателю</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Пункт выдачи</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Акции</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Блог</a>
+                                </li>
+                                <li class="header_right__menu--element">
+                                    <a href="">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header_right__btn">
+                            <div class="search-input">
+                                <input type="search" placeholder="Например, MICHELIN X-ICE NORTH">
+                            </div>
+                            <span class="header_right--search">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </span>
+                            <span class="header_right--favorites" data-count="8">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-favorites"></use>
+                            </svg>
+                        </span>
+                            <span class="header_right--account">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-account"></use>
+                            </svg>
+                        </span>
+                            <span class="header_right--cart" data-count="12">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <main>
+            <div class="container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            Оформление заказа
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="section-title">Оформление заказа</h1>
+            </div>
+
+            <section class="order">
+                <div class="container">
+                    <form class="order-form" action="#">
+                        <ol class="order-form__list">
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Контактная информация</h2>
+                                <div class="tabs field-column-max">
+                                    <div class="tabs__toggler-container order-tabs" data-tabs="contact-info">
+                                        <button class="tabs__toggler">Физическое лицо</button>
+                                        <button class="tabs__toggler">Юридическое лицо</button>
+                                        <button class="tabs__toggler">Индивидуальный предприниматель</button>
+                                    </div>
+                                </div>
+                                <div class="fields-box field-column-max">
+                                    <div class="fields-box__line">
+                                        <label for="">Фамилия*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Имя*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Отчество*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Email*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <div class="fields-box__line">
+                                        <label for="">Телефон*</label>
+                                        <input class="fields" type="text">
+                                    </div>
+                                    <span class="fields-box__info">* Поля являются обязательными для заполнения</span>
+                                </div>
+                                <div class="tabs__page-container field-column-max" data-tabs="contact-info">
+                                    <div class="tabs__page"></div>
+                                    <div class="tabs__page">
+                                        <h3 class="tabs__page__title-order">Компания</h3>
+                                        <div class="fields-box" data-cols="2">
+                                            <div class="fields-box__line">
+                                                <label for="">ИНН*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Компания*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">КПП*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Юридический адрес*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Почтовый адрес*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <div class="selection-item__checkbox--item checbox-custom">
+                                                    <input type="checkbox" name="not-ship">
+                                                    <span class="selection-item__checkbox--field"></span>
+                                                    <label for="not-ship">
+                                                        совпадает с юридическим адресом
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <span class="fields-box__info">* Поля являются обязательными для заполнения</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Способ получения</h2>
+                                <div class="tabs field-column-max">
+                                    <div class="tabs__toggler-container order-tabs" data-tabs="method-delivery">
+                                        <button class="tabs__toggler">Самовывоз</button>
+                                        <button class="tabs__toggler">Доставка</button>
+                                    </div>
+                                </div>
+                                <div class="tabs__page-container field-column-max" data-tabs="method-delivery">
+                                    <div class="tabs__page">
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio">
+                                                <span></span>
+                                            </div>
+                                            <div class="order-form__radio--text">
+                                                <p class="order-form__radio--title">г. Балашиха, ул юбилейная 24.</p>
+                                                <p class="order-form__radio--time">Ежедневно с 9:00 до 21:00, без перерывов</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__page">
+                                        <div class="fields-box" data-cols="2">
+                                            <div class="fields-box__line">
+                                                <label for="">Регион*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                            <div class="fields-box__line">
+                                                <label for="">Адрес*</label>
+                                                <input class="fields" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/delivery.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>Курьерская доставка</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <span class="order-form__radio--p">Доставка до подъезда по Москве и Подмосковью</span>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 1 - 3 дней</p>
+                                                    <p class="order-form__radio__delivery--right">Стоимость доставки: 1 000₽</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/cdek.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>ТК СДЭК</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 2-3 дня в зависимости от вашего местоположения </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/delovye.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>ТК Деловые Линии</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 2-3 дня в зависимости от вашего местоположения </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__radio">
+                                            <div class="order-form__radio--input">
+                                                <input type="radio" name="delivery-m">
+                                                <span></span>
+                                            </div>
+                                            <img src="./img/order/pek.svg" class="order-form__radio--logo" alt="">
+                                            <div class="order-form__radio--text">
+                                                <div class="order-form__radio__top">
+                                                    <p>ТК ПЭК</p>
+                                                    <a href="">Условия доставки</a>
+                                                </div>
+                                                <div class="order-form__radio__delivery">
+                                                    <p class="order-form__radio__delivery--left">Срок доставки: 2-3 дня в зависимости от вашего местоположения </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-form__alert">
+                                            <span class="order-form__alert--green">* Доставка до транспортной компании 1 000 рублей</span>
+                                            <span class="order-form__alert--red">* Доставка строго до подъезда</span>
+                                            <span class="order-form__alert--gray">* Поля являются обязательными для заполнения</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Дополнительные услуги</h2>
+                                <div class="order-form__element--checkbox field-column-max">
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Незамерзающая жидкость - 30С
+                                        </label>
+                                    </div>
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Полироль для чернения шин
+                                        </label>
+                                    </div>
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Щетка для уборки снега автомобильная со скребком
+                                        </label>
+                                    </div>
+                                    <div class="selection-item__checkbox--item checbox-custom">
+                                        <input type="checkbox" name="not-ship">
+                                        <span class="selection-item__checkbox--field"></span>
+                                        <label for="not-ship">
+                                            Полировочная паста полироль для хрома автомобиля
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Консультация специалиста</h2>
+                                <div class="order-form__element--radio field-column-max">
+                                    <div class="order-form__radio">
+                                        <div class="order-form__radio--input">
+                                            <input type="radio" name="consult">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__radio--text">
+                                            <p>Мне требуется консультация менеджера</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__radio">
+                                        <div class="order-form__radio--input">
+                                            <input type="radio" name="consult">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__radio--text">
+                                            <p>Я уверен в выбранных товарах, консультация менеджера мне не нужна</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-form__element">
+                                <h2 class="order-form__title">Способ оплаты</h2>
+                                <div class="order-form__element--payment field-column-max">
+                                    <div class="order-form__element--payment__radio">
+                                        <input type="radio" name="payment-s">
+                                        <div class="order-form__radio--input">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__element--payment--text">
+                                            <p>При получении</p>
+                                            <span>Наличными или банковской картой в магазине</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__element--payment__radio">
+                                        <input type="radio" name="payment-s">
+                                        <div class="order-form__radio--input">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__element--payment--text">
+                                            <p>Онлайн-оплата</p>
+                                            <span>Картами Visa, MasterCard, Мир.</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-form__element--payment__radio">
+                                        <input type="radio" name="payment-s">
+                                        <div class="order-form__radio--input">
+                                            <span></span>
+                                        </div>
+                                        <div class="order-form__element--payment--text">
+                                            <p>Система быстрых платежей</p>
+                                            <span>Оплата по QR-коду через мобильное приложение Вашего банка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-form__element--textarea field-column-max">
+                                    <h3 class="order-form__element--textarea--title">Комментарий к заказу</h3>
+                                    <textarea name="" placeholder="На что нам стоит обратить внимание?"></textarea>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="order-total">
+                            <ul class="order-total__list">
+                                <li>
+                                    <span>Стоимость</span>
+                                    <span>10 000 ₽</span>
+                                </li>
+                                <li>
+                                    <span>Скидка</span>
+                                    <span>-250 ₽</span>
+                                </li>
+                                <li>
+                                    <span>Итоговая цена</span>
+                                    <span>9 750 ₽</span>
+                                </li>
+                            </ul>
+                            <button class="order-total__btn">Оформить заказ</button>
+                            <div class="order-total__polc">
+                                <input type="checkbox" checked>
+                                <p>Я согласен получать новости об акциях<br> и новинках интернет магазина</p>
+                            </div>
+                            <div class="order-total__polc">
+                                <input type="checkbox" checked>
+                                <p>Я согласен с <a href=""> условиями публичной оферты </a><br> и правилами продажи товаров</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+
+        </main>
+
+
+        <footer>
+    <img class="footer-back" src="/img/footer/back.png" alt="">
+    <div class="footer-top">
+        <div class="container">
+            <nav class="footer-top__menu">
+                <ul class="footer-top__menu--list">
+                    <li><a href="">Каталог ШИН</a></li>
+                    <li><a href="">Каталог ДИСКОВ</a></li>
+                    <li><a href="">АКСЕССУРЫ</a></li>
+                    <li><a href="">ОПЛАТА</a></li>
+                    <li><a href="">ДОСТАВКА</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__content">
+                <div class="footer-bottom__col">
+                    <div class="footer-bottom__head">
+                        <div class="footer-bottom__head--left">
+                            <p class="footer-bottom__head--title">Каталог ШИН ПО авто</p>
+                            <a class="footer-bottom__head--link" href="">Подробнее</a>
+                        </div>
+                        <a class="footer-bottom__head--link" href="">Карта сайта</a>
+                    </div>
+                    <div class="footer-bottom__list">
+                        <ul class="footer-bottom__list--items">
+                            <li><a href="">Kia</a></li>
+                            <li><a href="">Hyundai</a></li>
+                            <li><a href="">Skoda</a></li>
+                            <li><a href="">Volkswagen</a></li>
+                            <li><a href="">Toyota</a></li>
+                            <li><a href="">Brilliance</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                            <li><a href="">Changan</a></li>
+                            <li><a href="">Chery</a></li>
+                            <li><a href="">CheryExeed</a></li>
+                            <li><a href="">Chevrolet</a></li>
+                            <li><a href="">Citroen</a></li>
+                            <li><a href="">Datsun</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom__col">
+                    <p class="footer-bottom__col--header">
+                        УСЛУГИ
+                    </p>
+                    <ul class="footer-bottom__col--menu">
+                        <li><a href="">Шиномонтаж</a></li>
+                        <li><a href="">Доставка</a></li>
+                        <li><a href="">Хранение шин</a></li>
+                        <li><a href="">Ремонт шин</a></li>
+                        <li><a href="">Ремонт дисков</a></li>
+                        <li><a href="">Покраска дисков</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom__col">
+                    <p class="footer-bottom__col--header">
+                        Контакты
+                    </p>
+                    <div class="footer-bottom__col--contacts">
+                        <a class="footer-bottom__col--line footer-phone" href="tel:+79637787976">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#footer-phone"></use>
+                            </svg> +7 (963) 778-79-76
+                        </a>
+                        <div class="footer-bottom__col--line footer-time">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#footer-time"></use>
+                            </svg> Ежедневно с 10:00 до 20:00</div>
+                        <div class="footer-bottom__col--line footer-adress">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#footer-adress"></use>
+                            </svg>
+                            <p>Россия, Балашиха, Юбилейная улица, 24</p>
+                        </div>
+                    </div>
+                    <a href="" class="footer-bottom__col--marshr">Построить маршрут</a>
+                </div>
+                <div class="footer-bottom__col">
+                    <a href="" class="footer-bottom__avito">
+                        <img class="footer-bottom__avito--picture" src="/img/footer/avito.svg" alt="">
+                        <p class="footer-bottom__avito--title">Чёрное & Круглое</p>
+                        <span class="footer-bottom__avito--numb">5.0</span>
+                        <p class="footer-bottom__avito--recommend">Рекомендуют 100%</p>
+                        <svg class="footer-bottom__avito--icon">
+                            <use xlink:href="/img/sprite.svg#footer-star"></use>
+                        </svg>
+                    </a>
+                    <img class="footer-bottom__ya" src="/img/footer/ya.png" alt="">
+                </div>
+            </div>
+            <div class="footer-bottom__pdp">
+                <div class="footer-bottom__pdp--copyright">
+                    <p class="footer-bottom__pdp--info--policy">© 1996 - 2023 Шинный центр "ЧЕРНОЕ&КРУГЛОЕ"</p>
+                    <a class="footer-bottom__pdp--info--link" href="">Политика конфиденциальности</a>
+                    <a class="footer-bottom__pdp--info--link" href="">Пользовательское соглашение</a>
+                </div>
+                <p class="footer-bottom__pdp--text">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.</p>
+                <div class="footer-bottom__pdp--info">
+                    <p>Сделано с любовью </p>
+                    <a href="">Webpro.<span>studio</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+
+    <script src="./js/index.js?_v=20230306135404"></script>
+</body>
+
+</html>

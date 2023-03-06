@@ -1,129 +1,126 @@
-.catalog-items {
+.catalog-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 64px 36px;
-}
-
-@media (max-width: 1300px) {
-  .catalog-items {
-    grid-gap: 48px 24px;
-  }
+  grid-template-rows: repeat(2, 220px);
+  grid-gap: 24px 22px;
 }
 
 @media (max-width: 992px) {
-  .catalog-items {
-    grid-gap: 24px 16px;
-  }
-}
-
-@media (max-width: 600px) {
-  .catalog-items {
+  .catalog-main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.catalog-items__img {
-  height: 524px;
-  object-fit: cover;
+@media (max-width: 600px) {
+  .catalog-main {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0;
+  }
 }
 
-@media (max-width: 1300px) {
-  .catalog-items__img {
-    height: 383px;
+.catalog-item {
+  background: var(--bg-gray);
+  padding: 46px 26px;
+  border-radius: 20px;
+  transition: .3s;
+  position: relative;
+}
+
+.catalog-item:hover {
+  background: var(--c-yellow);
+}
+
+.catalog-item:first-child, .catalog-item:last-child {
+  grid-row: 3/1;
+}
+
+.catalog-item:first-child .catalog-item__title, .catalog-item:last-child .catalog-item__title {
+  width: 50%;
+}
+
+.catalog-item:nth-of-type(2) .catalog-item__title {
+  width: 50%;
+}
+
+.catalog-item:nth-of-type(3) {
+  grid-row: 2/2;
+}
+
+@media (max-width: 992px) {
+  .catalog-item:first-child, .catalog-item:last-child {
+    grid-row: auto;
+    grid-column: 4/1;
+  }
+  .catalog-item:nth-of-type(2) {
+    grid-column: 2/1;
+  }
+  .catalog-item:nth-of-type(3) {
+    grid-row: auto;
+    grid-column: 4/2;
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog-item {
+    padding: 20px;
+  }
+  .catalog-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .catalog-item:nth-of-type(2) .catalog-item__title, .catalog-item:first-child .catalog-item__title {
+    width: 100%;
+  }
+  .catalog-item .catalog-item__title {
+    font-size: 18px;
+    line-height: 1.4;
+    width: 100%;
+  }
+  .catalog-item .catalog-item__link {
+    font-size: 14px;
+  }
+}
+
+.catalog-item__picture {
+  position: absolute;
+  right: 0;
+  width: max-content;
+  width: max-content;
+  height: 93%;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (max-width: 1400px) {
+  .catalog-item__picture {
+    width: 60%;
+    height: auto;
   }
 }
 
 @media (max-width: 992px) {
-  .catalog-items__img {
-    height: 204px;
+  .catalog-item__picture {
+    width: 120px;
   }
 }
 
 @media (max-width: 600px) {
-  .catalog-items__img {
-    height: 153px;
+  .catalog-item__picture {
+    width: auto;
+    height: 100px;
+    object-fit: cover;
   }
 }
 
-.catalog-items--title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 140%;
-  font-family: var(--ff-title);
-  color: var(--c-text-regular);
-  margin-top: 24px;
+.catalog-item__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 14px;
 }
 
-@media (max-width: 992px) {
-  .catalog-items--title {
-    font-size: 16px;
-    margin-top: 12px;
-  }
-}
-
-@media (max-width: 600px) {
-  .catalog-items--title {
-    font-size: 12px;
-    line-height: 130%;
-  }
-}
-
-.catalog-title.section-title {
-  margin-bottom: 64px;
-}
-
-@media (max-width: 1300px) {
-  .catalog-title.section-title {
-    margin-bottom: 36px;
-  }
-}
-
-@media (max-width: 600px) {
-  .catalog-title.section-title {
-    margin-bottom: 24px;
-  }
-}
-
-.catalog-project .tabs {
-  overflow: visible;
-}
-
-.catalog-project.catalog-project {
-  margin-bottom: 160px;
-}
-
-.catalog-project .tabs__toggler-container {
-  width: 100%;
-  margin-bottom: 48px;
-}
-
-.catalog-project .projects-gallery-carousel > .swiper-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 31.4%);
-  grid-gap: 48px 36px;
-}
-
-.catalog-project .swiper-buttons {
-  display: none;
-}
-
-@media (max-width: 1300px) {
-  .catalog-project .projects-gallery-carousel > .swiper-wrapper {
-    grid-gap: 48px 24px;
-    grid-template-columns: repeat(3, 32%);
-  }
-}
-
-@media (max-width: 992px) {
-  .catalog-project .projects-gallery-carousel > .swiper-wrapper {
-    grid-gap: 24px 16px;
-    grid-template-columns: repeat(3, 32%);
-  }
-}
-
-@media (max-width: 600px) {
-  .catalog-project .projects-gallery-carousel > .swiper-wrapper {
-    grid-gap: 24px;
-    grid-template-columns: 100%;
-  }
+.catalog-item__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
 }
