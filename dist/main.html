@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230306173517">
+    <link rel="stylesheet" href="./css/style.css?_v=20230307132915">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -19,14 +19,16 @@
     <div class="container">
         <div class="header_left">
             <div class="header-menu-mobile">
-                <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 0C0.447716 0 0 0.447716 0 1C0 1.55228 0.447716 2 1 2H15C15.5523 2 16 1.55228 16 1C16 0.447716 15.5523 0 15 0H1Z" fill="#FADE56"></path>
-                    <path d="M1 5C0.447716 5 0 5.44772 0 6C0 6.55228 0.447716 7 1 7H9C9.55228 7 10 6.55228 10 6C10 5.44772 9.55228 5 9 5H1Z" fill="#FADE56"></path>
+                <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="3" rx="1.5" fill="#FFD81B"/>
+                    <rect y="9" width="24" height="3" rx="1.5" fill="#FFD81B"/>
+                    <rect y="18" width="32" height="3" rx="1.5" fill="#FFD81B"/>
                 </svg>
             </div>
             <div class="header_logo">
                 <a href="/">
                     <img src="./img/logo.png" alt="">
+                    <span class="header_logo--mobile-logo">Черное&Круглое</span>
                 </a>
             </div>
             <div class="header_catalog">
@@ -37,6 +39,18 @@
                     </svg>
                     <p class="header_catalog__menu--title">Каталог</p>
                     <ul class="header_catalog__dropdown"></ul>
+                </div>
+                <div class="header_right__btn header_catalog__mobile-elem">
+                    <span class="header_right--favorites" data-count="8">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#icon-favorites"></use>
+                        </svg>
+                    </span>
+                    <span class="header_right--cart" data-count="12">
+                        <svg>
+                            <use xlink:href="./img/sprite.svg#icon-cart"></use>
+                        </svg>
+                    </span>
                 </div>
             </div>
         </div>
@@ -120,6 +134,66 @@
         </div>
     </div>
 </header>
+<div class="back-overlay"></div>
+<div class="header-menu-popup">
+    <div class="container">
+        <ul class="header-menu__parent">
+            <li class="header-menu__parent--element">Шины
+                <ul class="header-menu__children" data-title="Шины">
+                    <li class="header-menu__children--element">
+                        <a href="">
+                        Моторные
+                    </a>
+                    </li>
+                    <li class="header-menu__children--element">Моторные</li>
+                    <li class="header-menu__children--element">Моторные</li>
+                    <li class="header-menu__children--element">Моторные</li>
+                    <li class="header-menu__children--element">Моторные</li>
+                    <li class="header-menu__children--element">Моторные</li>
+                    <li class="header-menu__children--element">Моторные</li>
+                    <li class="header-menu__children--element">Моторные</li>
+                </ul>
+            </li>
+            <li class="header-menu__parent--element">Диски</li>
+            <li class="header-menu__parent--element">Масла</li>
+            <li class="header-menu__parent--element">Аккумуляторы</li>
+            <li class="header-menu__parent--element">Аксессуары</li>
+            <li class="header-menu__parent--element">Расходные материалы</li>
+            <li class="header-menu__parent--element">Расходные жидкости</li>
+            <li class="header-menu__parent--element">Смазки</li>
+            <li class="header-menu__parent--element">Фильтра</li>
+
+        </ul>
+        <div class="header-menu__find-content">
+            <div class="hedaer-menu__find-content__top">
+                <div class="header-menu__find-content--title"></div>
+                <ul class="header-menu__find-content__list"></ul>
+            </div>
+            <button class="header-menu__esc">Закрыть меню</button>
+            <div class="header-menu__podbor">
+                <div class="header-menu__podbor--element">
+                    <img src="" alt="">
+                    <a>Подборшин и дисков</a>
+                </div>
+                <div class="header-menu__podbor--element">
+                    <img src="" alt="">
+                    <a>Аккумуляторы</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-menu__bann">
+            <p class="header-menu__bann--title">Перебьем предложения от конкурентов!</p>
+            <p class="header-menu__bann--text">
+                Скидки <span>от 10 до 25%</span> на стоимость комплекта шин
+            </p>
+            <a href="" class="header-menu__bann--link">в каталог</a>
+            <div class="header-menu__bann--picture">
+                <img src="./img/form-sect/background.png" class="header-menu__bann--pict" alt="">
+                <img src="./img/form-sect/fon.png" class="header-menu__bann--back" alt="">
+            </div>
+        </div>
+    </div>
+</div>
 
         <main>
 
@@ -1085,17 +1159,50 @@
                 <div class="container">
                     <h2 class="manufactures_title section-title">Популярные производители</h2>
                     <div class="manufactures_box">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
-                        <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
+                        <div class="manufactures--element">
+                            <img class="manufactures_box__picture" src="https://logos-marques.com/wp-content/uploads/2021/06/Hankook-logo.jpg" alt="">
+                            <a href="">MICHELIN</a>
+                        </div>
                         <a href="" class="manufactures_box__link">Смотреть еще</a>
                     </div>
                 </div>
@@ -1555,7 +1662,7 @@
     </div>
 </section>
 
-    <script src="./js/index.js?_v=20230306173517"></script>
+    <script src="./js/index.js?_v=20230307132915"></script>
 </body>
 
 </html>
